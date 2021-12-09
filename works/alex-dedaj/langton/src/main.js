@@ -11,5 +11,5 @@ for (let x = 3; x < 24; x++) {
     // Division euclidienne, en gros, on divise le numéro du pixel (1,2,3)
     // par 2, si le chiffre restant est 0 (donc divisé par un pixel pair)
     // alors on colorie le pixel en 'fc0 (jaune)', sinon en rouge
-    setPixel(x, 10, '#fc0')
+    setPixel(x, 10, color)
 }
