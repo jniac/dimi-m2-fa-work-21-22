@@ -8,4 +8,5 @@ Dépôt de travaux DIMI M2 (FA)
 ## Liens & ressources
 
 ### Plugins VSCode
-- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+- [Live Server (extension)](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+- [One Dark Pro (theme)](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
