@@ -1,4 +1,4 @@
-import { resizeCanvas, setPixel } from '../../../common/canvas.js'
+import { resizeCanvas, setPixel } from '../../../../common/canvas.js'
 
 resizeCanvas(32, 32)
 
