@@ -5,3 +5,7 @@ Dépôt de travaux DIMI M2 (FA)
 ### Fourmi de Langton
 - [David Louapre (Science étonnante, youtube)](https://www.youtube.com/watch?v=qZRYGxF6D3w&ab_channel=ScienceEtonnante)
 
+## Liens & ressources
+
+### Plugins VSCode
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
