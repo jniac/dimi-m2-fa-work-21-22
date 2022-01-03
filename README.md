@@ -1,5 +1,6 @@
 # dimi-m2-fa-work-21-22
 Dépôt de travaux DIMI M2 (FA)
+[évaluations](https://josephm.fr/students/supdecrea-Game-B2-21-22)
 
 ## Pixel walkers
 ### Fourmi de Langton
