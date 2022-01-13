@@ -1,6 +1,9 @@
 # dimi-m2-fa-work-21-22
 Dépôt de travaux DIMI M2 (FA)
 
+- [Fourmi de Langton (cours)](lectures/Langton.md)
+- [Travaux (/works)](works)
+
 ## Pixel walkers
 ### Fourmi de Langton
 - [David Louapre (Science étonnante, youtube)](https://www.youtube.com/watch?v=qZRYGxF6D3w&ab_channel=ScienceEtonnante)
