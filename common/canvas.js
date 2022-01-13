@@ -36,7 +36,7 @@ export const setPixel = (x, y, color) => {
  */
  export const getPixel = (x, y) => {
 
-  const [r, g, b] = context.getImageData(x, y, 1, 1).data
+  const [r, g, b] = ctx.getImageData(x, y, 1, 1).data
   const rgb = r << 16 | g << 8 | b
   return `#${rgb.toString(16).padStart(6, '0')}`
 }
