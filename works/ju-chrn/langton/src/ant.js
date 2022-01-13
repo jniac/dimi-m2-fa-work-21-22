@@ -3,4 +3,7 @@ let x = 0
 let y = 0
 let orientation = 0
 
-alert (`yo ${x} ${y}`)
+const moveForward = () => {
+if (orientation == 0 ) {
+x = x + 1 }
+}
