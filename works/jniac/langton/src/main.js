@@ -1,10 +1,10 @@
 import { resizeCanvas, setPixel } from '../../../../common/canvas.js'
-import './ant.js'
-import { move } from './ant.js'
+import { ant } from './ant.js'
 
 resizeCanvas(32, 32)
 
-move()
-move()
-move()
-move()
+ant.teleport(15, 15)
+
+document.querySelector('button').onclick = () => {
+  ant.move()
+}

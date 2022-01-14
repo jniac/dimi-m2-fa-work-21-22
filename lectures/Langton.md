@@ -5,3 +5,5 @@
 - code: les modules (javascript ES6)
 - code: boucle `for`
 - html: la balise `<canvas>`
+
+<img src="orientation.svg" width="400">
