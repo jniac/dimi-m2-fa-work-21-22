@@ -16,10 +16,28 @@
     ul li {
       display: flex;
       flex-direction: row;
+      transition: all .3s ease-in-out;
     }
     ul li .identity {
-      flex: 0 0 200px;
+      flex: 0 0 340px;
       overflow: hidden;
+    }
+
+    ul li button {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: none;
+      background-color: black;
+      mask-image: url(../common/icons/copy.svg);
+      -webkit-mask-image: url(../common/icons/copy.svg);
+    }
+    ul li button:hover {
+      background-color: red;
+    }
+    ul li.copy-feedback {
+      opacity: .2;
+      transition-duration: 0s;
     }
 
   </style>
@@ -32,7 +50,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/alexia-ll">Mon Prénom ici (alexia-ll)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/alexia-ll">alexia-ll</a><button></button></span>
       </div>
       <div class="work">
         <a href="alexia-ll/langton/"> => Fourmi de Langton</a>
@@ -42,7 +61,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/apiault">Mon Prénom ici (apiault)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/apiault">apiault</a><button></button></span>
       </div>
       <div class="work">
         <a href="apiault/langton/"> => Fourmi de Langton</a>
@@ -52,7 +72,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/CCHhuut">Mon Prénom ici (CCHhuut)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/CCHhuut">CCHhuut</a><button></button></span>
       </div>
       <div class="work">
         <a href="CCHhuut/langton/"> => Fourmi de Langton</a>
@@ -62,7 +83,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/Foulindra">Mon Prénom ici (Foulindra)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/Foulindra">Foulindra</a><button></button></span>
       </div>
       <div class="work">
         <a href="Foulindra/langton/"> => Fourmi de Langton</a>
@@ -72,7 +94,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/Jdel98">Mon Prénom ici (Jdel98)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/Jdel98">Jdel98</a><button></button></span>
       </div>
       <div class="work">
         <a href="Jdel98/langton/"> => Fourmi de Langton</a>
@@ -82,7 +105,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/ju-chrn">Mon Prénom ici (ju-chrn)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/ju-chrn">ju-chrn</a><button></button></span>
       </div>
       <div class="work">
         <a href="ju-chrn/langton/"> => Fourmi de Langton</a>
@@ -92,7 +116,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/juju-f">Mon Prénom ici (juju-f)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/juju-f">juju-f</a><button></button></span>
       </div>
       <div class="work">
         <a href="juju-f/langton/"> => Fourmi de Langton</a>
@@ -102,7 +127,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/JustineBrgts">Mon Prénom ici (JustineBrgts)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/JustineBrgts">JustineBrgts</a><button></button></span>
       </div>
       <div class="work">
         <a href="JustineBrgts/langton/"> => Fourmi de Langton</a>
@@ -112,7 +138,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/Laure-AnneLeprovost">Mon Prénom ici (Laure-AnneLeprovost)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/Laure-AnneLeprovost">Laure-AnneLeprovost</a><button></button></span>
       </div>
       <div class="work">
         <a href="Laure-AnneLeprovost/langton/"> => Fourmi de Langton</a>
@@ -122,7 +149,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/Lily5555">Mon Prénom ici (Lily5555)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/Lily5555">Lily5555</a><button></button></span>
       </div>
       <div class="work">
         <a href="Lily5555/langton/"> => Fourmi de Langton</a>
@@ -132,7 +160,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/Mabelled">Mon Prénom ici (Mabelled)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/Mabelled">Mabelled</a><button></button></span>
       </div>
       <div class="work">
         <a href="Mabelled/langton/"> => Fourmi de Langton</a>
@@ -142,7 +171,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/manha04">Mon Prénom ici (manha04)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/manha04">manha04</a><button></button></span>
       </div>
       <div class="work">
         <a href="manha04/langton/"> => Fourmi de Langton</a>
@@ -152,7 +182,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/Maxime-Cortiana">Mon Prénom ici (Maxime-Cortiana)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/Maxime-Cortiana">Maxime-Cortiana</a><button></button></span>
       </div>
       <div class="work">
         <a href="Maxime-Cortiana/langton/"> => Fourmi de Langton</a>
@@ -162,7 +193,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/mrmystica">Mon Prénom ici (mrmystica)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/mrmystica">mrmystica</a><button></button></span>
       </div>
       <div class="work">
         <a href="mrmystica/langton/"> => Fourmi de Langton</a>
@@ -172,7 +204,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/oceaneroussel">Mon Prénom ici (oceaneroussel)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/oceaneroussel">oceaneroussel</a><button></button></span>
       </div>
       <div class="work">
         <a href="oceaneroussel/langton/"> => Fourmi de Langton</a>
@@ -182,7 +215,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/Romainbocquet">Mon Prénom ici (Romainbocquet)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/Romainbocquet">Romainbocquet</a><button></button></span>
       </div>
       <div class="work">
         <a href="Romainbocquet/langton/"> => Fourmi de Langton</a>
@@ -192,7 +226,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/Saysano">Mon Prénom ici (Saysano)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/Saysano">Saysano</a><button></button></span>
       </div>
       <div class="work">
         <a href="Saysano/langton/"> => Fourmi de Langton</a>
@@ -202,7 +237,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/SouhaR">Mon Prénom ici (SouhaR)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/SouhaR">SouhaR</a><button></button></span>
       </div>
       <div class="work">
         <a href="SouhaR/langton/"> => Fourmi de Langton</a>
@@ -212,7 +248,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/stphnmarzolini">Mon Prénom ici (stphnmarzolini)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/stphnmarzolini">stphnmarzolini</a><button></button></span>
       </div>
       <div class="work">
         <a href="stphnmarzolini/langton/"> => Fourmi de Langton</a>
@@ -222,7 +259,8 @@
 
     <li>
       <div class="identity">
-        <a href="https://github.com/TheoRmgc">Mon Prénom ici (TheoRmgc)</a>
+        <span class="name">Mon Prénom</span>
+        <span class="github"><a href="https://github.com/TheoRmgc">TheoRmgc</a><button></button></span>
       </div>
       <div class="work">
         <a href="TheoRmgc/langton/"> => Fourmi de Langton</a>
@@ -230,6 +268,29 @@
     </li>
 
   </ul>
+
+  <script>
+    const copyToClipboard = async (str) => {
+      const { state } = await navigator.permissions.query({ name: 'clipboard-write' })
+      if (state === 'granted') {
+        await navigator.clipboard.writeText(str)
+        return true
+      }
+      return false
+    }
+    for (const li of document.querySelectorAll('ul li')) {
+      const button = li.querySelector('button')
+      button.onclick = async () => {
+        const github = li.querySelector('a').innerText
+        if (await copyToClipboard(github)) {
+          li.classList.add('copy-feedback')
+          setTimeout(() => {
+            li.classList.remove('copy-feedback')
+          }, 10)
+        }
+      }
+    }
+  </script>
   
 </body>
 </html>
