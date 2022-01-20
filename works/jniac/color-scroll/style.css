@@ -61,7 +61,7 @@ section.color-set {
   justify-content: center;
   align-items: center;
   background-color: #333;
-  height: 200vh;
+  height: 100vh;
 }
 
 section.color-set div.color {
@@ -72,5 +72,11 @@ section.color-set div.color {
   justify-content: flex-end;
   font-size: 48px;
   padding: 32px;
+  border: solid 8px transparent;
+  cursor: pointer;
 }
 
+section.color-set div.color:hover {
+  border: solid 8px black;
+  transform: scale(1.1);
+}
