@@ -17,6 +17,7 @@ h1 {
 section {
   /* vh: "viewport height" : la hauteur de la fenêtre */
   min-height: 100vh; 
+  padding: 32px;
 }
 
 section.intro {
@@ -60,6 +61,7 @@ section.color-set {
   justify-content: center;
   align-items: center;
   background-color: #333;
+  height: 200vh;
 }
 
 section.color-set div.color {
