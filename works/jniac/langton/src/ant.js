@@ -29,21 +29,21 @@ const moveForward = () => {
   }
 }
 
-export const turnRight = () => {
+const turnRight = () => {
   orientation = orientation + 1
   if (orientation === 4) {
     orientation = 0
   }
 }
 
-export const turnLeft = () => {
+const turnLeft = () => {
   orientation = orientation - 1
   if (orientation === -1) {
     orientation = 3
   }
 }
 
-export const move = () => {
+const move = () => {
   const pixel = getPixel(x, y)
 
   if (pixel === '#ff0000') {
