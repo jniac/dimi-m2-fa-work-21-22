@@ -28,3 +28,15 @@ export const setPixel = (x, y, color) => {
   ctx.fillRect(x, y, 1, 1)
 }
 
+/**
+ * Récupère la valeur d'un pixel du canvas.
+ * @param {number} x 
+ * @param {number} y 
+ * @returns Un chaîne de caractère du type "#ff0000" (les lettres sont en bas de casse).
+ */
+ export const getPixel = (x, y) => {
+
+  const [r, g, b] = ctx.getImageData(x, y, 1, 1).data
+  const rgb = r << 16 | g << 8 | b
+  return `#${rgb.toString(16).padStart(6, '0')}`
+}
