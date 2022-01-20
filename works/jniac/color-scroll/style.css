@@ -74,9 +74,15 @@ section.color-set div.color {
   padding: 32px;
   border: solid 8px transparent;
   cursor: pointer;
+  transition: background-color .3s ease-in-out;
 }
 
 section.color-set div.color:hover {
   border: solid 8px black;
   transform: scale(1.1);
 }
+
+section.color-set div.color.clicked {
+  background-color: white !important;
+}
+
