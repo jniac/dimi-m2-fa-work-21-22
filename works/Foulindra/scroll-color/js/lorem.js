@@ -1,7 +1,13 @@
-const section = document.querySelector('selection.lorem')
+const paragraph = document.querySelector('section.lorem p')
 
-const newInnerHTML = section.innerText
-  .split(' ')
+
+
+const newInnerHTML = paragraph.innerText
+  .split(' ') // on divise le texte en autant de mot que nécessaire
   .map(word => {
-    return `span`
-})
+    const color = getRandomColor()
+    return `<span style="color: ${color};">${word}</span>`
+  })
+  .join(' ')
+
+paragraph.innerHTML = newInnerHTML
