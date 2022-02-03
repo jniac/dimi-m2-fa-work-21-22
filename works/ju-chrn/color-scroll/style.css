@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
 @import url(lorem.css);
+@import url(rorschach.css);
 
 body, body * {
   margin: 0;
   box-sizing: border-box;
+  position:relative;
 }
 
 body {
@@ -20,6 +22,7 @@ section {
   /* vh: "viewport height" : la hauteur de la fenêtre */
   min-height: 100vh; 
   padding: 32px;
+  overflow:hidden;
 }
 
 section.intro {
@@ -37,15 +40,16 @@ section.intro div.scroll-down {
   width: 100px;
   height: 100px;
   transform: translateX(-50%) translateY(-32px);
+  background-color:#333;
   
   /* utilisation d'un svg comme masque: */
-  mask-image: url(assets/arrow-down.svg);
+  mask-image: url(assets/iconmonstr-arrow-69.svg);
   mask-size: contain;
-  -webkit-mask-image: url(assets/arrow-down.svg);
+  -webkit-mask-image: url(assets/iconmonstr-arrow-69.svg);
   -webkit-mask-size: contain;
   
   /* inception: le svg de la flèche est réutilisé en background */
-  background-image: url(assets/arrow-down.svg);
+  /*background-image: url(assets/iconmonstr-arrow-69.svg);*/
 
   /* une option plus sage: une couleur pleine */
   /* background-color: black; */
