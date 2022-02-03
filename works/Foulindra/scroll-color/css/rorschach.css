@@ -34,5 +34,5 @@ section.rorschach div.pen {
   width: 30vw;
   height: 30vh;
   background-color: red;
-  mask-image: url(../assets/arrow-down.svg);
+  mask-image: url(../assets/pen-solid.svg);
 }
