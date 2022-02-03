@@ -1,12 +1,10 @@
 import { resizeCanvas, setPixel } from '../../../../common/canvas.js'
+import { ant } from './ant.js'
 
-resizeCanvas(32, 32)
+resizeCanvas(128, 128)
 
-setPixel(3, 3, 'red')
-setPixel(4, 3, 'blue')
-setPixel(4, 4, '#f59833')
+ant.teleport(64, 64)
 
-for (let x = 3; x < 24; x = x + 1) {
-  const color = (x % 5 === 0) ? '#fc0' : 'red'
-  setPixel(x, 10, color)
+document.querySelector('button').onclick = () => {
+  ant.move()
 }

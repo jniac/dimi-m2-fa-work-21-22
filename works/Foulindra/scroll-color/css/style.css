@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
-@import url(lorem.css);
 
 body, body * {
   margin: 0;
@@ -13,7 +12,6 @@ body {
 h1 {
   font-family: 'Mochiy Pop P One', sans-serif;
   font-size: 120px;
-  color:#333;
 }
 
 section {
@@ -27,7 +25,7 @@ section.intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #DCFFFB;
+  background-color: dimgrey;
 }
 
 section.intro div.scroll-down {
@@ -51,7 +49,7 @@ section.intro div.scroll-down {
   /* background-color: black; */
 }
 section.intro div.scroll-down:hover {
-  background-color: #C1BBDD;
+  background-color: blue;
 }
 
 
@@ -62,7 +60,7 @@ section.color-set {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #222;
+  background-color: #333;
   height: 100vh;
 }
 
@@ -80,7 +78,7 @@ section.color-set div.color {
 }
 
 section.color-set div.color:hover {
-  border: solid 8px #333;
+  border: solid 8px black;
   transform: scale(1.1);
 }
 
