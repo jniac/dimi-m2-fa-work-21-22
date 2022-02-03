@@ -1,18 +1,15 @@
 export const colors = [
-  '#fc0',
-  'red',
+  'white',
   'blue',
-  '#6f0',
-  '#888',
-
+  'yellow',
+  'orange',
+  'green',
 ]
-
 
 export const backgroundColors = [
-'black',
-'brown',
+  '#222',
+  '#232323',
 ]
-
 
 export const getRandomColor = () => {
   const index = Math.floor(Math.random() * colors.length)
