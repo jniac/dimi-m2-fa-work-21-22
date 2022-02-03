@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
+@import url(lorem.css);
 
 body, body * {
   margin: 0;
@@ -17,6 +18,7 @@ h1 {
 section {
   /* vh: "viewport height" : la hauteur de la fenêtre */
   min-height: 100vh; 
+  padding: 32px;
 }
 
 section.intro {
@@ -24,7 +26,7 @@ section.intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: dimgrey;
+  background-color: #abc4ff;
 }
 
 section.intro div.scroll-down {
@@ -48,7 +50,7 @@ section.intro div.scroll-down {
   /* background-color: black; */
 }
 section.intro div.scroll-down:hover {
-  background-color: blue;
+  background-color: #eac4d5;
 }
 
 
@@ -60,6 +62,7 @@ section.color-set {
   justify-content: center;
   align-items: center;
   background-color: #333;
+  height: 100vh;
 }
 
 section.color-set div.color {
@@ -70,5 +73,25 @@ section.color-set div.color {
   justify-content: flex-end;
   font-size: 48px;
   padding: 32px;
+  border: solid 8px transparent;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
 }
+
+section.color-set div.color:hover {
+  border: solid 8px black;
+  transform: scale(1.1);
+}
+
+section.color-set div.color.clicked {
+  background-color: white !important;
+}
+
+
+
+
+
+
+
+
 
