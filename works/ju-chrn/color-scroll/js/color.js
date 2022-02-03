@@ -7,11 +7,11 @@ export const colors = [
 ]
 
 export const backgroundColors = [
-  '333'
+  '#333'
 ]
 
 export const getRandomColor = () => {
   const index = Math.floor(Math.random() * colors.length)
-  const color = colors[index]
-  return colors[index]
+  const color=colors[index]
+  return color
 }
