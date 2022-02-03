@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
 @import url(lorem.css);
+@import url(rorschach.css);
 
 body, body * {
   margin: 0;
   box-sizing: border-box;
+  position: relative;
 }
 
 body {
