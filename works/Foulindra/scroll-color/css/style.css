@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
-@import url(lorem.css);
 
 body, body * {
   margin: 0;
@@ -50,7 +49,7 @@ section.intro div.scroll-down {
   /* background-color: black; */
 }
 section.intro div.scroll-down:hover {
-  background-color: #FFF;
+  background-color: blue;
 }
 
 
@@ -86,12 +85,3 @@ section.color-set div.color:hover {
 section.color-set div.color.clicked {
   background-color: white !important;
 }
-
-
-
-
-
-
-
-
-

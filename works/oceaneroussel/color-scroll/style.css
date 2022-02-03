@@ -50,7 +50,7 @@ section.intro div.scroll-down {
   /* background-color: black; */
 }
 section.intro div.scroll-down:hover {
-  background-color: #FFF;
+  background-color: blue;
 }
 
 
