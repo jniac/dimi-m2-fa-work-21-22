@@ -1,4 +1,8 @@
-const colors =['#ffcc00', 'red', 'blue', 'green', '#ff7900']
-const backgroudColors = ['#222', '#232323']
+export const colors =['#ffcc00', 'red', 'blue', 'green', '#ff7900']
+export const backgroudColors = ['#222', '#232323']
 
-const getRandomColor =()
+export const getRandomColor =() => {
+  const index = Math.floor(Math.random() * colors.length)
+  const color = colors[index]
+  return color
+}
