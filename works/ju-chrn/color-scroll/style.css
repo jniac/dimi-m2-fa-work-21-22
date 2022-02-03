@@ -13,6 +13,7 @@ body {
 h1 {
   font-family: 'Mochiy Pop P One', sans-serif;
   font-size: 120px;
+  color:#333;
 }
 
 section {
@@ -26,7 +27,7 @@ section.intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: dimgrey;
+  background-color: #DCFFFB;
 }
 
 section.intro div.scroll-down {
@@ -50,7 +51,7 @@ section.intro div.scroll-down {
   /* background-color: black; */
 }
 section.intro div.scroll-down:hover {
-  background-color: blue;
+  background-color: #C1BBDD;
 }
 
 
@@ -61,7 +62,7 @@ section.color-set {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+  background-color: #222;
   height: 100vh;
 }
 
@@ -79,7 +80,7 @@ section.color-set div.color {
 }
 
 section.color-set div.color:hover {
-  border: solid 8px black;
+  border: solid 8px #333;
   transform: scale(1.1);
 }
 
