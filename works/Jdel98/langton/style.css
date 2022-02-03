@@ -1,0 +1,11 @@
+@import url(../../../common/style.css);
+
+body {
+  padding: 64px;
+}
+
+canvas {
+  margin: 32px;
+  flex: 1;
+  image-rendering: pixelated;
+}
