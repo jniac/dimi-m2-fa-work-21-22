@@ -38,19 +38,15 @@ section.intro div.scroll-down {
   left: 50%;
   width: 100px;
   height: 100px;
-  transform: translateX(-50%) translateY(-32px);
+  background-color: black;
   
   /* utilisation d'un svg comme masque: */
   mask-image: url(assets/arrow-down.svg);
   mask-size: contain;
   -webkit-mask-image: url(assets/arrow-down.svg);
   -webkit-mask-size: contain;
-  
-  /* inception: le svg de la flèche est réutilisé en background */
-  background-image: url(assets/arrow-down.svg);
 
-  /* une option plus sage: une couleur pleine */
-  /* background-color: black; */
+  transform: translateX(-50%) translateY(-32px);
 }
 section.intro div.scroll-down:hover {
   background-color: blue;
