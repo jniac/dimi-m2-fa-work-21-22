@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
-
+@import url(../css/lorem.css);
 body, body * {
   margin: 0;
   box-sizing: border-box;
