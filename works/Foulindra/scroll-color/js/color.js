@@ -1,20 +1,21 @@
-const colors = [
+export const colors = [
   '#fc0',
   'red',
   'blue',
-  
-
-
-
-
+  '#6f0',
+  '#888',
 
 ]
 
 
+export const backgroundColors = [
+'black',
+'brown',
+]
 
 
-const getRandomColor = () => {
-  const colors = ['#fc0', 'red', 'blue']
+export const getRandomColor = () => {
   const index = Math.floor(Math.random() * colors.length)
-  return colors[index]
+  const color = colors[index]
+  return color
 }
