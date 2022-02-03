@@ -2,7 +2,7 @@
 Dépôt de travaux DIMI M2 (FA)
 
 - [Fourmi de Langton (cours)](lectures/Langton.md)
-- [Travaux (/works)](works)
+- [Travaux (/works)](https://jniac.github.io/dimi-m2-fa-work-21-22/works/)
 
 ## Pixel walkers
 ### Fourmi de Langton
