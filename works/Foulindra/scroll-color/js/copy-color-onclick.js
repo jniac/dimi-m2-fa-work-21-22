@@ -1,3 +1,4 @@
+
 const divs = document.querySelectorAll('section.color-set div.color')
 
 for (const div of divs) {
