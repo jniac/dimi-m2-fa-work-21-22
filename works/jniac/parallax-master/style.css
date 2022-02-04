@@ -1,0 +1,42 @@
+@import url(../../../common/style.css);
+@import url(header.css);
+
+body {
+  background-color: #eee;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 60vh;
+  font-weight: 900;
+  /* background-color: #ccc; */
+  background-image: repeating-linear-gradient(45deg, #ccc 0, #ccc 2vh, transparent 2vh, transparent 2.2vh);
+}
+
+section:nth-child(2n) {
+  /* background-color: transparent; */
+  background-image: unset;
+}
+
+section.fx .dot {
+  position: fixed;
+  width: 10vh;
+  height: 10vh;
+  left: 50%;
+  top: 50%;
+  background-color: #840832;
+  border-radius: 50%;
+}
+
+/* horizontal scroll */
+body.horizontal-scroll {
+  display: flex;
+  flex-direction: row;
+}
+body.horizontal-scroll section {
+  flex: 0 0 100vw;
+}
