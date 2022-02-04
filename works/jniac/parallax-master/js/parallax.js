@@ -1,12 +1,5 @@
-import { trackParallax } from '../../../common/parallax.js'
-
-const randomRange = (min, max) => {
-  return min + (max - min) * Math.random()
-}
-const randomItem = (array) => {
-  const index = Math.floor(Math.random() * array.length)
-  return array[index]
-}
+import { trackParallax } from '../../../../common/parallax.js'
+import { randomItem, randomRange } from '../../../../common/random-utils.js'
 
 const initDot = (dot) => {
 
@@ -18,11 +11,11 @@ const initDot = (dot) => {
   dot.style.zIndex = zIndex
   dot.style.backgroundColor = color
 
-  const parallaxScale = randomRange(0, 4)
+  const parallaxScale = randomRange(-0.5, 4)
   
   dot.addEventListener('parallax', event => {
-    const px = anchorX + event.detail.x * parallaxScale
-    const py = anchorY + event.detail.y * parallaxScale
+    const px = anchorX + -event.detail.x * parallaxScale
+    const py = anchorY + -event.detail.y * parallaxScale
     const tx = `${(px * 100).toFixed(1)}vw`
     const ty = `${(py * 100).toFixed(1)}vh`
     dot.style.transform = `translate(${tx}, ${ty}) scale(${scale})`

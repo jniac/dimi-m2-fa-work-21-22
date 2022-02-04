@@ -1,4 +1,4 @@
-@import url(../../../common/style.css);
+@import url(../../../../common/style.css);
 @import url(header.css);
 
 body {
@@ -8,18 +8,37 @@ body {
 section {
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  --stripe-color: #ccc;
+  background-image: repeating-linear-gradient(45deg, var(--stripe-color) 0, var(--stripe-color) 2vh, transparent 2vh, transparent 2.2vh);
+}
+
+section span {
   font-size: 60vh;
   font-weight: 900;
-  /* background-color: #ccc; */
-  background-image: repeating-linear-gradient(45deg, #ccc 0, #ccc 2vh, transparent 2vh, transparent 2.2vh);
+  line-height: 1em;
 }
 
 section:nth-child(2n) {
-  /* background-color: transparent; */
   background-image: unset;
+}
+
+section.fx {
+  color: white;
+  --stripe-color: #67c58d;
+}
+
+section.fx span {
+  z-index: 10;
+}
+
+section.fx p {
+  padding: 0 20%;
+  font-size: 2em;
+  text-align: center;
+  z-index: 10;
 }
 
 section.fx .dot {
