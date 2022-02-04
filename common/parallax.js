@@ -5,7 +5,14 @@ const inverseLerp = (a, b, t) => clamp01((t - a) / (b - a))
 
 const elements = new Set()
 
-const updateElement = (element) => {
+/** @typedef {{ x: number, y: number, width: number, height: number }} ParallaxInfo */
+
+/**
+ * Met à jour un noeud.
+ * @param {HTMLElement} element 
+ * @param {boolean} dispatchToChildren Faut-il mettre à jour les enfants de ce noeud ?
+ */
+const updateElement = (element, dispatchToChildren = false) => {
   const parentWidth = window.innerWidth
   const parentHeight = window.innerHeight
 
@@ -20,23 +27,33 @@ const updateElement = (element) => {
 
   const event = new CustomEvent('parallax', { detail })
   element.dispatchEvent(event)
-  for (const child of element.children) {
-    child.dispatchEvent(event)
+
+  if (dispatchToChildren) {
+    for (const child of element.children) {
+      child.dispatchEvent(event)
+    }
   }
 }
 
 /**
  * Ajoute un élément du DOM.
- * @param {HTMLElement} element 
+ * @param {HTMLElement} element
+ * @param {{ dispatchToChildren?: boolean, onParallax?: (info: ParallaxInfo) => void }} options 
  */
-export const trackParallax = (element) => {
-  elements.add(element)
-  update(element)
+export const trackParallax = (element, {
+  dispatchToChildren = true,
+  onParallax,
+} = {}) => {
+  elements.add({ element, dispatchToChildren })
+  if (onParallax) {
+    element.addEventListener('parallax', event => onParallax(event.detail))
+  }
+  update(element, dispatchToChildren)
 }
 
 const update = () => {
-  for (const element of elements) {
-    updateElement(element)
+  for (const { element, dispatchToChildren } of elements) {
+    updateElement(element, dispatchToChildren)
   }
 }
 

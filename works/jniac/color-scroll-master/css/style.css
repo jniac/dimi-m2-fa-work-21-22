@@ -3,6 +3,7 @@
 @import url(color-set.css);
 @import url(lorem.css);
 @import url(rorschach.css);
+@import url(grid-fx.css);
 
 body, body * {
   margin: 0;
