@@ -1,4 +1,5 @@
 section.rorschach {
+  --scroll-t: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -50,9 +51,11 @@ section.rorschach span.big-r {
   color: var(--color-5);
   transform: 
   translate(-50%, -50%)
+  scale(calc(0.7 + 0.3 + var(--scroll-t)))
   rotate(28deg)
   translate(-11.1vh, 0)
   scaleX(-1)
+  translateX(calc(var(--scroll-t) * 200px))
   ;
 }
 
@@ -64,6 +67,7 @@ section.rorschach span.big-q {
   translate(-50%, -50%)
   rotate(-20deg)
   translate(-29vh, 0)
+  translateX(calc(var(--scroll-t) * -400px))
   ;
 }
 
@@ -74,6 +78,7 @@ section.rorschach span.big-paragraph {
   color: var(--color-5);
   transform:
   translate(-50%, -50%)
+  scale(calc(0.7 + 0.3 + var(--scroll-t)))
   translate(-10.1vh, 30vh)
   scaleX(-1)
   rotate(28deg)
