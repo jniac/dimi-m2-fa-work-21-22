@@ -30,7 +30,7 @@ const createGrid = (element, col = 10, row = 10) => {
 const initIntroGrid = () => {
 
   const container = document.querySelector('.grid-fx')
-  const size = { x: 61, y: 5 }
+  const size = { x: 31, y: 5 }
   const divs = createGrid(container, size.x, size.y).flat()
   
   // couleurs aléatoires
