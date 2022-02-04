@@ -2,7 +2,7 @@
 const paragraph = document.querySelector('section.lorem p')
 
 const getRandomColor = () => {
-  const colors = ['#7DDAD9', '#FCEAAF', '#F598AA']
+  const colors = ['#fc0', 'red', 'blue']
   const index = Math.floor(Math.random() * colors.length)
   return colors[index]
 }

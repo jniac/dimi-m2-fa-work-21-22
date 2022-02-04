@@ -26,7 +26,7 @@ section.intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #abc4ff;
+  background-color: dimgrey;
 }
 
 section.intro div.scroll-down {
@@ -50,7 +50,7 @@ section.intro div.scroll-down {
   /* background-color: black; */
 }
 section.intro div.scroll-down:hover {
-  background-color: #eac4d5;
+  background-color: blue;
 }
 
 
