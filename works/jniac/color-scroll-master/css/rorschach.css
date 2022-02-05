@@ -79,6 +79,7 @@ section.rorschach span.big-paragraph {
   transform:
   translate(-50%, -50%)
   scale(calc(0.7 + 0.3 + var(--scroll-t)))
+  translateX(calc(var(--scroll-t) * -400px))
   translate(-10.1vh, 30vh)
   scaleX(-1)
   rotate(28deg)

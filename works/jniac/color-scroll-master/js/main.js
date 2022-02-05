@@ -1,6 +1,7 @@
-import './copy-color-onclick.js'
 import './lorem.js'
+import './plain-color.js'
 import './rorschach.js'
 import './color-set.js'
+import './you-cant-read-this.js'
 import './plz-scroll-down.js'
 import './grid-fx.js'

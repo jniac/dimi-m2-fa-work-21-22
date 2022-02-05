@@ -17,3 +17,9 @@ export const getRandomColor = () => {
   const color = colors[index]
   return color
 }
+
+// Ajoute les variables css "--color-x" à la page, en les associant à la balise <body>
+colors.forEach((color, index) => {
+  const name = `--color-${index + 1}`
+  document.body.style.setProperty(name, color)
+})

@@ -1,0 +1,30 @@
+
+section.you-cant-read-this {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: dimgrey;
+}
+
+section.you-cant-read-this div {
+  display: flex;
+}
+
+section.you-cant-read-this span {
+  --size: min(12vh, 8vw);
+  font-size: calc(var(--size) * 0.8);
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+
+  transition: 
+  color .15s ease-in-out .1s, 
+  background-color .15s ease-in-out 0s;
+}
