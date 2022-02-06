@@ -1,0 +1,10 @@
+
+section.random-chars {
+  background-color: var(--color-1);
+}
+
+section.random-chars span {
+  position: absolute;
+  display: block;
+  font-size: min(10vw, 10vh);
+}
