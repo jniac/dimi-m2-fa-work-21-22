@@ -1,5 +1,5 @@
 import './lorem.js'
-import './plain-color.js'
+import './color-interpolation.js'
 import './rorschach.js'
 import './color-set.js'
 import './you-cant-read-this.js'

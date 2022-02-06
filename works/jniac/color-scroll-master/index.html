@@ -30,10 +30,23 @@
     </p>
   </section>
 
-  <section class="plain-color">
-    <span>0</span>
-    <span class="big">0</span>
-    <span>0</span>
+  <section class="color-interpolation">
+    <span class="y">0</span>
+    <div class="spacing"></div>
+    <h1>Dégradé de couleurs</h1>
+    <div class="gradient">
+      <div class="cursor"></div>
+    </div>
+    <p>Automatique, immédiate du coté du style, du css, l'interpolation de couleur en javascript n'est en revanche pas chose aisée.</p>
+    <p>Proposition s'appuyant sur cette solution : <a href="https://colorjs.io/docs/the-color-object.html">colorjs.io</a></p>
+    <code>
+      const red = new Color('#f00')
+      const blue = new Color('#00f')
+      const gradient = red.range(blue)
+      section.backgroundColor = gradient(0.5) // mid-point
+    </code>
+    <div class="spacing"></div>
+    <span class="y">0</span>
   </section>
 
   <section class="you-cant-read-this">
