@@ -1,3 +1,9 @@
+
+/**
+ * Renvoie un nombre au hasard compris entre `min` et `max`
+ * @param {number} min 
+ * @param {number} max 
+ */
 export const randomRange = (min, max) => {
   return min + (max - min) * Math.random()
 }
@@ -29,3 +35,13 @@ export const shuffle = (array) => {
   }
   return result
 }
+
+/**
+ * Effectue un tirage aléatoire et le compare avec la probabilité donnée en paramètre :
+ * - `chance(0)` retourne toujours `false`
+ * - `chance(1)` retourne toujours `true`
+ * - `chance(0.5)` retourne `true` dans 50% des cas
+ * @param {number} p 
+ * @returns 
+ */
+export const chance = (p) => Math.random() < p
