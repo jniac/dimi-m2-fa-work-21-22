@@ -24,11 +24,11 @@ section.querySelector('div.gradient').style.backgroundImage = `linear-gradient(t
 
 const getInterpolatedColor = y => {
   if (y < 0) {
-    const t = inverseLerp(-.5, -.1, y)
+    const t = inverseLerp(-.3, -.1, y)
     return gradientDarkGreyToRedish(t).hex
   }
   else {
-    const t = inverseLerp(.1, .5, y)
+    const t = inverseLerp(.1, .3, y)
     return gradientRedishToMauve(t).hex
   }
 }
@@ -37,8 +37,8 @@ trackParallax(section, info => {
   
   const color = getInterpolatedColor(info.y)
 
-  const t = info.y < 0 ? inverseLerp(-.5, -.1, info.y) * 0.5 : inverseLerp(.1, .5, info.y) * 0.5 + 0.5
-  section.querySelector('div.gradient .cursor').style.left = `${(t * 100).toFixed(1)}%`
+  const left = info.y < 0 ? inverseLerp(-.3, -.1, info.y) * 0.5 : inverseLerp(.1, .3, info.y) * 0.5 + 0.5
+  section.querySelector('div.gradient .cursor').style.left = `${(left * 100).toFixed(1)}%`
 
   const n = info.y.toFixed(2)
   for (const span of section.querySelectorAll('span.y')) {

@@ -57,8 +57,11 @@ section.color-interpolation .gradient {
 }
 
 section.color-interpolation .gradient .cursor {
-  width: 2px;
-  height: 100%;
+  position: absolute;
+  top: -5px;
+  width: 5px;
+  height: 110px;
+  border-radius: 2px;
   background-color: white;
 }
 
