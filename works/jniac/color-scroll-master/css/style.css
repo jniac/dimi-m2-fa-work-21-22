@@ -71,3 +71,17 @@ section.intro div.scroll-down {
 section.intro div.scroll-down:hover {
   background-color: var(--color-1);
 }
+
+section .section-info {
+  position: absolute;
+  --margin: 32px;
+  left: var(--margin);
+  bottom: var(--margin);
+  color: white;
+}
+section .section-info span {
+  font-size: 1.2em;
+}
+section .section-info a {
+  color: white;
+}

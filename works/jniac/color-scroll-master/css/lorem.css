@@ -1,9 +1,11 @@
 section.lorem {
-  font-size: 36px;
   padding: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   background-color: #1c1c1c;
+}
+section.lorem p {
+  font-size: 36px;
 }

@@ -46,7 +46,8 @@ const initIntroGrid = () => {
     const x = inverseLerp(.02, .4, info.y)
     const indexEnd = Math.floor(divs.length * x)
     suffleDivs.forEach((div, index) => {
-      div.classList.toggle('colored', index < indexEnd)
+      const isColored = index < indexEnd
+      div.classList.toggle('colored', isColored)
     })
   })
 }

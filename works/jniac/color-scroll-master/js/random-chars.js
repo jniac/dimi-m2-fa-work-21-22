@@ -19,7 +19,13 @@ const randomDraw = () => {
     const x = (Math.random() * 100).toFixed() + '%'
     const y = (Math.random() * 100).toFixed() + '%'
     const transform = `translate(-50%, -50%) rotate(${angle.toFixed(1)}deg) scale(${scale.toFixed(2)})`
-    spans.push(`<span style="color: var(${color}); left: ${x}; top: ${y}; transform: ${transform};">${char}</span>`)
+    const style = `
+      color: var(${color}); 
+      left: ${x}; 
+      top: ${y}; 
+      transform: ${transform};
+    `
+    spans.push(`<span style="${style}">${char}</span>`)
   }
 
   section.querySelector('.container').innerHTML = spans.join('\n')

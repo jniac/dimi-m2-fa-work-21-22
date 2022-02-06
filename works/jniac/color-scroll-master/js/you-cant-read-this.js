@@ -3,6 +3,7 @@ import { trackParallax } from '../../../../common/parallax.js'
 import { randomItem } from '../../../../common/random-utils.js'
 
 const section = document.querySelector('section.you-cant-read-this')
+const container = section.querySelector('.container')
 
 const mapWord = (word) => {
 
@@ -19,14 +20,14 @@ const mapWord = (word) => {
 }
 
 const splitToSpan = () => {
-  const words = section.innerText.split(' ')
-  section.innerHTML = words
+  const words = container.innerText.split(' ')
+  container.innerHTML = words
     .map(word => mapWord(word))
     .join('<span class="space"></span>')
 }
 
 const setRandomColorsToSpan = () => {
-  for (const span of section.querySelectorAll('span:not(.space)')) {
+  for (const span of container.querySelectorAll('span:not(.space)')) {
     const i1 = randomItem([1, 2, 3, 4, 5])
     // const i2 = randomItem([1, 3, 4])
     span.style.color = `var(--color-${i1})`

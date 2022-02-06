@@ -37,7 +37,7 @@ section.color-interpolation a:visited {
   opacity: .5;
 }
 
-section.color-interpolation span {
+section.color-interpolation span.y {
   padding: 12px 16px;
   border: solid 1px currentColor;
   border-radius: 2px;
