@@ -78,6 +78,7 @@ section .section-info {
   left: var(--margin);
   bottom: var(--margin);
   color: white;
+  font-weight: 100;
 }
 section .section-info span {
   font-size: 1.2em;

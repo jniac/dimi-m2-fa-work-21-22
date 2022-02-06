@@ -6,7 +6,7 @@ section.rorschach {
   background-color: #111;
 }
 
-section.rorschach > div {
+section.rorschach > .half {
   flex: 1 0 0;
   position: relative;
   display: flex;
@@ -15,11 +15,11 @@ section.rorschach > div {
   overflow: hidden;
 }
 
-section.rorschach > div.right {
+section.rorschach > .half.right {
   transform: scaleX(-1);
 }
 
-section.rorschach > div > * {
+section.rorschach > .half > * {
   position: absolute;
   top: 50%;
   left: 100%;
