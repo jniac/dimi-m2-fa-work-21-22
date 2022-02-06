@@ -17,9 +17,9 @@ const infoMap = new Map()
 /**
  * Met à jour un noeud.
  * @param {HTMLElement} element 
- * @param {boolean} dispatch Faut-il mettre à jour les enfants de ce noeud ?
+ * @param {DispacthMode} dispatch Faut-il mettre à jour les enfants de ce noeud ?
  */
-const updateElement = (element, dispatch = false) => {
+const updateElement = (element, dispatch = 'none') => {
   const parentWidth = window.innerWidth
   const parentHeight = window.innerHeight
 
@@ -48,9 +48,14 @@ const updateElement = (element, dispatch = false) => {
     const event = new CustomEvent('parallax', { detail: info })
     element.dispatchEvent(event)
   
-    if (dispatch) {
-      for (const child of element.children) {
-        child.dispatchEvent(event)
+    if (dispatch !== 'none') {
+      const elements = [...element.children]
+      while (elements.length > 0) {
+        const first = elements.shift()
+        first.dispatchEvent(event)
+        if (dispatch === 'all-children') {
+          elements.push(...first.children)
+        }
       }
     }
   }
