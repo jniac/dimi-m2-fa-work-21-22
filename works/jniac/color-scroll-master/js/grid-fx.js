@@ -42,15 +42,12 @@ const initIntroGrid = () => {
   const suffleDivs = shuffle(divs)
 
   // effet "parallax"
-  trackParallax(container, {
-    dispatchToChildren: false,
-    onParallax: info => {
-      const x = inverseLerp(.02, .4, info.y)
-      const indexEnd = Math.floor(divs.length * x)
-      suffleDivs.forEach((div, index) => {
-        div.classList.toggle('colored', index < indexEnd)
-      })
-    },
+  trackParallax(container, info => {
+    const x = inverseLerp(.02, .4, info.y)
+    const indexEnd = Math.floor(divs.length * x)
+    suffleDivs.forEach((div, index) => {
+      div.classList.toggle('colored', index < indexEnd)
+    })
   })
 }
 

@@ -1,5 +1,5 @@
 import { round } from '../../../../common/basic-functions.js'
-import { onParallax, trackParallax } from '../../../../common/parallax.js'
+import { trackParallax } from '../../../../common/parallax.js'
 import { randomItem } from '../../../../common/random-utils.js'
 
 const section = document.querySelector('section.you-cant-read-this')
@@ -37,10 +37,8 @@ const setRandomColorsToSpan = () => {
 splitToSpan()
 setRandomColorsToSpan()
 
-trackParallax(section)
-
 let y = 0, yOld = 0
-onParallax(section, info => {
+trackParallax(section, info => {
   yOld = y
   y = round(info.y, 0.1)
 

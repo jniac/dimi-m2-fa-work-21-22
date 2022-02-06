@@ -1,5 +1,5 @@
 import Color from "https://colorjs.io/dist/color.esm.js"
-import { onParallax, trackParallax } from '../../../../common/parallax.js'
+import { trackParallax } from '../../../../common/parallax.js'
 import { colors } from './color.js'
 import { inverseLerp } from '../../../../common/basic-functions.js'
 
@@ -33,8 +33,7 @@ const getInterpolatedColor = y => {
   }
 }
 
-trackParallax(section)
-onParallax(section, info => {
+trackParallax(section, info => {
   
   const color = getInterpolatedColor(info.y)
 

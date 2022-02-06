@@ -3,18 +3,20 @@ const clamp01 = (x) => x < 0 ? 0 : x > 1 ? 1 : x
 const lerp = (a, b, t) => a + (b - a) * clamp01(t)
 const inverseLerp = (a, b, t) => clamp01((t - a) / (b - a))
 
+/** @typedef {'none' | 'children' | 'all-children'} DispacthMode */
 /** @typedef {{ x: number, y: number, width: number, height: number }} ParallaxInfo */
-/** @typedef {{ dispatchToChildren: boolean, onParallax: (info: ParallaxInfo) => void }} TrackOptions */
+/** @typedef {(info: ParallaxInfo) => void} ParallaxCallback */
+/** @typedef {{ dispatch: DispacthMode, onParallax: ParallaxCallback }} TrackOptions */
 
-/** @type {Set<{ element: HTMLElement, dispatchToChildren: boolean }>} */
+/** @type {Set<{ element: HTMLElement, dispatch: DispacthMode }>} */
 const elements = new Set()
 
 /**
  * Met à jour un noeud.
  * @param {HTMLElement} element 
- * @param {boolean} dispatchToChildren Faut-il mettre à jour les enfants de ce noeud ?
+ * @param {boolean} dispatch Faut-il mettre à jour les enfants de ce noeud ?
  */
-const updateElement = (element, dispatchToChildren = false) => {
+const updateElement = (element, dispatch = false) => {
   const parentWidth = window.innerWidth
   const parentHeight = window.innerHeight
 
@@ -30,7 +32,7 @@ const updateElement = (element, dispatchToChildren = false) => {
   const event = new CustomEvent('parallax', { detail })
   element.dispatchEvent(event)
 
-  if (dispatchToChildren) {
+  if (dispatch) {
     for (const child of element.children) {
       child.dispatchEvent(event)
     }
@@ -38,8 +40,8 @@ const updateElement = (element, dispatchToChildren = false) => {
 }
 
 const update = () => {
-  for (const { element, dispatchToChildren } of elements) {
-    updateElement(element, dispatchToChildren)
+  for (const { element, dispatch } of elements) {
+    updateElement(element, dispatch)
   }
 }
 
@@ -62,23 +64,44 @@ window.onscroll = update
 /**
  * Ajoute un élément du DOM.
  * @param {HTMLElement} element
- * @param {Partial<TrackOptions>} options 
+ * @param {Partial<TrackOptions> | ParallaxCallback} options 
  */
-export const trackParallax = (element, {
-  dispatchToChildren = true,
-  onParallax,
-} = {}) => {
-  elements.add({ element, dispatchToChildren })
-  if (onParallax) {
-    element.addEventListener('parallax', event => onParallax(event.detail))
+export const trackParallax = (element, options = null) => {
+  
+  if (typeof options === 'function') {
+    return trackParallax(element, { onParallax: options })
   }
-  update(element, dispatchToChildren)
+
+  const onDestroy = []
+  const destroy = () => {
+    for (const cb of onDestroy) {
+      cb()
+    }
+  }
+  
+  const { 
+    dispatch = 'none', 
+    onParallax: onParallaxArg,
+  } = options ?? {}
+  
+  const bundle = { element, dispatch }
+  elements.add(bundle)
+  onDestroy.push(() => elements.delete(bundle))
+
+  if (onParallaxArg) {
+    const { destroy } = onParallax(element, onParallaxArg)
+    onDestroy.push(destroy)
+  }
+
+  update(element, dispatch)
+
+  return { destroy }
 }
 
 /**
  * Ajoute un écouteur d'évènement à un noeud du DOM.
  * @param {HTMLElement} element 
- * @param {(info: ParallaxInfo) => void} onParallax 
+ * @param {ParallaxCallback} onParallax 
  */
 export const onParallax = (element, onParallax) => {
   const listener = event => onParallax(event.detail)
