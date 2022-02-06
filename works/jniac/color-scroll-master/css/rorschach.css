@@ -93,6 +93,7 @@ section.rorschach span.big-k {
   color: var(--color-3);
   transform:
   translate(-50%, -50%)
+  translate(calc(var(--scroll-t) * -200px), 0px)
   translate(0.1vh, -40vh)
   scaleX(-1)
   scale(0.8)
@@ -106,8 +107,10 @@ section.rorschach div.pen {
   /* background-image: linear-gradient(-135deg, var(--color-1) 30%, var(--color-4) 90%); */
   transform:
   translate(-50%, -50%)
+  translate(calc(var(--scroll-t) * -800px), 0px)
   translate(-40vh, -20vh)
   rotate(104deg)
+  scale(calc(1 + var(--scroll-t)))
   ;
 }
 
@@ -117,6 +120,7 @@ section.rorschach div.sun {
   background-color: var(--color-4);
   transform: 
   translate(-50%, -50%)
+  translate(calc(var(--scroll-t) * -400px), 0px)
   scale(1.8)
   translate(-5vh, -8vh)
   ;
@@ -128,7 +132,9 @@ section.rorschach div.sun-2 {
   background-color: var(--color-2);
   transform: 
   translate(-50%, -50%)
-  translate(-45vh, 9vh);
+  translate(-45vh, 9vh)
+  translate(calc(var(--scroll-t) * -800px), 0px)
+  ;
 }
 
 section.rorschach div.sun-3 {
@@ -138,6 +144,7 @@ section.rorschach div.sun-3 {
   transform: 
   translate(-50%, -50%)
   translate(0vh, 9vh)
+  translate(calc(var(--scroll-t) * -800px), 0px)
   ;
 }
 
@@ -148,5 +155,7 @@ section.rorschach div.cloud {
   translate(-50%, -50%)
   translate(-42vh, 23vh)
   rotate(-142deg)
+  translate(calc(var(--scroll-t) * -800px), 0px)
+  scale(calc(1 + var(--scroll-t)))
   ;
 }
