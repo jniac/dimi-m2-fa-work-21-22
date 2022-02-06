@@ -30,6 +30,12 @@
     </p>
   </section>
 
+  <section class="simple-parallax">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </section>
+
   <section class="color-interpolation">
     <span class="y">0</span>
     <div class="spacing"></div>
@@ -43,10 +49,19 @@
       const red = new Color('#f00')
       const blue = new Color('#00f')
       const gradient = red.range(blue)
-      section.backgroundColor = gradient(0.5) // mid-point
+      section.style.backgroundColor = gradient(0.5) // mid-point
     </code>
     <div class="spacing"></div>
     <span class="y">0</span>
+  </section>
+
+  <section class="complex-parallax">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape">
+      Animation usant de&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/var()">variables css</a>&nbsp;(--parallax)
+    </div>
   </section>
 
   <section class="you-cant-read-this">
