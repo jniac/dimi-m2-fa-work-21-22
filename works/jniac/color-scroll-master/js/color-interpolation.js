@@ -1,35 +1,45 @@
 import Color from "https://colorjs.io/dist/color.esm.js"
 import { trackParallax } from '../../../../common/parallax.js'
-import { colors } from './color.js'
 import { inverseLerp } from '../../../../common/basic-functions.js'
 
 const section = document.querySelector('section.color-interpolation')
 
 // Couleurs :
-const darkGrey = new Color('#111111')
-const redish = new Color(colors[2])
-const mauve = new Color(colors[3])
+const darkGrey = new Color('#111')
+let color2 = new Color('--color-3', document.body)
+let color3 = new Color('--color-4', document.body)
 
 // Interpolations :
 // Les interpolations sont obtenu par la méthode "range":
 // https://colorjs.io/docs/interpolation.html
-const gradientDarkGreyToRedish = darkGrey.range(redish)
-const gradientRedishToMauve = redish.range(mauve)
+let gradient1 = darkGrey.range(color2)
+let gradient2 = color2.range(color3)
 
-const gradient = [
-  ...Color.steps(darkGrey, redish, { steps: 10 }),
-  ...Color.steps(redish, mauve, { steps: 10 }),
-].map(c => c.hex).join(', ')
-section.querySelector('div.gradient').style.backgroundImage = `linear-gradient(to right, ${gradient})`
+const updateColor = () => {
+  color2 = new Color('--color-3', document.body)
+  color3 = new Color('--color-4', document.body)
+  gradient1 = darkGrey.range(color2)
+  gradient2 = color2.range(color3)
+}
+
+const updateGradientDiv = () => {
+  const gradient = [
+    ...Color.steps(darkGrey, color2, { steps: 10 }),
+    ...Color.steps(color2, color3, { steps: 10 }),
+  ].map(c => c.hex).join(', ')
+  section.querySelector('div.gradient').style.backgroundImage = `linear-gradient(to right, ${gradient})`
+}
+
+updateGradientDiv()
 
 const getInterpolatedColor = y => {
   if (y < 0) {
     const t = inverseLerp(-.3, -.1, y)
-    return gradientDarkGreyToRedish(t).hex
+    return gradient1(t).hex
   }
   else {
     const t = inverseLerp(.1, .3, y)
-    return gradientRedishToMauve(t).hex
+    return gradient2(t).hex
   }
 }
 
@@ -51,3 +61,14 @@ trackParallax(section, info => {
 // grrr. 
 // Une ligne de code pour retirer la première ligne du bloc code. Such a shame.
 section.querySelector('code').innerHTML = section.querySelector('code').innerText.trim()
+
+
+
+// Les couleurs CSS sont susceptible de changer. 
+// Il sera alors nécessaire de ré-évaluer les variables couleurs.
+document.body.addEventListener('color-changed', () => {
+  updateColor()
+  updateGradientDiv()
+})
+
+

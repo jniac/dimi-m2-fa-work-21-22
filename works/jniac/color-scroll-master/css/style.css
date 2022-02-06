@@ -20,11 +20,23 @@ body, body * {
 
 body {
   font-family: 'Fira Code', monospace;
-  --color-1: #fff;
-  --color-2: #fff;
-  --color-3: #fff;
-  --color-4: #fff;
-  --color-5: #fff;
+  background-color: #000;
+}
+
+body {
+  --color-1:#ffcc00; 
+  --color-2:#aaaaaa; 
+  --color-3:#94003a; 
+  --color-4:#4223a8; 
+  --color-5:#fff;
+}
+
+body.color-version-2 {
+  --color-1: #ffffff;
+  --color-2: #9a00ed;
+  --color-3: #ff5d9d;
+  --color-4: #87e16a;
+  --color-5: #86ffe7;
 }
 
 h1 {
@@ -74,6 +86,8 @@ section.intro div.scroll-down:hover {
   background-color: var(--color-1);
 }
 
+
+
 section .section-info {
   position: absolute;
   --margin: 32px;
@@ -82,9 +96,34 @@ section .section-info {
   color: white;
   font-weight: 100;
 }
+
 section .section-info span {
   font-size: 1.2em;
 }
+
 section .section-info a {
   color: white;
+}
+
+
+
+section .color-change {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 32px;
+}
+
+section .color-change button {
+  padding: 16px;
+  font-family: inherit;
+  background-color: var(--color-4);
+  color: white;
+  border: solid 1px #fff3;
+  border-radius: 4px;
+  cursor: pointer;
+}
+section .color-change button:hover {
+  background-color: white;
+  color: var(--color-4);
 }

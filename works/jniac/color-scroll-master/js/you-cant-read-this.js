@@ -6,12 +6,10 @@ const section = document.querySelector('section.you-cant-read-this')
 const container = section.querySelector('.container')
 
 const mapWord = (word) => {
-
   const spans = word
     .split('')
     .map(char => `<span>${char}</span>`)
     .join('')
-  
   return `
     <div>
       ${spans}
@@ -28,10 +26,15 @@ const splitToSpan = () => {
 
 const setRandomColorsToSpan = () => {
   for (const span of container.querySelectorAll('span:not(.space)')) {
-    const i1 = randomItem([1, 2, 3, 4, 5])
-    // const i2 = randomItem([1, 3, 4])
-    span.style.color = `var(--color-${i1})`
-    span.style.backgroundColor = `var(--color-${i1})`
+    const color = randomItem([
+      '--color-1', 
+      '--color-2',
+      '--color-3',
+      '--color-4',
+      '--color-5',
+    ])
+    span.style.color = `var(${color})`
+    span.style.backgroundColor = `var(${color})`
   }
 }
 

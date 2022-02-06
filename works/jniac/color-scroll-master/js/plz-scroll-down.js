@@ -1,11 +1,21 @@
+import { randomItem } from '../../../../common/random-utils.js'
 import { waitSeconds } from '../../../../common/utils.js'
-import { getRandomColor } from './color.js'
 
 const mapSpan = (char) => {
   if (char === ' ') {
     return ' '
   }
   return `<span>${char}</span>`
+}
+
+const getRandomColor = () => {
+  return randomItem([
+    'var(--color-1)',
+    'var(--color-2)',
+    'var(--color-3)',
+    'var(--color-4)',
+    'var(--color-5)',
+  ])
 }
 
 const p = document.querySelector('section.intro p')
