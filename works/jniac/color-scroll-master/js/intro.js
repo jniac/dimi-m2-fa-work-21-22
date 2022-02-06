@@ -29,9 +29,9 @@ const createGrid = (element, col = 10, row = 10) => {
 
 const initIntroGrid = () => {
 
-  const container = document.querySelector('.grid-fx')
+  const grid = document.querySelector('section.intro .grid')
   const size = { x: 31, y: 5 }
-  const divs = createGrid(container, size.x, size.y).flat()
+  const divs = createGrid(grid, size.x, size.y).flat()
   
   // couleurs aléatoires
   divs.forEach(div => {
@@ -42,7 +42,7 @@ const initIntroGrid = () => {
   const suffleDivs = shuffle(divs)
 
   // effet "parallax"
-  trackParallax(container, info => {
+  trackParallax(grid, info => {
     const x = inverseLerp(.02, .4, info.y)
     const indexEnd = Math.floor(divs.length * x)
     suffleDivs.forEach((div, index) => {
