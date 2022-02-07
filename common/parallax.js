@@ -3,23 +3,21 @@ const clamp01 = (x) => x < 0 ? 0 : x > 1 ? 1 : x
 const lerp = (a, b, t) => a + (b - a) * clamp01(t)
 const inverseLerp = (a, b, t) => clamp01((t - a) / (b - a))
 
-/** @typedef {'none' | 'children' | 'all-children'} DispacthMode */
+/** @typedef {'none' | 'children' | 'all-children'} DispatchMode */
 /** @typedef {{ x: number, y: number, width: number, height: number, old?: ParallaxInfo }} ParallaxInfo */
 /** @typedef {(info: ParallaxInfo, infoOld: ParallaxInfo) => void} ParallaxCallback */
-/** @typedef {{ dispatch: DispacthMode, onParallax: ParallaxCallback }} TrackOptions */
+/** @typedef {{ dispatch: DispatchMode, onParallax: ParallaxCallback }} TrackOptions */
+/** @typedef {{ info: ParallaxInfo, dispatch: DispatchMode, directListenerCount: number }} Bundle */
 
-/** @type {Set<{ element: HTMLElement, dispatch: DispacthMode }>} */
-const elements = new Set()
-
-/** @type {Map<HTMLElement, ParallaxInfo>} */
-const infoMap = new Map()
+/** @type {Map<HTMLElement, Bundle>} */
+const map = new Map()
 
 /**
  * Met à jour un noeud.
  * @param {HTMLElement} element 
- * @param {DispacthMode} dispatch Faut-il mettre à jour les enfants de ce noeud ?
+ * @param {Bundle} bundle
  */
-const updateElement = (element, dispatch = 'none') => {
+const updateElement = (element, bundle) => {
   const parentWidth = window.innerWidth
   const parentHeight = window.innerHeight
 
@@ -32,7 +30,7 @@ const updateElement = (element, dispatch = 'none') => {
   const height = (parentHeight + el.height) / 2
   const info = { x, y, width, height, old: null }
 
-  const infoOld = infoMap.get(element)
+  const infoOld = bundle.info
   const hasChanged = !infoOld || (
     info.x !== infoOld.x ||
     info.y !== infoOld.y ||
@@ -43,17 +41,17 @@ const updateElement = (element, dispatch = 'none') => {
   if (hasChanged) {
 
     info.old = infoOld ?? { ...info }
-    infoMap.set(element, info)
+    bundle.info = info
     
     const event = new CustomEvent('parallax', { detail: info })
     element.dispatchEvent(event)
-  
-    if (dispatch !== 'none') {
+
+    if (bundle.dispatch !== 'none') {
       const elements = [...element.children]
       while (elements.length > 0) {
         const first = elements.shift()
         first.dispatchEvent(event)
-        if (dispatch === 'all-children') {
+        if (bundle.dispatch === 'all-children') {
           elements.push(...first.children)
         }
       }
@@ -62,8 +60,8 @@ const updateElement = (element, dispatch = 'none') => {
 }
 
 const update = () => {
-  for (const { element, dispatch } of elements) {
-    updateElement(element, dispatch)
+  for (const [element, bundle] of map.entries()) {
+    updateElement(element, bundle)
   }
 }
 
@@ -101,21 +99,35 @@ export const trackParallax = (element, options = null) => {
     }
   }
   
-  const { 
-    dispatch = 'none', 
-    onParallax: onParallaxArg,
-  } = options ?? {}
-  
-  const bundle = { element, dispatch }
-  elements.add(bundle)
-  onDestroy.push(() => elements.delete(bundle))
+  if (map.has(element) === false) {
+    map.set(element, { 
+      info: null, 
+      dispatch: options.dispatch, 
+      directListenerCount: 1,
+    })
+  }
+  else {
+    const bundle = map.get(element)
+    if (options.dispatch) {
+      bundle.dispatch = options.dispatch
+    }
+    bundle.directListenerCount += 1
+  }
 
-  if (onParallaxArg) {
-    const { destroy } = onParallax(element, onParallaxArg)
+  onDestroy.push(() => {
+    const bundle = map.get(element)
+    bundle.directListenerCount += -1
+    if (bundle.directListenerCount === 0) {
+      map.delete(element)
+    }
+  })
+  
+  if (options.onParallax) {
+    const { destroy } = onParallax(element, options.onParallax)
     onDestroy.push(destroy)
   }
 
-  update(element, dispatch)
+  update(element)
 
   return { destroy }
 }
@@ -123,10 +135,10 @@ export const trackParallax = (element, options = null) => {
 /**
  * Ajoute un écouteur d'évènement à un noeud du DOM.
  * @param {HTMLElement} element 
- * @param {ParallaxCallback} onParallax 
+ * @param {ParallaxCallback} callback 
  */
-export const onParallax = (element, onParallax) => {
-  const listener = event => onParallax(event.detail, event.detail.old)
+export const onParallax = (element, callback) => {
+  const listener = event => callback(event.detail, event.detail.old)
   element.addEventListener('parallax', listener)
   const destroy = () => element.removeEventListener('parallax', listener)
   return { destroy }
