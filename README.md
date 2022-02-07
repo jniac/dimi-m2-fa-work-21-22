@@ -1,8 +1,10 @@
 # dimi-m2-fa-work-21-22
 Dépôt de travaux DIMI M2 (FA)
 
-- [Fourmi de Langton (cours)](lectures/Langton.md)
 - [Travaux (/works)](https://jniac.github.io/dimi-m2-fa-work-21-22/works/)
+- [Brief color-scroll](https://github.com/jniac/dimi-m2-fa-work-21-22/blob/main/Scroll-Color-Brief.md)
+- [color-scroll-master](https://jniac.github.io/dimi-m2-fa-work-21-22/works/jniac/color-scroll-master/)
+- [Fourmi de Langton (cours)](lectures/Langton.md)
 
 ## Pixel walkers
 ### Fourmi de Langton
