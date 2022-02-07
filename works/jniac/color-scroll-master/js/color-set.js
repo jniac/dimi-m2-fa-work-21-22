@@ -21,8 +21,6 @@ const update = () => {
 
   const colors = getColors()
 
-  console.log(colors)
-
   divs.forEach((div, index) => {
   
     const color = colors[index]

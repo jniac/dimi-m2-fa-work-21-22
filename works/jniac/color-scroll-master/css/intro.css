@@ -16,3 +16,10 @@ section.intro .grid > div.colored {
   --color: var(--color-1);
   background-color: var(--color);
 }
+
+section.intro p {
+  transition: all .1s ease-out;
+}
+section.intro p.hidden {
+  opacity: 0;
+}

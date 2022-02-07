@@ -1,3 +1,4 @@
+import { onParallax } from '../../../../common/parallax.js'
 import { randomItem } from '../../../../common/random-utils.js'
 import { waitSeconds } from '../../../../common/utils.js'
 
@@ -18,7 +19,13 @@ const getRandomColor = () => {
   ])
 }
 
-const p = document.querySelector('section.intro p')
+const section = document.querySelector('section.intro')
+const p = section.querySelector('p')
+
+onParallax(section, info => {
+  console.log(info)
+  p.classList.toggle('hidden', info.y > 0.01)
+})
 
 p.innerHTML = p.innerText
   .split('')
