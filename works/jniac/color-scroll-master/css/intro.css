@@ -20,15 +20,17 @@ section.intro div.scroll-down {
   /* utilisation d'un svg comme masque: */
   mask-image: url(../assets/arrow-down.svg);
   mask-size: contain;
+  mask-repeat: no-repeat;
   -webkit-mask-image: url(../assets/arrow-down.svg);
   -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
 
   transform: 
   translateX(calc(var(--size) * -0.5)) 
   translateY(-32px)
   ;
 
-  transition: all .2s ease-in-out;
+  transition: background .2s ease-in-out, opacity .2s ease-in-out;
 }
 
 section.intro div.scroll-down:hover {
@@ -40,7 +42,12 @@ section.intro div.scroll-down.hidden {
 }
 
 section.intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
   font-size: 12vw;
+  line-height: 1em;
+  text-align: center;
 }
 
 section.intro .grid {
@@ -63,6 +70,10 @@ section.intro .grid > div.colored {
 
 section.intro p {
   font-size: 2em;
+  transition: all .1s ease-out;
+}
+
+section.intro p span {
   transition: all .1s ease-out;
 }
 

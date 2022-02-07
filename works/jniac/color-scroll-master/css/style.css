@@ -41,20 +41,15 @@ body.color-version-2 {
   --color-5: #86ffe7;
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 140px;
-  font-weight: 700;
-  line-height: 1em;
-  text-align: center;
-}
-
 section {
   /* vh: "viewport height" : la hauteur de la fenêtre */
   min-height: 100vh;
   overflow: hidden;
 }
+
+
+
+
 
 section .color-change {
   position: absolute;
@@ -72,7 +67,16 @@ section .color-change button {
   border-radius: 4px;
   cursor: pointer;
 }
+
 section .color-change button:hover {
   background-color: white;
   color: var(--color-4);
+}
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section .color-change {
+    padding: 16px;
+  }
 }

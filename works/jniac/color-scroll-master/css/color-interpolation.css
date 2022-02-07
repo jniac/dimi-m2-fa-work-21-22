@@ -11,8 +11,12 @@ section.color-interpolation {
 }
 
 section.color-interpolation h1 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
   font-size: 10vh;
   line-height: 1em;
+  text-align: center;
 }
 
 section.color-interpolation .color-swatches {
