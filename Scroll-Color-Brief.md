@@ -1,6 +1,8 @@
 # Scroll-Color
 
+<a href="https://jniac.github.io/dimi-m2-fa-work-21-22/works/jniac/color-scroll-master/">
 <img height="600" src="works/jniac/screens/Color-Scroll-2022-02-07-11-17-21.jpeg">
+</a>
 
 ## Résumé
 
@@ -35,6 +37,10 @@ couleur actuelle pour une nouvelle gamme. L'expérience des précédents écrans
   différents écrans.
 - L'utilisation des couleurs dans les différents écrans doit nécessairement faire 
   appel aux variables CSS (syntaxe: `var(--color-x)`)
+  
+## Demo
+À des fins d'inspirations en css et js, une démo est disponible ici :
+- [color-scroll-master](https://jniac.github.io/dimi-m2-fa-work-21-22/works/jniac/color-scroll-master/)
 
 ## Critères d'évaluations
 
