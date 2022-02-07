@@ -75,7 +75,7 @@ section.color-interpolation {
 }
 
 section.color-interpolation .spacing {
-  flex: 1;
+  flex: 1 0 100px;
 }
 
 section.color-interpolation .gradient {

@@ -11,6 +11,8 @@
 @import url(random-chars.css);
 @import url(you-cant-read-this.css);
 @import url(rorschach.css);
+@import url(section-info.css);
+
 
 body, body * {
   margin: 0;
@@ -44,68 +46,15 @@ h1 {
   font-style: italic;
   font-size: 140px;
   font-weight: 700;
+  line-height: 1em;
+  text-align: center;
 }
 
 section {
   /* vh: "viewport height" : la hauteur de la fenêtre */
-  min-height: 100vh; 
-  padding: 32px;
+  min-height: 100vh;
   overflow: hidden;
 }
-
-section.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: dimgrey;
-}
-
-section.intro p {
-  font-size: 2em;
-}
-
-section.intro div.scroll-down {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 100px;
-  height: 100px;
-  background-color: black;
-  
-  /* utilisation d'un svg comme masque: */
-  mask-image: url(../assets/arrow-down.svg);
-  mask-size: contain;
-  -webkit-mask-image: url(../assets/arrow-down.svg);
-  -webkit-mask-size: contain;
-
-  transform: translateX(-50%) translateY(-32px);
-}
-
-section.intro div.scroll-down:hover {
-  background-color: var(--color-1);
-}
-
-
-
-section .section-info {
-  position: absolute;
-  --margin: 32px;
-  left: var(--margin);
-  bottom: var(--margin);
-  color: white;
-  font-weight: 100;
-}
-
-section .section-info span {
-  font-size: 1.2em;
-}
-
-section .section-info a {
-  color: white;
-}
-
-
 
 section .color-change {
   position: absolute;

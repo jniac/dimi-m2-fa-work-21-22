@@ -1,5 +1,6 @@
 
 section.random-chars {
+  padding: 32px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -8,7 +9,11 @@ section.random-chars {
 }
 
 section.random-chars button {
-  --size: min(10vw, 10vh);
+  --margin: 32px;
+  --size: 10vh;
+  position: absolute;
+  bottom: var(--margin);
+  right: var(--margin);
   width: var(--size);
   height: var(--size);
   display: flex;
@@ -45,4 +50,15 @@ section.random-chars .container span {
   position: absolute;
   display: block;
   font-size: min(10vw, 10vh);
+}
+
+
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section.random-chars button {
+    --margin: 16px;
+    --size: 20vw;
+  }
 }

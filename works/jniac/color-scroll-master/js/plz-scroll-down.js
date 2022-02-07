@@ -9,22 +9,40 @@ const mapSpan = (char) => {
   return `<span>${char}</span>`
 }
 
+let randomColorOld = null
 const getRandomColor = () => {
-  return randomItem([
+
+  let color = randomItem([
     'var(--color-1)',
     'var(--color-2)',
     'var(--color-3)',
     'var(--color-4)',
     'var(--color-5)',
   ])
+
+  while (randomColorOld === color) {
+    color = randomItem([
+      'var(--color-1)',
+      'var(--color-2)',
+      'var(--color-3)',
+      'var(--color-4)',
+      'var(--color-5)',
+    ])
+  }
+
+  randomColorOld = color
+
+  return color
 }
 
 const section = document.querySelector('section.intro')
 const p = section.querySelector('p')
+const scrollDown = section.querySelector('.scroll-down')
 
 onParallax(section, info => {
-  console.log(info)
-  p.classList.toggle('hidden', info.y > 0.01)
+  const isHidden = info.y > 0.01
+  p.classList.toggle('hidden', isHidden)
+  scrollDown.classList.toggle('hidden', isHidden)
 })
 
 p.innerHTML = p.innerText
@@ -45,7 +63,9 @@ const startAnim = async () => {
       span.style.backgroundColor = null
     }
 
-    spans[index].style.backgroundColor = getRandomColor()
+    const color = getRandomColor()
+    spans[index].style.backgroundColor = color
+    scrollDown.style.backgroundColor = color
 
     index += 1
     if (index === spans.length) {

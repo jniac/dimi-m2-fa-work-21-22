@@ -1,3 +1,4 @@
+
 section.lorem {
   padding: 64px;
   display: flex;
@@ -6,6 +7,60 @@ section.lorem {
   text-align: center;
   background-color: #1c1c1c;
 }
+
 section.lorem p {
   font-size: 36px;
+}
+
+
+
+section.lorem button {
+  --margin: 32px;
+  --size: 10vh;
+  position: absolute;
+  bottom: var(--margin);
+  right: var(--margin);
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 100;
+  font-size: calc(var(--size) * 0.8);
+  background-color: var(--color-4);
+  color: #fff6;
+  border: solid 2px #fff3;
+  border-radius: 8px;
+  transition: all .1s ease-out;
+  cursor: pointer;
+}
+
+section.lorem span {
+  transform: translate(7%, -4%);
+}
+
+section.lorem button:hover {
+  color: var(--color-4);
+  border-color: #fff5;
+  background-color: white;
+}
+
+
+
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section.lorem {
+    padding: 96px 48px;
+  }
+
+  section.lorem p {
+    font-size: 24px;
+  }
+
+  section.lorem button {
+    --margin: 16px;
+  }
 }

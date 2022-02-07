@@ -12,6 +12,7 @@ section.complex-parallax .shape {
   --size: min(100vh, 100vw);
   width: var(--size);
   height: var(--size);
+  padding: calc(var(--size) * 0.1);
   border-radius: calc(var(--size) * 0.1);
 
   display: flex;
@@ -50,4 +51,8 @@ section.complex-parallax .shape:nth-child(4) {
 
 section.complex-parallax a {
   color: var(--color-1);
+}
+
+section.complex-parallax p {
+  text-align: center;
 }
