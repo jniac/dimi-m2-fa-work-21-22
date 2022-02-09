@@ -6,7 +6,7 @@ section.rorschach {
   background-color: #111;
 }
 
-section.rorschach > div {
+section.rorschach > .half {
   flex: 1 0 0;
   position: relative;
   display: flex;
@@ -15,11 +15,11 @@ section.rorschach > div {
   overflow: hidden;
 }
 
-section.rorschach > div.right {
+section.rorschach > .half.right {
   transform: scaleX(-1);
 }
 
-section.rorschach > div > * {
+section.rorschach > .half > * {
   position: absolute;
   top: 50%;
   left: 100%;
@@ -79,6 +79,7 @@ section.rorschach span.big-paragraph {
   transform:
   translate(-50%, -50%)
   scale(calc(0.7 + 0.3 + var(--scroll-t)))
+  translateX(calc(var(--scroll-t) * -400px))
   translate(-10.1vh, 30vh)
   scaleX(-1)
   rotate(28deg)
@@ -92,6 +93,7 @@ section.rorschach span.big-k {
   color: var(--color-3);
   transform:
   translate(-50%, -50%)
+  translate(calc(var(--scroll-t) * -200px), 0px)
   translate(0.1vh, -40vh)
   scaleX(-1)
   scale(0.8)
@@ -105,8 +107,10 @@ section.rorschach div.pen {
   /* background-image: linear-gradient(-135deg, var(--color-1) 30%, var(--color-4) 90%); */
   transform:
   translate(-50%, -50%)
+  translate(calc(var(--scroll-t) * -800px), 0px)
   translate(-40vh, -20vh)
   rotate(104deg)
+  scale(calc(1 + var(--scroll-t)))
   ;
 }
 
@@ -116,6 +120,7 @@ section.rorschach div.sun {
   background-color: var(--color-4);
   transform: 
   translate(-50%, -50%)
+  translate(calc(var(--scroll-t) * -400px), 0px)
   scale(1.8)
   translate(-5vh, -8vh)
   ;
@@ -127,7 +132,9 @@ section.rorschach div.sun-2 {
   background-color: var(--color-2);
   transform: 
   translate(-50%, -50%)
-  translate(-45vh, 9vh);
+  translate(-45vh, 9vh)
+  translate(calc(var(--scroll-t) * -800px), 0px)
+  ;
 }
 
 section.rorschach div.sun-3 {
@@ -137,6 +144,7 @@ section.rorschach div.sun-3 {
   transform: 
   translate(-50%, -50%)
   translate(0vh, 9vh)
+  translate(calc(var(--scroll-t) * -800px), 0px)
   ;
 }
 
@@ -147,5 +155,7 @@ section.rorschach div.cloud {
   translate(-50%, -50%)
   translate(-42vh, 23vh)
   rotate(-142deg)
+  translate(calc(var(--scroll-t) * -800px), 0px)
+  scale(calc(1 + var(--scroll-t)))
   ;
 }

@@ -27,31 +27,25 @@ const createGrid = (element, col = 10, row = 10) => {
   return divs
 }
 
-const initIntroGrid = () => {
+const section = document.querySelector('section.intro')
+const grid = section.querySelector('.grid')
+const size = { x: 31, y: 5 }
+const divs = createGrid(grid, size.x, size.y).flat()
 
-  const container = document.querySelector('.grid-fx')
-  const size = { x: 31, y: 5 }
-  const divs = createGrid(container, size.x, size.y).flat()
-  
-  // couleurs aléatoires
-  divs.forEach(div => {
-    const x = randomItem([1, 2, 3, 4, 5])
-    div.style.setProperty('--color', `var(--color-${x})`)
+// couleurs aléatoires
+divs.forEach(div => {
+  const x = randomItem([1, 2, 3, 4, 5])
+  div.style.setProperty('--color', `var(--color-${x})`)
+})
+
+const suffleDivs = shuffle(divs)
+
+// effet "parallax"
+trackParallax(section, info => {
+  const x = inverseLerp(.02, .4, info.y)
+  const indexEnd = Math.floor(divs.length * x)
+  suffleDivs.forEach((div, index) => {
+    const isColored = index < indexEnd
+    div.classList.toggle('colored', isColored)
   })
-  
-  const suffleDivs = shuffle(divs)
-
-  // effet "parallax"
-  trackParallax(container, {
-    dispatchToChildren: false,
-    onParallax: info => {
-      const x = inverseLerp(.02, .3, info.y)
-      const indexEnd = Math.floor(divs.length * x)
-      suffleDivs.forEach((div, index) => {
-        div.classList.toggle('colored', index < indexEnd)
-      })
-    },
-  })
-}
-
-initIntroGrid()
+})

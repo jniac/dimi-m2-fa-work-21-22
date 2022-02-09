@@ -8,11 +8,9 @@ const copyLeftToRight = () => {
 }
 
 const section = document.querySelector('section.rorschach')
-trackParallax(section, {
-  onParallax: info => {
-    const scrollT = remap(-0.5, -0, -1, 0, info.y)
-    section.style.setProperty('--scroll-t', scrollT)
-  },
+trackParallax(section, info => {
+  const scrollT = remap(-0.4, -0, -1, 0, info.y)
+  section.style.setProperty('--scroll-t', scrollT)
 })
 
 copyLeftToRight()

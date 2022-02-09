@@ -1,10 +1,10 @@
 
 export const colors = [
   '#ffcc00', 
-  '#aaaaaa',
-  '#94003a',
-  '#4223a8',
-  '#fff',
+  'red',
+  'blue',
+  '#6f0',
+  '#0ff',
 ]
 
 export const backgroundColors = [

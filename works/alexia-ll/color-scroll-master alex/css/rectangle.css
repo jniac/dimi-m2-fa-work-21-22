@@ -1,0 +1,26 @@
+section.simple-accordion .container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transform-origin: 0 0;
+  }
+  
+  section.simple-accordion .stripe {
+    flex: 1;
+  }
+  
+  section.simple-accordion .stripe:nth-child(3n + 1) {
+    background-color: var(--color-2);
+  }
+  
+  section.simple-accordion .stripe:nth-child(3n + 2) {
+    background-color: var(--color-3);
+  }
+  
+  section.simple-accordion .stripe:nth-child(3n + 3) {
+    background-color: var(--color-4);
+  }
