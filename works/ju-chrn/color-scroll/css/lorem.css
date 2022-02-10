@@ -12,8 +12,6 @@ section.lorem p {
   font-size: 36px;
 }
 
-
-
 section.lorem button {
   --margin: 32px;
   --size: 10vh;
