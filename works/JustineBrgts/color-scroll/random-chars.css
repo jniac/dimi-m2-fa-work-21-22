@@ -23,8 +23,8 @@ section.random-chars button {
   font-weight: 100;
   font-size: calc(var(--size) * 0.8);
   background-color: var(--color-4);
-  color: #fff6;
-  border: solid 2px #fff3;
+  color: #590d22;
+  border: solid 2px #590d22;
   border-radius: 8px;
   transition: all .1s ease-out;
   cursor: pointer;
