@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
+@import url(lorem.css);
+
+body, body * {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+}
+
+h1 {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  font-size: 120px;
+}
+
+section {
+  /* vh: "viewport height" : la hauteur de la fenêtre */
+  min-height: 100vh; 
+  padding: 32px;
+}
+
+section.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: dimgrey;
+}
+
+section.intro div.scroll-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translateX(-50%) translateY(-32px);
+  
+  /* utilisation d'un svg comme masque: */
+  mask-image: url(assets/arrow-down.svg);
+  mask-size: contain;
+  -webkit-mask-image: url(assets/arrow-down.svg);
+  -webkit-mask-size: contain;
+  
+  /* inception: le svg de la flèche est réutilisé en background */
+  background-image: url(assets/arrow-down.svg);
+
+  /* une option plus sage: une couleur pleine */
+  /* background-color: black; */
+}
+section.intro div.scroll-down:hover {
+  background-color: blue;
+}
+
+
+
+section.color-set {
+  padding: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  height: 100vh;
+}
+
+section.color-set div.color {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 48px;
+  padding: 32px;
+  border: solid 8px transparent;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+section.color-set div.color:hover {
+  border: solid 8px black;
+  transform: scale(1.1);
+}
+
+section.color-set div.color.clicked {
+  background-color: white !important;
+}
+
+
+
+
+
+
+
+
+
