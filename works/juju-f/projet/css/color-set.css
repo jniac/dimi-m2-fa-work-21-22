@@ -27,12 +27,13 @@ section.color-set {
 }
 
 section.color-set div.color {
-  width: var(--size);
-  height: var(--size);
+  width: 200px;
+  height: 200px;
+  margin-left: 10px;
+  border-radius: 100px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  font-size: calc(var(--size) * 0.15);
   padding: 16px;
   border: solid 8px transparent;
   cursor: pointer;
@@ -40,7 +41,6 @@ section.color-set div.color {
 }
 
 section.color-set div.color:hover {
-  border: solid 8px black;
   transform: scale(1.15);
   z-index: 1;
 }
@@ -48,7 +48,6 @@ section.color-set div.color:hover {
 section.color-set div.color.clicked {
   background-color: white !important;
 }
-
 
 
 /* mobile */
