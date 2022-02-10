@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
 @import url(lorem.css);
+@import url(rorschach.css);
 
 body, body * {
   margin: 0;
   box-sizing: border-box;
+  position:relative;
 }
 
 body {
@@ -13,13 +15,17 @@ body {
 h1 {
   font-family: 'Mochiy Pop P One', sans-serif;
   font-size: 120px;
-  color:#333;
+  animation: inherit;
+  margin: auto;
+  background: #333;
+  padding: 1em;
 }
 
 section {
   /* vh: "viewport height" : la hauteur de la fenêtre */
   min-height: 100vh; 
   padding: 32px;
+  overflow:hidden;
 }
 
 section.intro {
@@ -27,7 +33,27 @@ section.intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #DCFFFB;
+  color: #C1E7E3;
+  animation: wheelHueColor 10s infinite;
+  background-color: currentColor;
+}
+@supports (background-blend-mode: overlay) {
+  .intro {
+    background-image: linear-gradient(45deg, white 10%, black 90%);
+    background-blend-mode: overlay;
+  }
+}
+@keyframes wheelHueColor {
+  from, to { color: #C1E7E3; }
+  10%      { color: #DCFFFB; }
+  20%      { color: #FFDCF4; }
+  30%      { color: #DABFDE; }
+  40%      { color: #C1BBDD; }
+  50%      { color: #FFDAC1; }
+  60%      { color: #FFB7B2; }
+  70%      { color: #FF9AA2; }
+  80%      { color: #E2F0CB; }
+  90%      { color: #B5EAD7; }
 }
 
 section.intro div.scroll-down {
@@ -37,15 +63,16 @@ section.intro div.scroll-down {
   width: 100px;
   height: 100px;
   transform: translateX(-50%) translateY(-32px);
+  background-color:#333;
   
   /* utilisation d'un svg comme masque: */
-  mask-image: url(assets/arrow-down.svg);
+  mask-image: url(assets/iconmonstr-arrow-69.svg);
   mask-size: contain;
-  -webkit-mask-image: url(assets/arrow-down.svg);
+  -webkit-mask-image: url(assets/iconmonstr-arrow-69.svg);
   -webkit-mask-size: contain;
   
   /* inception: le svg de la flèche est réutilisé en background */
-  background-image: url(assets/arrow-down.svg);
+  /*background-image: url(assets/iconmonstr-arrow-69.svg);*/
 
   /* une option plus sage: une couleur pleine */
   /* background-color: black; */
@@ -74,14 +101,12 @@ section.color-set div.color {
   justify-content: flex-end;
   font-size: 48px;
   padding: 32px;
-  border: solid 8px transparent;
   cursor: pointer;
   transition: background-color .3s ease-in-out;
 }
 
 section.color-set div.color:hover {
-  border: solid 8px #333;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 section.color-set div.color.clicked {

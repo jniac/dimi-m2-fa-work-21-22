@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
 @import url(lorem.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
 body, body * {
   margin: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: 'Poppins', sans-serif;
 }
 
 h1 {
-  font-family: 'Mochiy Pop P One', sans-serif;
-  font-size: 120px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 80px;
+  color: white;
 }
 
 section {
@@ -26,7 +29,7 @@ section.intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: dimgrey;
+  background-color: #590d22;
 }
 
 section.intro div.scroll-down {
@@ -61,7 +64,7 @@ section.color-set {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+  background-color: rgb(255, 255, 255);
   height: 100vh;
 }
 
@@ -79,14 +82,17 @@ section.color-set div.color {
 }
 
 section.color-set div.color:hover {
-  border: solid 8px black;
+  border: solid 8px rgb(255, 253, 253);
   transform: scale(1.1);
 }
 
 section.color-set div.color.clicked {
-  background-color: white !important;
+  background-color: #590d22 !important;
 }
-
+#degrade{
+  height: 100vh;
+  color: black;
+}
 
 
 

@@ -1,0 +1,40 @@
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #840832;
+    z-index: 2;
+  }
+  
+  header p {
+    padding-right: 16px;
+    color: white;
+  }
+  
+  header button {
+    padding: 8px 16px;
+    border-radius: 3px;
+    background-color: white;
+    border: none;
+    font-family: inherit;
+  }
+  
+  header span.direction {
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+  body:not(.horizontal-scroll) header span.horizontal {
+    display: none;
+  }
+  
+  body.horizontal-scroll header span.vertical {
+    display: none;
+  }
+  

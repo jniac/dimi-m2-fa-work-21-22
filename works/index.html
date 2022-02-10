@@ -7,20 +7,34 @@
   <style>
 
     @import url(../common/style.css);
+
     body {
       padding: 64px;
+      font-weight: 300;
+      font-size: 14px;
     }
+
+    header {
+      padding-bottom: 32px;
+    }
+
     ul {
       padding: 0;
     }
+
     ul li {
       display: flex;
       flex-direction: row;
       transition: all .3s ease-in-out;
     }
+
     ul li .identity {
-      flex: 0 0 340px;
+      flex: 0 0 440px;
       overflow: hidden;
+    }
+
+    ul li .work + .work {
+      margin-left: 32px;
     }
 
     ul li button {
@@ -32,19 +46,36 @@
       mask-image: url(../common/icons/copy.svg);
       -webkit-mask-image: url(../common/icons/copy.svg);
     }
+    
     ul li button:hover {
       background-color: red;
     }
+
     ul li.copy-feedback {
       opacity: .2;
       transition-duration: 0s;
+    }
+
+    footer {
+      position: fixed;
+      width: 100vw;
+      bottom: 0;
+      left: 0;
+      padding: 32px;
+      background-color: #0001;
+      font-size: .75em;
+      color: #000c;
     }
 
   </style>
 </head>
 <body>
   
-  <h1>Travaux étudiants DIMI M2 FA 2021/2022</h1>
+  <header>
+    <h1>Travaux étudiants DIMI M2 FA 2021/2022</h1>
+    <p>Graphisme Dynamique. Technique web.</p>
+    <p><a href="https://github.com/jniac/dimi-m2-fa-work-21-22">Projet Github</a></p>
+  </header>
 
   <ul>
 
@@ -56,6 +87,9 @@
       <div class="work">
         <a href="alexia-ll/langton/"> => Fourmi de Langton</a>
       </div>
+      <div class="work">
+        <a href="alexia-ll/color-scroll/"> => Color Scroll</a>
+      </div>
     </li>
 
     <li>
@@ -65,6 +99,9 @@
       </div>
       <div class="work">
         <a href="apiault/langton/"> => Fourmi de Langton</a>
+      </div>
+      <div class="work">
+        <a href="apiault/color-scroll/"> => Color Scroll</a>
       </div>
     </li>
 
@@ -76,6 +113,9 @@
       <div class="work">
         <a href="CCHhuut/langton/"> => Fourmi de Langton</a>
       </div>
+      <div class="work">
+        <a href="CCHhuut/color-scroll/"> => Color Scroll</a>
+      </div>
     </li>
 
     <li>
@@ -86,15 +126,21 @@
       <div class="work">
         <a href="Foulindra/langton/"> => Fourmi de Langton</a>
       </div>
+      <div class="work">
+        <a href="Foulindra/color-scroll/"> => Color Scroll</a>
+      </div>
     </li>
 
     <li>
       <div class="identity">
-        <span class="name">Mon Prénom</span>
+        <span class="name">Julian Delorme</span>
         <span class="github"><a href="https://github.com/Jdel98">Jdel98</a><button></button></span>
       </div>
       <div class="work">
         <a href="Jdel98/langton/"> => Fourmi de Langton</a>
+      </div>
+      <div class="work">
+        <a href="Jdel98/color-scroll/"> => Color Scroll</a>
       </div>
     </li>
 
@@ -106,15 +152,21 @@
       <div class="work">
         <a href="ju-chrn/langton/"> => Fourmi de Langton</a>
       </div>
+      <div class="work">
+        <a href="ju-chrn/color-scroll/"> => Color Scroll</a>
+      </div>
     </li>
 
     <li>
       <div class="identity">
-        <span class="name">Mon Prénom</span>
+        <span class="name">Juliette Fautrat</span>
         <span class="github"><a href="https://github.com/juju-f">juju-f</a><button></button></span>
       </div>
       <div class="work">
         <a href="juju-f/langton/"> => Fourmi de Langton</a>
+      </div>
+      <div class="work">
+        <a href="juju-f/color-scroll/"> => Color Scroll</a>
       </div>
     </li>
 
@@ -126,6 +178,9 @@
       <div class="work">
         <a href="JustineBrgts/langton/"> => Fourmi de Langton</a>
       </div>
+      <div class="work">
+        <a href="JustineBrgts/color-scroll/"> => Color Scroll</a>
+      </div>
     </li>
 
     <li>
@@ -135,6 +190,9 @@
       </div>
       <div class="work">
         <a href="Laure-AnneLeprovost/langton/"> => Fourmi de Langton</a>
+      </div>
+      <div class="work">
+        <a href="Laure-AnneLeprovost/color-scroll/"> => Color Scroll</a>
       </div>
     </li>
 
@@ -146,6 +204,9 @@
       <div class="work">
         <a href="Lily5555/langton/"> => Fourmi de Langton</a>
       </div>
+      <div class="work">
+        <a href="Lily5555/color-scroll/"> => Color Scroll</a>
+      </div>
     </li>
 
     <li>
@@ -155,6 +216,9 @@
       </div>
       <div class="work">
         <a href="Mabelled/langton/"> => Fourmi de Langton</a>
+      </div>
+      <div class="work">
+        <a href="Mabelled/color-scroll/"> => Color Scroll</a>
       </div>
     </li>
 
@@ -166,6 +230,9 @@
       <div class="work">
         <a href="manha04/langton/"> => Fourmi de Langton</a>
       </div>
+      <div class="work">
+        <a href="manha04/color-scroll/"> => Color Scroll</a>
+      </div>
     </li>
 
     <li>
@@ -175,6 +242,9 @@
       </div>
       <div class="work">
         <a href="Maxime-Cortiana/langton/"> => Fourmi de Langton</a>
+      </div>
+      <div class="work">
+        <a href="Maxime-Cortiana/color-scroll/"> => Color Scroll</a>
       </div>
     </li>
 
@@ -186,6 +256,9 @@
       <div class="work">
         <a href="mrmystica/langton/"> => Fourmi de Langton</a>
       </div>
+      <div class="work">
+        <a href="mrmystica/color-scroll/"> => Color Scroll</a>
+      </div>
     </li>
 
     <li>
@@ -195,6 +268,9 @@
       </div>
       <div class="work">
         <a href="oceaneroussel/langton/"> => Fourmi de Langton</a>
+      </div>
+      <div class="work">
+        <a href="oceaneroussel/color-scroll/"> => Color Scroll</a>
       </div>
     </li>
 
@@ -206,6 +282,9 @@
       <div class="work">
         <a href="Romainbocquet/langton/"> => Fourmi de Langton</a>
       </div>
+      <div class="work">
+        <a href="Romainbocquet/color-scroll/"> => Color Scroll</a>
+      </div>
     </li>
 
     <li>
@@ -215,6 +294,9 @@
       </div>
       <div class="work">
         <a href="Saysano/langton/"> => Fourmi de Langton</a>
+      </div>
+      <div class="work">
+        <a href="Saysano/color-scroll/"> => Color Scroll</a>
       </div>
     </li>
 
@@ -226,6 +308,9 @@
       <div class="work">
         <a href="SouhaR/langton/"> => Fourmi de Langton</a>
       </div>
+      <div class="work">
+        <a href="SouhaR/color-scroll/"> => Color Scroll</a>
+      </div>
     </li>
 
     <li>
@@ -235,6 +320,9 @@
       </div>
       <div class="work">
         <a href="stphnmarzolini/langton/"> => Fourmi de Langton</a>
+      </div>
+      <div class="work">
+        <a href="stphnmarzolini/color-scroll/"> => Color Scroll</a>
       </div>
     </li>
 
@@ -246,6 +334,9 @@
       <div class="work">
         <a href="TheoRmgc/langton/"> => Fourmi de Langton</a>
       </div>
+      <div class="work">
+        <a href="TheoRmgc/color-scroll/"> => Color Scroll</a>
+      </div>
     </li>
 
     <li>
@@ -256,9 +347,20 @@
       <div class="work">
         <a href="jniac/langton/"> => Fourmi de Langton</a>
       </div>
+      <div class="work">
+        <a href="jniac/color-scroll/"> => Color Scroll</a>
+      </div>
     </li>
 
   </ul>
+
+  <footer>
+    <p>Quelques projets masters pour inspiration: </p>
+    <ul>
+      <li><a href="jniac/color-scroll-master/"> => color-scroll-master</a>&nbsp;<a href="https://github.com/jniac/dimi-m2-fa-work-21-22/tree/main/works/jniac/color-scroll-master/">(dossier)</a></li>
+      <li><a href="jniac/parallax-master/"> => parallax-master</a>&nbsp;<a href="https://github.com/jniac/dimi-m2-fa-work-21-22/tree/main/works/jniac/parallax-master/">(dossier)</a></li>
+    </ul>
+  </footer>
 
   <script>
     const copyToClipboard = async (str) => {
