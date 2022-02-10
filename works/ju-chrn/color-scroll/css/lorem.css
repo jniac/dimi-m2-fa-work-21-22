@@ -14,7 +14,7 @@ section.lorem p {
 
 section.lorem button {
   --margin: 32px;
-  --size: 10vh;
+  --size: 7vh;
   position: absolute;
   bottom: var(--margin);
   right: var(--margin);
@@ -23,8 +23,7 @@ section.lorem button {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: inherit;
-  font-weight: 100px;
+  font-family: 'Monsterrat' sans-serif;
   font-size: 40px;
   background-color: var(--color-1);
   color: var(--back);
@@ -32,6 +31,7 @@ section.lorem button {
   border-radius: 50px;
   transition: all .1s ease-out;
   cursor: pointer;
+  padding-top: 7px;
 }
 
 section.lorem span {
@@ -39,6 +39,6 @@ section.lorem span {
 }
 
 section.lorem button:hover {
-  color: var(--color-4);
+  color: var(--back);
   background-color: var(--white);
 }

@@ -95,17 +95,18 @@ section .color-change {
 
 section .color-change button {
   padding: 16px;
-  font-family: inherit;
-  background-color: var(--color-4);
-  color: white;
-  border: solid 1px #fff3;
-  border-radius: 4px;
+  font-family: 'Monsterrat' sans-serif;
+  font-size: 20px;
+  background-color: var(--back);
+  color: var(--color-1);
+  border: solid 1px transparent;
+  border-radius: 50px;
   cursor: pointer;
 }
 
 section .color-change button:hover {
-  background-color: white;
-  color: var(--color-4);
+  background-color: var(--color-1);
+  color: var(--back);
 }
 
 /* mobile */
