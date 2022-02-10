@@ -1,0 +1,46 @@
+
+section.lorem {
+  padding: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--back);
+}
+
+section.lorem p {
+  font-size: 36px;
+}
+
+
+
+section.lorem button {
+  --margin: 32px;
+  --size: 10vh;
+  position: absolute;
+  bottom: var(--margin);
+  right: var(--margin);
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 100px;
+  font-size: 40px;
+  background-color: var(--color-1);
+  color: var(--back);
+  border:solid 0px transparent;
+  border-radius: 50px;
+  transition: all .1s ease-out;
+  cursor: pointer;
+}
+
+section.lorem span {
+  transform: translate(7%, -4%);
+}
+
+section.lorem button:hover {
+  color: var(--color-4);
+  background-color: var(--white);
+}

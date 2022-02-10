@@ -1,6 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
-@import url(lorem.css);
-@import url(rorschach.css);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
+@import url(css/color-set.css);
+@import url(css/lorem.css);
+@import url(css/simple-accordion.css);
+@import url(css/animation.css);
+@import url(css/intro.css);
+
+body{
+  --color-1: #FAE4D8;
+  --color-2: #DCFFFB;
+  --color-3: #FFDCF4;
+  --color-4: #DABFDE;
+  --color-5: #F8F1AE;
+  --back:#222;
+  --white:white;
+}
+
+body.color-version-2 {
+  --color-1: #91aaff;
+  --color-2: #ff9e9e;
+  --color-3: #ff80c5;
+  --color-4: #7afbff;
+  --color-5: #8aff9c;
+  --back:#222;
+  --white:white;
+}
 
 body, body * {
   margin: 0;
@@ -13,12 +37,26 @@ body {
 }
 
 h1 {
-  font-family: 'Mochiy Pop P One', sans-serif;
+  font-family: 'Montsterrat', sans-serif;
+  color: var(--back);
+  text-align: center;
+  font-size: 200px;
+  font-weight: 800;
+  line-height: 200px;
+}
+
+h2 {
+  font-family: 'Montsterrat', sans-serif;
   font-size: 120px;
   animation: inherit;
   margin: auto;
-  background: #333;
+  background: var(--back);
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:var(--color-1);
 }
 
 section {
@@ -28,87 +66,52 @@ section {
   overflow:hidden;
 }
 
-section.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #C1E7E3;
-  animation: wheelHueColor 10s infinite;
-  background-color: currentColor;
-}
-@supports (background-blend-mode: overlay) {
-  .intro {
-    background-image: linear-gradient(45deg, white 10%, black 90%);
-    background-blend-mode: overlay;
-  }
-}
-@keyframes wheelHueColor {
-  from, to { color: #C1E7E3; }
-  10%      { color: #DCFFFB; }
-  20%      { color: #FFDCF4; }
-  30%      { color: #DABFDE; }
-  40%      { color: #C1BBDD; }
-  50%      { color: #FFDAC1; }
-  60%      { color: #FFB7B2; }
-  70%      { color: #FF9AA2; }
-  80%      { color: #E2F0CB; }
-  90%      { color: #B5EAD7; }
+#color-1{
+  background-color:var(--color-1);
 }
 
-section.intro div.scroll-down {
+#color-2{
+  background-color:var(--color-2);
+}
+
+#color-3{
+  background-color:var(--color-3);
+}
+
+#color-4{
+  background-color:var(--color-4);
+}
+
+#color-5{
+  background-color:var(--color-5);
+}
+
+section .color-change {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  width: 100px;
-  height: 100px;
-  transform: translateX(-50%) translateY(-32px);
-  background-color:#333;
-  
-  /* utilisation d'un svg comme masque: */
-  mask-image: url(assets/iconmonstr-arrow-69.svg);
-  mask-size: contain;
-  -webkit-mask-image: url(assets/iconmonstr-arrow-69.svg);
-  -webkit-mask-size: contain;
-  
-  /* inception: le svg de la flèche est réutilisé en background */
-  /*background-image: url(assets/iconmonstr-arrow-69.svg);*/
-
-  /* une option plus sage: une couleur pleine */
-  /* background-color: black; */
-}
-section.intro div.scroll-down:hover {
-  background-color: #C1BBDD;
-}
-
-
-
-section.color-set {
-  padding: 64px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: #222;
-  height: 100vh;
-}
-
-section.color-set div.color {
-  width: 300px;
-  height: 300px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-size: 48px;
+  right: 0;
   padding: 32px;
+}
+
+section .color-change button {
+  padding: 16px;
+  font-family: inherit;
+  background-color: var(--color-4);
+  color: white;
+  border: solid 1px #fff3;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color .3s ease-in-out;
 }
 
-section.color-set div.color:hover {
-  transform: scale(1.05);
+section .color-change button:hover {
+  background-color: white;
+  color: var(--color-4);
 }
 
-section.color-set div.color.clicked {
-  background-color: white !important;
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section .color-change {
+    padding: 16px;
+  }
 }
