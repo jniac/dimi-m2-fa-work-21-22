@@ -1,24 +1,14 @@
 
-section.lorem {
-  padding: 64px;
+section.random-chars {
+  padding: 32px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: initial;
-  color: rgb(255, 255, 255);
-  background-image: url(https://undefined-studio.com/wp-content/uploads/2019/08/Fond-2-min-e1628530866155.png);
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: var(--color-1);
 }
 
-section.lorem p {
-  font-size: 36px;
-}
-
-
-
-section.lorem button {
+section.random-chars button {
   --margin: 32px;
   --size: 10vh;
   position: absolute;
@@ -39,32 +29,36 @@ section.lorem button {
   transition: all .1s ease-out;
   cursor: pointer;
 }
-
-section.lorem span {
+section.random-chars span {
   transform: translate(7%, -4%);
 }
-
-section.lorem button:hover {
+section.random-chars button:hover {
   color: var(--color-4);
   border-color: #fff5;
   background-color: white;
 }
 
+section.random-chars .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section.random-chars .container span {
+  position: absolute;
+  display: block;
+  font-size: min(10vw, 10vh);
+}
 
 
 
 /* mobile */
 
 @media screen and (max-width: 400px) {
-  section.lorem {
-    padding: 96px 48px;
-  }
-
-  section.lorem p {
-    font-size: 24px;
-  }
-
-  section.lorem button {
+  section.random-chars button {
     --margin: 16px;
+    --size: 20vw;
   }
 }

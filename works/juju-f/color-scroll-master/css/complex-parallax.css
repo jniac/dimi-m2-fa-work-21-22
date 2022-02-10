@@ -4,7 +4,7 @@ section.complex-parallax {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 110, 110);
+  background-color: #111;
 }
 
 section.complex-parallax .shape {
