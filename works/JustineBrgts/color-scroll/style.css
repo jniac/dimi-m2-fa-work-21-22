@@ -91,7 +91,7 @@ section.color-set div.color.clicked {
 }
 #degrade{
   height: 100vh;
-  color: black;
+  background-color: black;
 }
 
 
