@@ -18,7 +18,7 @@ body {
 
 h1 {
   font-family: 'Asset', cursive;
-  font-size: 180px;
+  font-size: 10vw;
   text-align: center;
   color: #f23603;
 }
@@ -64,25 +64,25 @@ section.intro div.scroll-down:hover {
 }
 
 
-
 section.color-set {
-  padding: 64px;
+  --size: 40vh;
+  padding: 64px calc((100% - 3.5 * var(--size)) / 2);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
   background-color: #5a3e2d;
-  height: 100vh;
 }
 
 section.color-set div.color {
-  width: 300px;
-  height: 300px;
+  width: var(--size);
+  height: var(--size);
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  font-size: 48px;
-  padding: 32px;
+  font-size: calc(var(--size) * 0.15);
+  padding: 16px;
   border: solid 8px transparent;
   cursor: pointer;
   transition: background-color .3s ease-in-out;
@@ -90,9 +90,25 @@ section.color-set div.color {
 
 section.color-set div.color:hover {
   border: solid 10px rgb(242, 226, 176);
-  transform: scale(1.1);
+  transform: scale(1.15);
+  z-index: 1;
 }
 
 section.color-set div.color.clicked {
   background-color: white !important;
+}
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section.color-set {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  section.color-set div.color:nth-child(2n + 1) {
+    transform: rotate(-5deg) translateX(-5vw);
+  }
+  section.color-set div.color:nth-child(2n + 2) {
+    transform: rotate(5deg) translateX(5vw);
+  }
 }
