@@ -27,7 +27,7 @@ body {
 
 body {
   --color-1:#6f96ff; 
-  --color-2:#aaaaaa; 
+  --color-2:rgb(205, 174, 255); 
   --color-3:rgb(105, 73, 250); 
   --color-4:rgb(50, 13, 134); 
   --color-5:#fff;
