@@ -14,7 +14,7 @@ section.color-set {
     width: var(--size);
     height: var(--size);
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
     font-size: calc(var(--size) * 0.15);
     padding: 16px;
