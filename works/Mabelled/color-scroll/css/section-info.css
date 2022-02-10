@@ -1,0 +1,24 @@
+section .section-info {
+    position: absolute;
+    --margin: 32px;
+    left: var(--margin);
+    bottom: var(--margin);
+    color: white;
+    font-weight: 100;
+  }
+  
+  section .section-info span {
+    font-size: 1.2em;
+  }
+  
+  section .section-info a {
+    color: white;
+  }
+  
+  @media screen and (max-width: 400px) {
+    section .section-info {
+      --margin: 16px;
+      font-size: 12px;
+    }
+  }
+  
