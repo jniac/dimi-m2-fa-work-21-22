@@ -26,7 +26,7 @@ section.intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(202, 60, 60, 0.74);
+  background-color: #590d22;
 }
 
 section.intro div.scroll-down {
@@ -79,7 +79,7 @@ section.color-set div.color {
 }
 
 section.color-set div.color:hover {
-  border: solid 8px black;
+  border: solid 8px rgb(255, 253, 253);
   transform: scale(1.1);
 }
 
