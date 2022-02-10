@@ -8,11 +8,11 @@ body, body * {
 }
 
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: 'Poppins', sans-serif;
 }
 
 h1 {
-  font-family: 'Mochiy Pop P One', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 80px;
   color: white;
 }
