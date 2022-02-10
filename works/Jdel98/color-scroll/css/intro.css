@@ -15,11 +15,11 @@ section.intro div.scroll-down {
   --size: 10vh;
   width: var(--size);
   height: var(--size);
-  background-color: black;
+  background-color: rgb(255, 158, 158);
   
   /* utilisation d'un svg comme masque: */
   mask-image: url(../assets/arrow-down.svg);
-  mask-size: contain;
+  mask-size:s contain;
   mask-repeat: no-repeat;
   -webkit-mask-image: url(../assets/arrow-down.svg);
   -webkit-mask-size: contain;
