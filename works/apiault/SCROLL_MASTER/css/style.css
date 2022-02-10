@@ -26,18 +26,18 @@ body {
 }
 
 body {
-  --color-1:#6f96ff; 
-  --color-2:rgb(205, 174, 255); 
-  --color-3:rgb(105, 73, 250); 
-  --color-4:rgb(50, 13, 134); 
+  --color-1:#ffcc00; 
+  --color-2:#aaaaaa; 
+  --color-3:#94003a; 
+  --color-4:#4223a8; 
   --color-5:#fff;
 }
 
 body.color-version-2 {
   --color-1: #ffffff;
   --color-2: #9a00ed;
-  --color-3: rgb(105, 73, 250);
-  --color-4: rgb(50, 13, 134);
+  --color-3: #ff5d9d;
+  --color-4: #87e16a;
   --color-5: #86ffe7;
 }
 
@@ -62,7 +62,7 @@ section .color-change button {
   padding: 16px;
   font-family: inherit;
   background-color: var(--color-4);
-  color: rgb(168, 227, 255);
+  color: white;
   border: solid 1px #fff3;
   border-radius: 4px;
   cursor: pointer;

@@ -1,5 +1,5 @@
 
-section.color-set {
+section.bloc2 {
   --size: 30vh;
   padding: 64px calc((100% - 3.5 * var(--size)) / 2);
   display: flex;
@@ -11,7 +11,7 @@ section.color-set {
   transition: background-color .3s ease-in-out;
 }
 
-section.color-set div.color {
+section.bloc2 div.color {
   width: var(--size);
   height: var(--size);
   display: flex;
@@ -24,13 +24,13 @@ section.color-set div.color {
   transition: background-color .3s ease-in-out;
 }
 
-section.color-set div.color:hover {
+section.bloc2 div.color:hover {
   border: solid 8px black;
   transform: scale(1.15);
   z-index: 1;
 }
 
-section.color-set div.color.clicked {
+section.bloc2 div.color.clicked {
   background-color: white !important;
 }
 
@@ -39,14 +39,14 @@ section.color-set div.color.clicked {
 /* mobile */
 
 @media screen and (max-width: 400px) {
-  section.color-set {
+  section.bloc2 {
     padding-top: 80px;
     padding-bottom: 80px;
   }
-  section.color-set div.color:nth-child(2n + 1) {
+  section.bloc2 div.color:nth-child(2n + 1) {
     transform: rotate(-5deg) translateX(-5vw);
   }
-  section.color-set div.color:nth-child(2n + 2) {
+  section.bloc2 div.color:nth-child(2n + 2) {
     transform: rotate(5deg) translateX(5vw);
   }
 }
