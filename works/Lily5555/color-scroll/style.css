@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Asset & display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Asset&family=DM+Serif+Display&display=swap');
 @import url(lorem.css);
 @import url(rorschach.css);
 
@@ -9,13 +11,16 @@ body, body * {
 }
 
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  color: rgb(242, 226, 176);
 }
 
 h1 {
-  font-family: 'Mochiy Pop P One', sans-serif;
-  font-size: 120px;
-  color:#333;
+  font-family: 'Asset', cursive;
+  font-size: 180px;
+  text-align: center;
+  color: #f23603;
 }
 
 section {
@@ -30,17 +35,17 @@ section.intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #DCFFFB;
+  background-color: #490313;
 }
 
 section.intro div.scroll-down {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 100px;
-  height: 100px;
+  width: 10vh;
+  height: 10vh;
   transform: translateX(-50%) translateY(-32px);
-  background-color:#333;
+  background-color:#490313;
   
   /* utilisation d'un svg comme masque: */
   mask-image: url(assets/iconmonstr-arrow-69.svg);
@@ -55,7 +60,7 @@ section.intro div.scroll-down {
   /* background-color: black; */
 }
 section.intro div.scroll-down:hover {
-  background-color: #C1BBDD;
+  background-color: rgb(242, 226, 176);
 }
 
 
@@ -66,7 +71,7 @@ section.color-set {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #222;
+  background-color: #5a3e2d;
   height: 100vh;
 }
 
@@ -84,7 +89,7 @@ section.color-set div.color {
 }
 
 section.color-set div.color:hover {
-  border: solid 8px #333;
+  border: solid 10px rgb(242, 226, 176);
   transform: scale(1.1);
 }
 
