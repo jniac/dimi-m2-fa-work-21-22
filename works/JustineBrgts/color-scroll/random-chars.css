@@ -34,8 +34,8 @@ section.random-chars span {
 }
 section.random-chars button:hover {
   color: var(--color-4);
-  border-color: #fff5;
-  background-color: white;
+  border-color: #590d22;
+  background-color: 590d22;
 }
 
 section.random-chars .container {
