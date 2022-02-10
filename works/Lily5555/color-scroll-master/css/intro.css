@@ -4,7 +4,7 @@ section.intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: dimgrey;
+  background-color: rgb(242, 226, 176);
 }
 
 section.intro div.scroll-down {
