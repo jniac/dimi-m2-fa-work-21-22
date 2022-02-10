@@ -7,8 +7,8 @@ section.color-set {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: #111111;
-  transition: background-color .3s ease-in-out;
+  background-color: #ff9e43;
+  transition: background-color .3s ease-in;
 }
 
 section.color-set div.color {
