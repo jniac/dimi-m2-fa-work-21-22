@@ -1,0 +1,64 @@
+
+section.random-chars {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: var(--color-1);
+}
+
+section.random-chars button {
+  --margin: 32px;
+  --size: 10vh;
+  position: absolute;
+  bottom: var(--margin);
+  right: var(--margin);
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 100;
+  font-size: calc(var(--size) * 0.8);
+  background-color: var(--color-4);
+  color: #590d22;
+  border: solid 2px #590d22;
+  border-radius: 8px;
+  transition: all .1s ease-out;
+  cursor: pointer;
+}
+section.random-chars span {
+  transform: translate(7%, -4%);
+}
+section.random-chars button:hover {
+  color: var(--color-4);
+  border-color: #590d22;
+  background-color: 590d22;
+}
+
+section.random-chars .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section.random-chars .container span {
+  position: absolute;
+  display: block;
+  font-size: min(10vw, 10vh);
+}
+
+
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section.random-chars button {
+    --margin: 16px;
+    --size: 20vw;
+  }
+}
