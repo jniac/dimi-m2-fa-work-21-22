@@ -15,7 +15,7 @@ section.intro div.scroll-down {
   --size: 10vh;
   width: var(--size);
   height: var(--size);
-  background-color: black;
+  background-color: #490313;
   
   /* utilisation d'un svg comme masque: */
   mask-image: url(../assets/arrow-down.svg);
