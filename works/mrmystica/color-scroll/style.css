@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
 @import url(lorem.css);
+@import url(rorschach.css);
 
 body, body * {
   margin: 0;
   box-sizing: border-box;
+  position: relative;
 }
+
 body {
   font-family: 'Fira Code', monospace;
 }
@@ -16,6 +19,7 @@ section {
   /* vh: "viewport height" : la hauteur de la fenêtre */
   min-height: 100vh; 
   padding: 32px;
+  overflow: hidden;
 }
 section.intro {
   display: flex;
@@ -71,6 +75,6 @@ section.color-set div.color:hover {
   border: solid 8px black;
   transform: scale(1.1);
 }
-@@ -86,3 +87,11 @@
+section.color-set div.color.clicked {
   background-color: white !important;
 }

@@ -12,7 +12,7 @@ body {
 
 h1 {
   font-family: 'Mochiy Pop P One', sans-serif;
-  font-size: 120px;
+  font-size: 80px;
 }
 
 section {
@@ -26,7 +26,7 @@ section.intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: dimgrey;
+  background-color: rgba(202, 60, 60, 0.74);
 }
 
 section.intro div.scroll-down {
@@ -61,7 +61,7 @@ section.color-set {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+  background-color: rgba(222, 105, 238, 0.527);
   height: 100vh;
 }
 
