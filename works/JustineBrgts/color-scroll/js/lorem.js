@@ -1,3 +1,4 @@
+import { getRandomColor } from "./color.js"
 
 const paragraph = document.querySelector('section.lorem p')
 
