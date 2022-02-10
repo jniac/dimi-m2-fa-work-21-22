@@ -64,7 +64,7 @@ section.color-set {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: rgba(222, 105, 238, 0.527);
+  background-color: rgb(255, 255, 255);
   height: 100vh;
 }
 
