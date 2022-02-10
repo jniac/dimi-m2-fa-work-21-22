@@ -33,23 +33,23 @@ section.intro div.scroll-down {
   width: 100px;
   height: 100px;
   transform: translateX(-50%) translateY(-32px);
-  background-color:var(--back);
+  background-color:#333;
   
   /* utilisation d'un svg comme masque: */
-  mask-image: url(assets/iconmonstr-arrow-69.svg);
+  mask-image: url(assets/arrow.svg);
   mask-size: contain;
-  -webkit-mask-image: url(assets/iconmonstr-arrow-69.svg);
+  -webkit-mask-image: url(assets/arrow.svg);
   -webkit-mask-size: contain;
-  /* inception: le svg de la flèche est réutilisé en background */
-  /*background-image: url(assets/iconmonstr-arrow-69.svg);*/
 
-  /* une option plus sage: une couleur pleine */
-  /* background-color: black; */
+}
+
+.scroll-down{
   animation-duration: 1s;
    animation-name: clignoter;
    animation-iteration-count: infinite;
    transition: none;
-}
+  }
+
 @keyframes clignoter {
   0%   {opacity:1; }
   40%   {opacity:0; }
