@@ -1,0 +1,101 @@
+
+section.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://undefined-studio.com/wp-content/uploads/2021/07/Test-6.jpeg);
+  
+}
+
+section.intro div.scroll-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  --size: 10vh;
+  width: var(--size);
+  height: var(--size);
+  background-color: rgb(255, 158, 158);
+  
+  /* utilisation d'un svg comme masque: */
+  mask-image: url(../assets/arrow-down.svg);
+  mask-size:s contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url(../assets/arrow-down.svg);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+
+  transform: 
+  translateX(calc(var(--size) * -0.5)) 
+  translateY(-32px)
+  ;
+
+  transition: background .2s ease-in-out, opacity .2s ease-in-out;
+}
+
+section.intro div.scroll-down:hover {
+  background-color: var(--color-1);
+}
+
+section.intro div.scroll-down.hidden {
+  opacity: 0;
+}
+
+section.intro h1 {
+  font-family: Arial, Helvetica, sans-serif, serif;
+  font-style: inherit;
+  font-weight: 700;
+  font-size: 12vw;
+  line-height: 1em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+section.intro .grid {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+section.intro .grid > div {
+  position: absolute;
+  transition: background-color .1s ease-out;
+}
+
+section.intro .grid > div.colored {
+  --color: var(--color-1);
+  background-color: var(--color);
+}
+
+section.intro p {
+  font-size: 2em;
+  transition: all .1s ease-out;
+  color: rgb(255, 255, 255);
+}
+
+section.intro p span {
+  transition: all .1s ease-out;
+}
+
+section.intro p.hidden {
+  opacity: 0;
+}
+
+
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section.intro h1 {
+    font-size: 14vh;
+  }
+  
+  section.intro p {
+    margin-top: 4vh;
+    font-size: 1.4em;
+  }
+}
