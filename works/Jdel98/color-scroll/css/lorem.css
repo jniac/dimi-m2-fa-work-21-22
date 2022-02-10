@@ -5,7 +5,11 @@ section.lorem {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #1c1c1c;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: initial;
+  color: rgb(255, 255, 255);
+  background-image: url(https://undefined-studio.com/wp-content/uploads/2019/08/Fond-2-min-e1628530866155.png);
 }
 
 section.lorem p {

@@ -7,7 +7,7 @@ section.color-set {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: #ff9e43;
+  background-color: #7543af;
   transition: background-color .3s ease-in;
 }
 
@@ -25,7 +25,7 @@ section.color-set div.color {
 }
 
 section.color-set div.color:hover {
-  border: solid 8px black;
+  border: solid 8px rgb(255, 255, 255);
   transform: scale(1.15);
   z-index: 1;
 }
