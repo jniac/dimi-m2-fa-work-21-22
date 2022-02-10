@@ -4,7 +4,8 @@ section.intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: dimgrey;
+  background: rgb(255,217,104);
+  background: radial-gradient(circle, rgba(255,217,104,1) 0%, rgba(255,175,41,1) 100%);
 }
 
 section.intro div.scroll-down {
@@ -42,12 +43,13 @@ section.intro div.scroll-down.hidden {
 }
 
 section.intro h1 {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 700;
-  font-size: 12vw;
+  font-family: 'Comfortaa', cursive;
+  font-weight: Medium 500;
+  font-size: 20pt;
   line-height: 1em;
   text-align: center;
+  color: #07374a;
+  letter-spacing: .1rem;
 }
 
 section.intro .grid {
