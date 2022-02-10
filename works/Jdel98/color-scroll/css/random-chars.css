@@ -1,64 +1,49 @@
+HTML  CSS Result  
+EDIT ON
 
-section.random-chars {
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  background-color: var(--color-1);
+ .text {
+  animation: inherit;
+  color: aliceblue;
 }
-
-section.random-chars button {
-  --margin: 32px;
-  --size: 10vh;
-  position: absolute;
-  bottom: var(--margin);
-  right: var(--margin);
-  width: var(--size);
-  height: var(--size);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: inherit;
-  font-weight: 100;
-  font-size: calc(var(--size) * 0.8);
-  background-color: var(--color-4);
-  color: #fff6;
-  border: solid 2px #fff3;
-  border-radius: 8px;
-  transition: all .1s ease-out;
-  cursor: pointer;
+.background {
+  color: hsl(324, 70%, 45%);
+  animation: wheelHueColor 10s infinite;
+  background-color: currentColor;
 }
-section.random-chars span {
-  transform: translate(7%, -4%);
-}
-section.random-chars button:hover {
-  color: var(--color-4);
-  border-color: #fff5;
-  background-color: white;
-}
-
-section.random-chars .container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-section.random-chars .container span {
-  position: absolute;
-  display: block;
-  font-size: min(10vw, 10vh);
-}
-
-
-
-/* mobile */
-
-@media screen and (max-width: 400px) {
-  section.random-chars button {
-    --margin: 16px;
-    --size: 20vw;
+@supports (background-blend-mode: overlay) {
+  .background {
+    background-image: linear-gradient(45deg, rgb(142, 106, 241) 10%, black 90%);
+    background-blend-mode: overlay;
   }
 }
+@keyframes wheelHueColor {
+  from, to { color: hsl(276, 93%, 60%); }
+  10%      { color: rgb(238, 103, 250); }
+  20%      { color: rgb(250, 162, 250); }
+  30%      { color: rgb(127, 67, 133); }
+  40%      { color: hsl(293, 84%, 88%); }
+  50%      { color: hsl(288, 32%, 68%); }
+  60%      { color: hsl(276, 44%, 43%); }
+  70%      { color: hsl(293, 42%, 38%); }
+  80%      { color: hsl(290, 53%, 63%); }
+  90%      { color: hsl(288, 33%, 37%); }
+}
+
+
+/* misc */
+* { margin: 0; padding: 0; }
+.background {
+  min-height: 100vh;
+  display: flex;
+}
+.text {
+  margin: auto;
+  background: rgba(117, 65, 115, 0.75);
+  padding: 1em;
+}
+
+
+
+
+
+Resources 1× 0.5× 0.25× Rerun
