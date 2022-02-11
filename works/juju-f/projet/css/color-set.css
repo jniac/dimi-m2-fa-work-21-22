@@ -1,7 +1,7 @@
 body {
   --color-1:#248EA6; 
   --color-2:#F23030; 
-  --color-3:#F2D338; 
+  --color-3:#F2762E; 
   --color-4:#25C7D9; 
   --color-5:#fff;
 }
@@ -22,7 +22,7 @@ section.color-set {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: #F2762E;
+  background-color: #F2D338;
   transition: background-color .3s ease-in-out;
 }
 
@@ -32,12 +32,15 @@ section.color-set div.color {
   margin-left: 10px;
   border-radius: 100px;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   padding: 16px;
   border: solid 8px transparent;
   cursor: pointer;
   transition: background-color .3s ease-in-out;
+  font-size: 12px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
 }
 
 section.color-set div.color:hover {
