@@ -17,11 +17,11 @@ body{
 }
 
 body.color-version-2 {
-  --color-1: #91aaff;
-  --color-2: #ff9e9e;
-  --color-3: #ff80c5;
-  --color-4: #7afbff;
-  --color-5: #8aff9c;
+  --color-1: #91AAFF;
+  --color-2: #FF9E9E;
+  --color-3: #FF80C5;
+  --color-4: #7AFBFF;
+  --color-5: #8AFF9C;
   --back:#222;
   --white:white;
 }
@@ -64,26 +64,6 @@ section {
   min-height: 100vh; 
   padding: 32px;
   overflow:hidden;
-}
-
-#color-1{
-  background-color:var(--color-1);
-}
-
-#color-2{
-  background-color:var(--color-2);
-}
-
-#color-3{
-  background-color:var(--color-3);
-}
-
-#color-4{
-  background-color:var(--color-4);
-}
-
-#color-5{
-  background-color:var(--color-5);
 }
 
 section .color-change {
