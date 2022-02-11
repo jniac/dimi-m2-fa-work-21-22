@@ -30,8 +30,8 @@ section.intro div.scroll-down {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   transform: translateX(-50%) translateY(-32px);
   background-color:#333;
   
