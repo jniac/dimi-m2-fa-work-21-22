@@ -4,24 +4,22 @@ section.intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: dimgrey;
+  background-color: white;
 }
 
 section.intro div.scroll-down {
   position: absolute;
   bottom: 0;
-  left: 50%;
 
-  --size: 10vh;
+  --size: 8vh;
   width: var(--size);
   height: var(--size);
-  background-color: black;
+  background-color: white;
   
-  /* utilisation d'un svg comme masque: */
-  mask-image: url(../assets/arrow-down.svg);
+  mask-image: url(../assets/scroll-down.svg);
   mask-size: contain;
   mask-repeat: no-repeat;
-  -webkit-mask-image: url(../assets/arrow-down.svg);
+  -webkit-mask-image: url(../assets/scroll-down.svg);
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
 
@@ -30,23 +28,14 @@ section.intro div.scroll-down {
   translateY(-32px)
   ;
 
-  transition: background .2s ease-in-out, opacity .2s ease-in-out;
+  transition: background.2s ease-in-out, opacity .2s ease-in-out;
 }
 
-section.intro div.scroll-down:hover {
-  background-color: var(--color-1);
-}
-
-section.intro div.scroll-down.hidden {
-  opacity: 0;
-}
 
 section.intro h1 {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 700;
-  font-size: 12vw;
-  line-height: 1em;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -69,7 +58,7 @@ section.intro .grid > div.colored {
 }
 
 section.intro p {
-  font-size: 2em;
+  font-size: 15px;
   transition: all .1s ease-out;
 }
 
