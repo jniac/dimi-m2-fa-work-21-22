@@ -1,0 +1,51 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+* {
+	margin: 0;
+	padding: 0;
+}
+.bloc3{
+
+}
+.hero {
+  height: 84vh;
+  padding-top: 25vh;
+  justify-content: center;
+
+	background: linear-gradient(45deg, rgba(21, 230, 233, 0.6), rgba(63, 211, 18, 0.5), rgb(241, 247, 139,.5), rgba(52,219,216,.5)) 0 0 / 1000% no-repeat, url('../asset/gradient-fond.jpeg') 0 0 / cover no-repeat;
+	background-attachment: fixed;
+  -webkit-animation: gradientAnimation 20s ease infinite;
+	animation: gradientAnimation 20s ease infinite;
+}
+@-webkit-keyframes gradientAnimation {
+	0%   { background-position: 0% 30%, 0 0;}
+	50%  { background-position: 100% 70%, 0 0;}
+	100% { background-position: 0% 30%, 0 0;}
+}
+@keyframes gradientAnimation {
+	0%   { background-position: 0% 30%, 0 0;}
+	50%  { background-position: 100% 70%, 0 0;}
+	100% { background-position: 0% 30%, 0 0;}
+}
+.bloc3 .hero h1 {
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font : normal 600 72px/1 'Open Sans', sans-serif;
+	text-align: center;
+	white-space: nowrap;
+}
+.box2text{
+	color: white;
+}
+.bloc3 .hero h1 span {
+	display: block;
+	margin-top: 1em;
+	font-size: 40px;
+	font-weight: 300;
+}
+.bloc3 img{
+  position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+}
