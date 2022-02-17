@@ -5,6 +5,9 @@ section.intro {
   align-items: center;
   justify-content: center;
   background-image: url(https://undefined-studio.com/wp-content/uploads/2021/07/Test-6.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
   
 }
 
