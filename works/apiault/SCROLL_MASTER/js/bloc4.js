@@ -81,7 +81,7 @@
 		$('.hero-center-section').css("display", "none");
 		$(window).scroll(function(){
 			const posScroll = $(document).scrollTop();
-			if(posScroll >=1200) {
+			if(posScroll >=1500) {
 				$('.hero-center-section').css("display", "inline");
 			}else{
 				$('.hero-center-section').css("display", "none");			

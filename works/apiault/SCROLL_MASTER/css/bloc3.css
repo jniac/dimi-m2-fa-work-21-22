@@ -1,13 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
-* {
-	margin: 0;
-	padding: 0;
-}
-.bloc3{
 
-}
 .hero {
-  height: 84vh;
+  height: 80vh;
   padding-top: 25vh;
   justify-content: center;
 
@@ -47,5 +40,4 @@
   position: absolute;
     bottom: 0px;
     width: 100%;
-}
 }
