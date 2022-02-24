@@ -1,5 +1,5 @@
-import { remap } from '../common/basic-functions.js'
-import { trackParallax } from '../common/parallax.js'
+import { remap } from '../../../../common/basic-functions.js'
+import { trackParallax } from '../../../../common/parallax.js'
 
 const copyLeftToRight = () => {
   const left = document.querySelector('section.rorschach div.left')

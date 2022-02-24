@@ -1,6 +1,6 @@
 import Color from "https://colorjs.io/dist/color.esm.js"
-import { trackParallax } from '../common/parallax.js'
-import { inverseLerp } from '../common/basic-functions.js'
+import { trackParallax } from '../../../../common/parallax.js'
+import { inverseLerp } from '../../../../common/basic-functions.js'
 
 const section = document.querySelector('section.color-interpolation')
 

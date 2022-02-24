@@ -1,6 +1,6 @@
-import { onParallax } from '../common/parallax.js'
-import { randomItem } from '../common/random-utils.js'
-import { waitSeconds } from '../common/utils.js'
+import { onParallax } from '../../../../common/parallax.js'
+import { randomItem } from '../../../../common/random-utils.js'
+import { waitSeconds } from '../../../../common/utils.js'
 
 const mapSpan = (char) => {
   if (char === ' ') {

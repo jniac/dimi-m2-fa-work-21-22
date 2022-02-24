@@ -1,4 +1,4 @@
-import { chance, randomItem, randomRange } from '../common/random-utils.js'
+import { chance, randomItem, randomRange } from '../../../../common/random-utils.js'
 
 const section = document.querySelector('section.random-chars')
 

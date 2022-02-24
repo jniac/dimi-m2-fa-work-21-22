@@ -1,6 +1,6 @@
-import { round } from '../common/basic-functions.js'
-import { trackParallax } from '../common/parallax.js'
-import { randomItem } from '../common/random-utils.js'
+import { round } from '../../../../common/basic-functions.js'
+import { trackParallax } from '../../../../common/parallax.js'
+import { randomItem } from '../../../../common/random-utils.js'
 
 const section = document.querySelector('section.you-cant-read-this')
 const container = section.querySelector('.container')

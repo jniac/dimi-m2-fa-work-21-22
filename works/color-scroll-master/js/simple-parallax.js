@@ -1,4 +1,4 @@
-import { trackParallax } from '../common/parallax.js'
+import { trackParallax } from '../../../../common/parallax.js'
 
 const section = document.querySelector('section.simple-parallax')
 

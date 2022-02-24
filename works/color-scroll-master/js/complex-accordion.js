@@ -1,5 +1,5 @@
-import { remap } from '../common/basic-functions.js'
-import { trackParallax } from '../common/parallax.js'
+import { remap } from '../../../../common/basic-functions.js'
+import { trackParallax } from '../../../../common/parallax.js'
 
 const section = document.querySelector('section.complex-accordion')
 const container = section.querySelector('.container')

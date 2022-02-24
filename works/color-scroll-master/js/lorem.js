@@ -1,4 +1,4 @@
-import { randomItem } from '../common/random-utils.js'
+import { randomItem } from '../../../../common/random-utils.js'
 
 const p = document.querySelector('section.lorem p')
 

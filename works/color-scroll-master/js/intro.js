@@ -1,6 +1,6 @@
-import { inverseLerp } from '../common/basic-functions.js'
-import { trackParallax } from '../common/parallax.js'
-import { randomItem, shuffle } from '../common/random-utils.js'
+import { inverseLerp } from '../../../../common/basic-functions.js'
+import { trackParallax } from '../../../../common/parallax.js'
+import { randomItem, shuffle } from '../../../../common/random-utils.js'
 
 /**
  * Créer une grille (div) dans un noeud html.
