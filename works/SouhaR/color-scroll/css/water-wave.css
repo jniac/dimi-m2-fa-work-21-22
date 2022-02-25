@@ -1,0 +1,126 @@
+section.wave {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#2bd5ff, #86ffe7); 
+    padding: 500px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 100px;
+}
+
+
+div.wave1
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../../../../works/SouhaR/color-scroll/png/wave.png);
+    background-size: 1000px 100px;
+}
+
+h4 {
+
+    font-size: 80px;
+    color: aliceblue;
+    padding: 100px;
+    text-align: justify;
+    height: 100vh;
+    min-height: 100vh;
+ }
+
+
+div.wave2
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../../../../works/SouhaR/color-scroll/png/wave.png);
+    background-size: 1000px 100px;
+}
+
+div.wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 0px;
+}
+
+@keyframes animate2
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+}
+
+div.wave3
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../../../../works/SouhaR/color-scroll/png/wave.png);
+    background-size: 1000px 100px;
+}
+
+div.wave3 {
+    animation: animate3 15s linear infinite;
+    z-index: 998;
+    opacity: 0.4;
+    animation-delay: -2s;
+    bottom: 0px;
+}
+
+@keyframes animate3
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+}
+
+div.wave4
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../../../../works/SouhaR/color-scroll/png/wave.png);
+    background-size: 1000px 100px;
+}
+div.wave4 {
+    animation: animate4 15s linear infinite;
+    z-index: 997;
+    opacity: 0.8;
+    animation-delay: -7s;
+    bottom: 0px;
+}
+
+@keyframes animate4
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 800px;
+    }
+}
+
