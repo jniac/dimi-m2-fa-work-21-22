@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url(css/color-set.css);
+@import url(css/lorem.css);
+@import url(css/simple-accordion.css);
+@import url(css/animation.css);
+@import url(css/intro.css);
+
+body{
+  --color-1: #ACDBC9;
+  --color-2: #DBEBC2;
+  --color-3: #FDD2B5;
+  --color-4: #F7A7A6;
+  --color-5: #F48B94;
+  --back:#1c2427;
+  --white:white;
+}
+
+body.color-version-2 {
+  --color-1: #99B898;
+  --color-2: #FECEA8;
+  --color-3: #FF847C;
+  --color-4: #E84A5F;
+  --color-5: #2C7373;
+  --back:#2A363B;
+  --white:white;
+}
+
+body, body * {
+  margin: 0;
+  box-sizing: border-box;
+  position:relative;
+}
+
+body {
+  font-family: 'Lato';
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  color: var(--back);
+  text-align: center;
+  font-size: 100px;
+  font-weight: 300;
+  line-height: 200px;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 120px;
+  animation: inherit;
+  margin: auto;
+  background: var(--back);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:var(--color-1);
+}
+
+section {
+  /* vh: "viewport height" : la hauteur de la fenêtre */
+  min-height: 100vh; 
+  padding: 32px;
+  overflow:hidden;
+}
+
+section .color-change {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 32px;
+}
+
+section .color-change button {
+  padding: 16px;
+  font-family: 'Lato' sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-size: 20px;
+  background-color: var(--back);
+  color: var(--color-3);
+  border: solid 1px transparent;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+section .color-change button:hover {
+  background-color: var(--back);
+  color: var(--color-1);
+}
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section .color-change {
+    padding: 16px;
+  }
+}
