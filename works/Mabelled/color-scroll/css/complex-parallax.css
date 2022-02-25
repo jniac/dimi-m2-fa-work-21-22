@@ -1,0 +1,57 @@
+section.complex-parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+  }
+  
+  section.complex-parallax .shape {
+    position: absolute;
+    --size: min(100vh, 100vw);
+    width: var(--size);
+    height: var(--size);
+    padding: calc(var(--size) * 0.1);
+    border-radius: calc(var(--size) * 0.1);
+  
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+    /* déclaration de la variable css  */
+    --parallax: 0;
+  
+    /* transform utilise la variable css "--parallax" */
+    transform: 
+    scale(calc(var(--parallax)))
+    rotate(calc(var(--parallax) * 30deg - 20deg));
+  
+    /* intéressant, mais bcp trop lourd à calculer : */
+    /* box-shadow: var(--color-3) 0 0 50px; */
+  }
+  
+  section.complex-parallax .shape:nth-child(1) {
+    background-color: var(--color-1);
+  }
+  
+  section.complex-parallax .shape:nth-child(2) {
+    background-color: var(--color-5);
+  }
+  
+  section.complex-parallax .shape:nth-child(3) {
+    background-color: var(--color-2);
+  }
+  
+  section.complex-parallax .shape:nth-child(4) {
+    background-color: var(--color-4);
+  }
+  
+  section.complex-parallax a {
+    color: var(--color-1);
+  }
+  
+  section.complex-parallax p {
+    text-align: center;
+  }

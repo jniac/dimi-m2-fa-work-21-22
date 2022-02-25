@@ -1,0 +1,19 @@
+section .animation{
+  min-height: 100vh; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.animation {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(to right, var(--color-1) 0%, var(--color-4) 100%);
+}
+.paper-plane {
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}

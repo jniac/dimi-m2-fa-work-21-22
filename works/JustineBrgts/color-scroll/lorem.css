@@ -1,0 +1,9 @@
+section.lorem {
+  font-size: 20px;
+  padding: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+}

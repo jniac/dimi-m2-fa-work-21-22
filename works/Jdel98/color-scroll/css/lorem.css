@@ -1,0 +1,81 @@
+
+section.lorem {
+  padding: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  background-image: url(https://undefined-studio.com/wp-content/uploads/2021/08/Monitor-Pro-Display-XDR-Mockup3-min-edited.png);
+  background-position-x: center;
+  background-position-y: center;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: initial;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section.lorem p {
+  font-size: 36px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: initial;
+}
+
+
+
+section.lorem button {
+  --margin: 32px;
+  --size: 10vh;
+  position: absolute;
+  bottom: var(--margin);
+  right: var(--margin);
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 100;
+  font-size: calc(var(--size) * 0.8);
+  background-color: var(--color-4);
+  color: #fff6;
+  border: solid 2px #fff3;
+  border-radius: 8px;
+  transition: all .1s ease-out;
+  cursor: pointer;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: initial;
+}
+
+section.lorem span {
+  transform: translate(7%, -4%);
+}
+
+section.lorem button:hover {
+  color: var(--color-4);
+  border-color: #fff5;
+  background-color: white;
+}
+
+
+
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section.lorem {
+    padding: 96px 48px;
+  }
+
+  section.lorem p {
+    font-size: 24px;
+  }
+
+  section.lorem button {
+    --margin: 16px;
+  }
+}
