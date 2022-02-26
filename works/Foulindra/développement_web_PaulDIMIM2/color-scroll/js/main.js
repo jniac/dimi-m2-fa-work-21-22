@@ -45,7 +45,7 @@ button.style.top = value  * 0.50 + 'px';
 /* VOLUME MUSIC */ 
 
   var audio = document.getElementById("music");
-  audio.volume = 0.1;
+  audio.volume = 0.5;
 
 
 /* commande js pour regler le volume de la musique, j'ai voulu voir si il était possible de regler le
