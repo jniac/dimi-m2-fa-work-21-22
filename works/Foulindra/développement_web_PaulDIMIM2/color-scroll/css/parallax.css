@@ -1,0 +1,77 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+
+min-height: 1500px;
+}
+
+section {
+position: relative;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.intro:before {
+content: '';
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 100px;
+background: linear-gradient(to top, #001040, transparent);
+z-index: 10000;
+
+}
+
+.intro:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: color;
+  pointer-events: none;
+  }
+.intro .button {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.intro img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+pointer-events: none;
+}
+
+.intro #stars {
+  height: 50%;
+}
+
+.intro #mountain {
+
+  height: 60%;
+}
+
+
+/* FIREFLY CSS */ 
+
+
+.canvas{
+  filter: blur(1px);
+}
+
