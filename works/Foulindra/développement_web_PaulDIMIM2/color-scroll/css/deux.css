@@ -1,0 +1,91 @@
+
+section.deux {
+  padding: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  background: linear-gradient(#001040, #001751);
+}
+
+section.deux p {
+  font-size: 36px;
+}
+
+
+
+section.deux button {
+  --margin: 32px;
+  --size: 10vh;
+  position: absolute;
+  bottom: var(--margin);
+  right: var(--margin);
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 100;
+  font-size: calc(var(--size) * 0.8);
+  background-color: var(--color-4);
+  color: #fff6;
+  border: solid 2px #fff3;
+  border-radius: 8px;
+  transition: all .1s ease-out;
+  cursor: pointer;
+}
+
+section.deux span {
+  transform: translate(7%, -4%);
+}
+
+section.deux button:hover {
+  color: var(--color-4);
+  border-color: #fff5;
+  background-color: white;
+}
+
+/* CHANGEMENT DE COULEUR */ 
+
+.deux {
+ -webkit-animation-name: change;   
+   -webkit-animation-duration: 3s; 
+   -webkit-animation-iteration-count: infinite; 
+   animation-name: change;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+}
+
+
+
+
+/* Standard syntax */
+@keyframes change {
+  0%   {color: #590ab0;}
+  25%  {color: #d43bb1;}
+  50%  {color: #ffde55;}
+  80% {color: #30dd8a;}
+  100% {color: #590ab0;}
+}
+
+
+
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section.deux {
+    padding: 96px 48px;
+  }
+
+  section.deux p {
+    font-size: 24px;
+  }
+
+  section.deux button {
+    --margin: 16px;
+  }
+}
