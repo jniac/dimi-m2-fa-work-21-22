@@ -1,34 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color Scroll</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="raimbow.css">
+
+
+
+
+  <title>Dev Leprovost</title>
 </head>
+
 <body>
-  
-  <section class="intro">
-    <h1>Color Scroll</h1>
-    <p>plz scroll down</p>
-    <div class="scroll-down"></div>
-  </section>
+  <div id="section1">
+    <svg viewBox="0 0 800 600">
+      <symbol id="s-text">
+        <text text-anchor="middle" x="50%" y="35%" class="text--line">
+          Leprovost
+        </text>
+        <text text-anchor="middle" x="50%" y="68%" class="text--line2">
+          Lolo
+        </text>
 
-  <section class="color-set">
-    <div class="color" style="background-color: #fc0;">#fc0</div>
-    <div class="color" style="background-color: #3f0000;">#3f0000</div>
-    <div class="color" style="background-color: #0ff;">#0ff</div>
-    <div class="color" style="background-color: #f0f;">#f0f</div>
-    <div class="color" style="background-color: #35350f;">#35350f</div>
-  </section>
+      </symbol>
 
-  <section class="lorem">
-    <p>
-      L'approche artistique de la couleur produit des guides pour affiner la perception de la couleur et employer des pigments ; l'approche chimique étudie les colorants ; l'approche physique aborde la couleur par l'analyse spectrale ; l'approche physiologique relie la perception au système visuel ; l'approche psychophysique débouche sur la colorimétrie et sur la synthèse des couleurs. La philosophie tente, depuis l'Antiquité grecque, de relier les notions de la couleur.
-    </p>
-  </section>
+      <g class="g-ants">
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+      </g>
 
-  <script src="js/main.js" type="module"></script>
+
+    </svg>
+
+
+  </div>
+
+  <div id="section2">
+    <p>Ça, c'est moi :</p>
+
+    <div class="parallax-effect"></div>
+    <div>
+      <Effet Parallaxe>
+    </div>
+    <div>
+      <p id="metierlolo">Graphiste</p>
+      <p id="ouca">en alternance chez orange</p>
+    </div>
+  </div>
+
+  <div id="section3">
+    <div id="conteneurliste">
+      <ul class="c-rainbow">
+        <li class="c-rainbow__layer c-rainbow__layer--white">Pouet</li>
+        <li class="c-rainbow__layer c-rainbow__layer--orange">Pouet</li>
+        <li class="c-rainbow__layer c-rainbow__layer--red">Pouet</li>
+        <li class="c-rainbow__layer c-rainbow__layer--violet">Pouet</li>
+        <li class="c-rainbow__layer c-rainbow__layer--blue">Pouet</li>
+        <li class="c-rainbow__layer c-rainbow__layer--green">Pouet</li>
+        <li class="c-rainbow__layer c-rainbow__layer--yellow">Pouet</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="section4">
+    <h3>Voici mes couleurs :</h3>
+    <div id="contenerlignecolors">
+      <button id="button1" value="#2C3532" onclick="myFunction1()">#2C3532</button>
+
+      <script>
+        function myFunction1() {
+          /* Get the text field */
+          var copyText = document.getElementById("button1");
+
+          /* Copy the text inside the text field */
+          navigator.clipboard.writeText(copyText.innerHTML);
+
+        }
+      </script>
+
+
+
+
+
+
+
+      <div id="cubcolors2">
+
+
+        <button id="button2" value="#0F6466" onclick="myFunction2()">#0F6466</button>
+
+        <script>
+          function myFunction2() {
+            /* Get the text field */
+            var copyText = document.getElementById("button2");
+
+            /* Copy the text inside the text field */
+            navigator.clipboard.writeText(copyText.innerHTML);
+
+          }
+        </script>
+      </div>
+
+      <div id="cubcolors3">
+        <button id="button3" value="#D8B08C" onclick="myFunction3()">#D8B08C</button>
+
+        <script>
+          function myFunction3() {
+            /* Get the text field */
+            var copyText = document.getElementById("button3");
+
+            /* Copy the text inside the text field */
+            navigator.clipboard.writeText(copyText.innerHTML);
+
+          }
+        </script>
+      </div>
+
+
+      <div id="cubcolors4">
+
+        <button id="button4" value="#FFCB9A" onclick="myFunction4()">#FFCB9A</button>
+
+        <script>
+          function myFunction4() {
+            /* Get the text field */
+            var copyText = document.getElementById("button4");
+
+            /* Copy the text inside the text field */
+            navigator.clipboard.writeText(copyText.innerHTML);
+
+          }
+        </script>
+
+      </div>
+      <div id="cubcolors5">
+        <button id="button5" value="#D2E8E3" onclick="myFunction5()">#D2E8E3</button>
+
+        <script>
+          function myFunction5() {
+            /* Get the text field */
+            var copyText = document.getElementById("button5");
+
+            /* Copy the text inside the text field */
+            navigator.clipboard.writeText(copyText.innerHTML);
+
+          }
+        </script>
+      </div>
+    </div>
+
+    <div id="fleche">
+      <img id="imgfleche" src="img/Fleche.png">
+    </div>
+    <p>click pour copier :)</p>
+
+    <a href=""></a>
+
+  </div>
+
+  </div>
+
+  </div>
+
+
+  <div id="section5">
+
+<h3>Ici on change de couleurs !</h3>
+
+    <section class="lorem">
+      <p>
+        L'approche artistique de la couleur produit des guides pour affiner la perception de la couleur et employer des
+        pigments ; l'approche chimique étudie les colorants ; l'approche physique aborde la couleur par l'analyse
+        spectrale ; l'approche physiologique relie la perception au système visuel ; l'approche psychophysique débouche
+        sur la colorimétrie et sur la synthèse des couleurs. La philosophie tente, depuis l'Antiquité grecque, de relier
+        les notions de la couleur.
+      </p>
+      <button><span>⟳</span></button>
+
+    </section>
+
+
+  </div>
+  <script src="raimbow.js"></script>
+  <script src="script.js" type="module"></script>
+
 </body>
+
 </html>
