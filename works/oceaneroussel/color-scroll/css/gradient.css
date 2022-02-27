@@ -1,0 +1,36 @@
+section.gradient p {
+    font-family: 'Rowdies', cursive;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    padding : 300px;
+    padding-left:auto;
+    line-height: 2em;
+}
+
+section.gradient {
+    background: linear-gradient(182deg, var(--color-2), var(--color-5));
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+
