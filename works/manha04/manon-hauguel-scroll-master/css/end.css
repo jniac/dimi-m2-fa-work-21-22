@@ -1,7 +1,7 @@
 
 .end
 {
-    background : linear-gradient(#AF3812, var(--color-1));
+    background : linear-gradient(#AF3812, var(--color-1), var(--color-5));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,9 @@
     width : 100%;
     height : 100%;
 }
- p{
+ p
+ {
      font-size: 100px;
      color : white;
+     font-family: 'Secular One', sans-serif;
  }
