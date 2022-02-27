@@ -1,0 +1,72 @@
+/* font */
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Roboto:wght@900&family=Rowdies&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+@import url(color-set.css);
+@import url(intro.css);
+@import url(gradient-circle.css);
+@import url(simple-accordion.css);
+@import url(gradient.css);
+
+
+  /* corps de texte */
+
+body, body * {
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+}
+
+
+body {
+  --color-1:#1A112A; 
+  --color-2:#572666;
+  --color-3:#374187; 
+  --color-4:#3870AC; 
+  --color-5:#479AC2; 
+}
+
+
+section {
+  /* vh: "viewport height" : la hauteur de la fenêtre */
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+
+section .color-change {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 32px;
+}
+
+section .color-change button {
+  padding: 16px;
+  font-family: inherit;
+  background-color: var(--color-4);
+  color: white;
+  border: solid 1px #fff3;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+section .color-change button:hover {
+  background-color: white;
+  color: var(--color-4);
+}
+
+
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section .color-change {
+    padding: 16px;
+  }
+}
+
