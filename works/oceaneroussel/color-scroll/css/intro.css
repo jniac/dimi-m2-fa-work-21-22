@@ -1,0 +1,138 @@
+ /* Contenu de l'intro */
+  
+ section.intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #BCBFDE;
+        background-image: url('https://images.unsplash.com/photo-1600627225432-82de96999068?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+        background-size: cover;
+      }
+
+ /* Intro : titre + phrase */
+    
+     section.intro h1 {
+      font-family: 'Rowdies', cursive;
+      font-size: 8vw;
+      font-weight: 700;
+      color: #BBBADB;
+      position: relative;
+      padding : 30px;
+      line-height: 1em;
+      text-align: center;
+    }
+    
+    section.intro p {
+      font-family: 'Rowdies', cursive;
+      font-size: 2em;
+      color: #ffffff;
+      text-align: center;
+      animation: Color 4s linear infinite;
+      -webkit-animation: Color 4s ease-in-out infinite;
+    }
+
+    section.intro div.bouton-scroll {
+      background-color: #BBBADB;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    @keyframes Color{
+      0%{
+        color:var(--color-1);
+      }
+ 
+      20%{
+        color: var(--color-2);
+      }
+      
+      40%{
+        color:var(--color-3)
+      }
+      
+      60%{
+        color:var(--color-4)
+      }
+      
+      80%{
+        color:var(--color-5)
+      }
+
+      100%{
+        color:var(--color-3)
+      }
+    }
+    
+    @-moz-keyframes Color{
+      0%{
+        color:var(--color-1);
+      }
+      
+      20%{
+        color: var(--color-2);
+      }
+      
+      40%{
+        color:var(--color-3)
+      }
+      
+      60%{
+        color:var(--color-4)
+      }
+      
+      80%{
+        color:var(--color-5)
+      }
+
+      100%{
+        color:var(--color-3)
+      }
+    }
+    
+    @-webkit-keyframes Color{
+      0%{
+        color:var(--color-1);
+      }
+      
+      20%{
+        color: var(--color-2);
+      }
+      
+      40%{
+        color:var(--color-3)
+      }
+      
+      60%{
+        color:var(--color-4)
+      }
+      
+      80%{
+        color:var(--color-5)
+      }
+
+
+      100%{
+        color:var(--color-3)
+      }
+
+    }
+  
+        /* mobile */
+    
+        @media screen and (max-width: 400px) {
+        section.intro h1 {
+          font-size: 14vh;
+        }
+        
+        section.intro p {
+          margin-top: 4vh;
+          font-size: 1.4em;
+        }
+      }
+    
+      

@@ -1,0 +1,30 @@
+
+.controls {
+    position: absolute;
+    bottom: 10px;
+    left : 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .control-item {
+    width: 130px;
+    background: #fff;
+    padding: 6px;
+    margin: 5px;
+    text-align: center;
+    color: rgba(0, 0, 0, .7);
+    user-select: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+      .particles-wrapper {
+          width: 100%;
+          background: linear-gradient(var(--color-2), var(--color-1));
+          position: absolute;
+          bottom: 0;
+          top: 0;
+      }
+  
+     

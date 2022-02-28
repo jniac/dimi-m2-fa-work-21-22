@@ -1,0 +1,48 @@
+section.gradient-circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-1);
+  }
+  
+  section.gradient-circle .circle {
+    position: absolute;
+    --size: min(100vh, 100vw);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    transition: all .1s linear;
+    background-image: radial-gradient(ellipse farthest-corner at 50% 50% , var(--color-1), var(--color-3));
+    background-size: 500% 500%;
+    margin: 0 auto;
+    animation: AnimGradient 3s linear infinite;
+  }
+  
+  section.gradient-circle .circle:nth-child(1) {
+    background-image: radial-gradient(ellipse farthest-corner at 50% 50% , var(--color-2), var(--color-5));
+    background-size: 500% 500%;
+    margin: 0 auto;
+    animation: AnimGradient 3s linear infinite;
+  }
+
+
+  @keyframes AnimGradient { 
+    0%{background-position:20% 20%}
+    10%{background-position:50% 10%}
+    20%{background-position:80% 20%}
+    30%{background-position:90% 50%}
+    50%{background-position:80% 80%}
+    60%{background-position:50% 90%}
+    75%{background-position:20% 80%}
+    80%{background-position:10% 50%}
+    100%{background-position:20% 20%}
+}  
+  
+  section.gradient-circle .circle:nth-child(2) {
+    background-color: var(--color-3);
+  }
+  
+  section.gradient-circle .circle:nth-child(3) {
+    background-color: var(--color-2);
+  }
