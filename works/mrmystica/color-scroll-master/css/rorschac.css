@@ -1,0 +1,161 @@
+section.rorschach {
+  --scroll-t: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #f9b24b;
+}
+
+section.rorschach > .half {
+  flex: 1 0 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+section.rorschach > .half.right {
+  transform: scaleX(-1);
+}
+
+section.rorschach > .half > * {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  color: var(--color-5);
+  transform: translate(-50%, -50%);
+  --size: auto;
+  --size-x: var(--size);
+  --size-y: var(--size);
+  width: var(--size-x);
+  height: var(--size-y);
+}
+
+section.rorschach .masked {
+  background-color: var(--color-1);
+  --image-url: url(../assets/pen.svg);
+  mask-image: var(--image-url);
+  -webkit-mask-image: var(--image-url);
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}
+
+
+
+/* CONTENU DESIGN : */
+
+section.rorschach span.big-r {
+  font-size: 60vh;
+  font-weight: 900;
+  color: var(--color-5);
+  transform: 
+  translate(-50%, -50%)
+  scale(calc(0.7 + 0.3 + var(--scroll-t)))
+  rotate(28deg)
+  translate(-11.1vh, 0)
+  scaleX(-1)
+  translateX(calc(var(--scroll-t) * 200px))
+  ;
+}
+
+section.rorschach span.big-q {
+  font-size: 60vh;
+  font-weight: 900;
+  color: var(--color-1);
+  transform:
+  translate(-50%, -50%)
+  rotate(-20deg)
+  translate(-29vh, 0)
+  translateX(calc(var(--scroll-t) * -400px))
+  ;
+}
+
+section.rorschach span.big-paragraph {
+  font-family: 'Playfair Display', serif;
+  font-size: 30vh;
+  font-weight: 100;
+  color: var(--color-5);
+  transform:
+  translate(-50%, -50%)
+  scale(calc(0.7 + 0.3 + var(--scroll-t)))
+  translateX(calc(var(--scroll-t) * -400px))
+  translate(-10.1vh, 30vh)
+  scaleX(-1)
+  rotate(28deg)
+  ;
+}
+
+section.rorschach span.big-k {
+  font-family: 'Playfair Display', serif;
+  font-size: 30vh;
+  font-weight: 100;
+  color: var(--color-3);
+  transform:
+  translate(-50%, -50%)
+  translate(calc(var(--scroll-t) * -200px), 0px)
+  translate(0.1vh, -40vh)
+  scaleX(-1)
+  scale(0.8)
+  rotate(-37deg)
+  ;
+}
+
+section.rorschach div.pen {
+  --image-url: url(../assets/pen.svg);
+  --size: 25vh;
+  /* background-image: linear-gradient(-135deg, var(--color-1) 30%, var(--color-4) 90%); */
+  transform:
+  translate(-50%, -50%)
+  translate(calc(var(--scroll-t) * -800px), 0px)
+  translate(-40vh, -20vh)
+  rotate(104deg)
+  scale(calc(1 + var(--scroll-t)))
+  ;
+}
+
+section.rorschach div.sun {
+  --image-url: url(../assets/sun.svg);
+  --size: 25vh;
+  background-color: var(--color-4);
+  transform: 
+  translate(-50%, -50%)
+  translate(calc(var(--scroll-t) * -400px), 0px)
+  scale(1.8)
+  translate(-5vh, -8vh)
+  ;
+}
+
+section.rorschach div.sun-2 {
+  --image-url: url(../assets/sun.svg);
+  --size: 20vh;
+  background-color: var(--color-2);
+  transform: 
+  translate(-50%, -50%)
+  translate(-45vh, 9vh)
+  translate(calc(var(--scroll-t) * -800px), 0px)
+  ;
+}
+
+section.rorschach div.sun-3 {
+  --image-url: url(../assets/sun.svg);
+  --size: 20vh;
+  background-color: var(--color-3);
+  transform: 
+  translate(-50%, -50%)
+  translate(0vh, 9vh)
+  translate(calc(var(--scroll-t) * -800px), 0px)
+  ;
+}
+
+section.rorschach div.cloud {
+  --image-url: url(../assets/cloud.svg);
+  --size: 27vh;
+  transform: 
+  translate(-50%, -50%)
+  translate(-42vh, 23vh)
+  rotate(-142deg)
+  translate(calc(var(--scroll-t) * -800px), 0px)
+  scale(calc(1 + var(--scroll-t)))
+  ;
+}

@@ -1,0 +1,86 @@
+
+.slider-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.slider-wrapper:hover { cursor: none; }
+
+
+.before-wrapper {
+  display: block;
+  overflow: hidden;
+  width: auto;
+  height: 100%;
+  position: relative;
+  background: url("./images/LIGHT1.jpg") no-repeat center center #111111;
+  background-size: 100% auto;
+}
+
+.before-wrapper:before {
+  display: block;
+  content: '';
+  width: 100%; 
+  height:100%;
+
+}
+
+.after-wrapper {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.after-image {
+  display: block;
+  width: auto;
+  height: 100%;
+  position: relative;
+-webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: url("./images/Darkside1.png") no-repeat center center #efefef;
+  background-size: 100% auto;
+}
+
+.past, .future{
+  padding: 40px;
+  color:#fff;
+  text-transform:uppercase;
+  font-size:20px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  font-weight:800;
+}
+
+.past {
+ position: absolute;
+ display: block;
+ bottom: 0px;
+ left:0px;
+}
+
+.you {
+  width: 200px;
+  height: 200px;
+ position: absolute;
+ display: block;
+ right:0px;
+ left: 0px;
+ z-index:999;
+ background: red;
+}
+
+.future {
+ position: absolute;
+ display: block;
+ bottom: 0px;
+ right:0px;
+}
+
+
+

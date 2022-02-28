@@ -1,0 +1,29 @@
+
+section.simple-parallax {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d4d5b;
+}
+
+section.simple-parallax .circle {
+  position: absolute;
+  --size: min(100vh, 100vw);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  transition: all .1s linear;
+}
+
+section.simple-parallax .circle:nth-child(1) {
+  background-color: var(--color-1);
+}
+
+section.simple-parallax .circle:nth-child(2) {
+  background-color: var(--color-3);
+}
+
+section.simple-parallax .circle:nth-child(3) {
+  background-color: var(--color-4);
+}
