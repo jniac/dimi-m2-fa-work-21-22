@@ -15,12 +15,12 @@ body{
 }
 
 body.color-version-2 {
-  --color-1: #6ca79b; 
-  --color-2: #00688a; 
-  --color-3: #f19f6b; 
-  --color-4: #e9663a; 
-  --color-5: #e63d26;
-  --color-6: #12256b;
+  --color-1: #cc9579; 
+  --color-2: #853d05; 
+  --color-3: #78826a; 
+  --color-4: #be7b41; 
+  --color-5: #919985;
+  --color-6: #d4b19f;
   --color-fond-1: rgb(242, 226, 176);
   --color-fond-2: #5a3e2d;
 }
