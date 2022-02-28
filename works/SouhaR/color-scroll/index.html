@@ -5,18 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Color Scroll</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../color-scroll/css/style.css">
   <script src="https://kit.fontawesome.com/4fed5e188e.js" crossorigin="anonymous"></script>
 </head>
-<body>
 
+<body>
     
-  <section class="intro">
-    
+  <section class="intro" onscroll="intro()">
     <img src="../color-scroll/png/beach.png" id="beach">
     <img src="../color-scroll/png/sun.png" id="sun">
     <img src="../color-scroll/png/mountain.png" id="mountain">
-    <h1 id="text">Rise and shine beautiful !</h1>
+    <img src="../color-scroll/png/stars.png" id="stars">
+    <h1 id="text" class="text">Rise and shine</h1>
   </section>
 
   <section class="icones">
@@ -76,6 +76,13 @@
     </div>
   </section>
 
+  <section class="you-cant-read-this">
+    <div class="container1">
+      You can't read this without scrolling.
+    </div>
+  </section>
+  
+
   <div class="container">
     <div class="box">
       <span></span>
@@ -115,9 +122,7 @@
     </div>
    </div>
 
-   <section class="parallax">
-     <h3 class="layer"> PARALLAX</h3>
-   </section>
+
 
   <section class="wave">
     <div class="wave wave1"></div>
@@ -126,5 +131,9 @@
     <div class="wave wave3"></div>
     <div class="wave wave4"></div>
   </section>
+
+
+  <script type="module" src="../color-scroll/js/main.js"></script>
+  
 </body>
 </html>

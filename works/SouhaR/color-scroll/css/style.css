@@ -5,7 +5,12 @@
 @import url(../../../../works/SouhaR/color-scroll/css/icons.css);
 @import url(../../../../works/SouhaR/color-scroll/css/cards.css);
 @import url(../../../../works/SouhaR/color-scroll/css/parallax.css);
+@import url(../../../../works/SouhaR/color-scroll/css/randomchars.css);
+@import url(../../../../works/SouhaR/color-scroll/css/you-cant-read-this.css);
 
+{
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   min-height: 100vh;
@@ -26,7 +31,7 @@ body {
     --color-2: #9a00ed;
     --color-3: #ff5d9d;
     --color-4: #87e16a;
-    --color-5: #9eda13;
+    --color-5: #13dada;
   }
 
   ::-webkit-scrollbar
@@ -48,26 +53,20 @@ body {
 {
   background: #87e16a;
 }
-  
-
-
 
 
 p {
-  font-size: 40px;
-  padding: 50px;
-  color: #864fec;
-  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  padding: 25px;
+  color: #ffffff;
+  text-align: justify;
+  bottom: 25em;
 }
 
 
 
-h3 {
-  position: relative;
-  color: rgb(55, 100, 139);
-  font-size: 2150px;
 
-}
 
 
 

@@ -1,11 +1,11 @@
 
 section.color-interpolation {
-  background-color: #111111;
+  background-color: #0c4d59;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: orange;
   text-align: center;
   font-weight: 100;
 }
@@ -27,7 +27,7 @@ section.color-interpolation .color-swatches {
 section.color-interpolation code {
   white-space: pre-line;
   text-align: left;
-  border: solid 2px white;
+  border: solid 2px #0c4d59;
   padding: 8px 16px;
   font-family: inherit;
 }
@@ -56,8 +56,7 @@ section.color-interpolation .gradient {
   width: 60%;
   flex: 0 0 100px;
   border-radius: 5px;
-  background-image: linear-gradient(to right, #111111, var(--color-3), var(--color-4));
-  /* border: solid 2px white; */
+  background-image: linear-gradient(to right, #0c4d59, var(--color-3), var(--color-4));
 }
 
 section.color-interpolation .gradient .cursor {
@@ -66,13 +65,13 @@ section.color-interpolation .gradient .cursor {
   width: 5px;
   height: 110px;
   border-radius: 2px;
-  background-color: white;
+  background-color: orange;
 }
 
 
 
 
-/* marges, espacements */
+
 
 section.color-interpolation {
   padding: 32px 20%;

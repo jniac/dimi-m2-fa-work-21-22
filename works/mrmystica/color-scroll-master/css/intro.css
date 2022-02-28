@@ -4,7 +4,7 @@ section.intro {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: dimgrey;
+  background-color: #0c4d59;
 }
 
 section.intro div.scroll-down {
@@ -15,7 +15,7 @@ section.intro div.scroll-down {
   --size: 10vh;
   width: var(--size);
   height: var(--size);
-  background-color: black;
+  background-color: orange;
   
   /* utilisation d'un svg comme masque: */
   mask-image: url(../assets/arrow-down.svg);
@@ -42,8 +42,8 @@ section.intro div.scroll-down.hidden {
 }
 
 section.intro h1 {
-  font-family: 'WaterSplash-w1gWw', serif;
-  font-style: italic;
+  font-family: 'Helsinkifjes';
+  font-style: regular;
   font-weight: 700;
   font-size: 12vw;
   line-height: 1em;
@@ -83,7 +83,7 @@ section.intro p.hidden {
 
 
 
-/* mobile */
+
 
 @media screen and (max-width: 400px) {
   section.intro h1 {

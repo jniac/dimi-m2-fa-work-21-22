@@ -7,8 +7,8 @@ section.icones {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    min-height: 130vh;
 }
-
 
 section {
     position: relative;
@@ -33,7 +33,6 @@ div.row {
     display: flex;
     padding: 200px 0;
     white-space: nowrap;
-    transform: rotate(-30deg);
     
 }
 
@@ -45,7 +44,6 @@ div.row2 {
     display: flex;
     padding: 10px 0;
     white-space: nowrap;
-    transform: rotate(-30deg);
     
 }
 
@@ -67,6 +65,7 @@ i {
     padding: 0 5px;
     user-select: none;
     cursor: default;
+    size: 50em;
 }
 
 
