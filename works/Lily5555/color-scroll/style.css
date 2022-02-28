@@ -287,14 +287,14 @@ section .color-change button {
   font-weight: 200;
   letter-spacing: 2px;
   font-size: 20px;
-  background-color: var(--color-fond-2);
-  color: var( --color-1);
+  background-color: var( --color-1);
+  color: var(--color-fond-2);
   border: solid 1px transparent;
   border-radius: 50px;
   cursor: pointer;
 }
 
 section .color-change button:hover {
-  background-color: var(--color-fond-2);
-  color: var(--color-1);
+  background-color: var( --color-1);
+  color: var(--color-fond-2);
 }
