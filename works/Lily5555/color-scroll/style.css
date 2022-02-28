@@ -6,8 +6,8 @@ body{
   --color-1: #490313;
   --color-2: #f23603;
   --color-3: #73b8a1;
-  --color-4: #e77318;
-  --color-5: #e7a12e;
+  --color-4: #e7a12e;
+  --color-5: #e77318;
   --color-6: #12856b;
   --color-fond-1: #5a3e2d;
   --color-fond-2: rgb(242, 226, 176);
@@ -16,13 +16,13 @@ body{
 
 body.color-version-2 {
   --color-1: #cc9579; 
-  --color-2: #853d05; 
-  --color-3: #78826a; 
+  --color-2: #853d05;
   --color-4: #be7b41; 
-  --color-5: #919985;
-  --color-6: #d4b19f;
+  --color-3: #919985; 
+  --color-5: #78826a; 
+  --color-6: #4b512a;
   --color-fond-1: rgb(242, 226, 176);
-  --color-fond-2: #5a3e2d;
+  --color-fond-2: #253416;
 }
 
 #color-1 {
@@ -270,7 +270,7 @@ section.fin h1 {
 .fin span {
   font-size: 10vw;
   text-align: center;
-  color: #12856b; 
+  color: var(--color-6); 
   line-height: 12vw;
 }
 
@@ -287,8 +287,8 @@ section .color-change button {
   font-weight: 200;
   letter-spacing: 2px;
   font-size: 20px;
-  background-color: var(--color-1);
-  color: var(--color-4);
+  background-color: var(--color-2);
+  color: var(--color-1);
   border: solid 1px transparent;
   border-radius: 50px;
   cursor: pointer;
@@ -296,5 +296,5 @@ section .color-change button {
 
 section .color-change button:hover {
   background-color: var(--color-1);
-  color: var(--color-4);
+  color: var(--color-2);
 }
