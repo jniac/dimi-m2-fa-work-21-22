@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url(intro.css);
+@import url(color-set.css);
+@import url(lorem.css);
+@import url(parallax.css);
+@import url(end.css);
+@import url(particles2.css);
+
+
+body, body * {
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  body {
+    font-family: 'Josefin', sans-serif;
+    background-color: white;
+  }
+  
+  body {
+    --color-1:#FF0C81; 
+    --color-2:#FFA800; 
+    --color-3:#B40C85; 
+    --color-4:#6B0E68; 
+    --color-5:#440742;
+  }
+  
+  body.color-version-2 {
+    --color-1: #1149F0;
+    --color-2: #0A8EFA;
+    --color-3: #09C0E0;
+    --color-4: #23FAD7;
+    --color-5: #40F09A;
+  }
+
+
+  section {
+    /* vh: "viewport height" : la hauteur de la fenêtre */
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  
+  section .color-change {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 32px;
+  }
+  
+  section .color-change button {
+    padding: 16px;
+    font-family: inherit;
+    background-color: var(--color-4);
+    color: white;
+    border: solid 1px #fff3;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  section .color-change button:hover {
+    background-color: white;
+    color: var(--color-4);
+  }
+  
+  /* mobile */
+  
+  @media screen and (max-width: 400px) {
+    section .color-change {
+      padding: 16px;
+    }
+  }
+
+  

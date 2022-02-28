@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+@import url('../css/parallax.css');
+@import url('../css/deux.css');
+@import url('../css/color-set.css');
+@import url('../css/accordion.css');
+@import url('./gradient.css');
+@import url('./glitch.css');
+
+
+body, body * {
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  
+}
+
+body {
+  font-family: 'Rowdies', monospace;
+}
+
+h1 {
+  font-family: 'Comforter';
+  font-size: 120px;
+  color: white;
+  
+  
+}
+
+section {
+  /* vh: "viewport height" : la hauteur de la fenêtre */
+  min-height: 100vh; 
+  padding: 32px;
+  overflow: hidden;
+}
+
+/* BOUTON HEADER */
+
+
+
+.button .btn-hover {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  filter: blur();
+}
+
+.button .btn-hover:hover {
+  background-position: 100% 0;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.button .btn-hover:focus {
+  outline: none;
+}
+
+.button .btn-hover.color-1 {
+  background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #ffde55);
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+/* ce bouton permet de lancer la visite de la plage. Au hover, le background couleur s'anime ce qui permet de casser le coté statique de la page.*/
