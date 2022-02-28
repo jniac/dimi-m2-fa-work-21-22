@@ -288,7 +288,9 @@ section .color-change button {
   letter-spacing: 2px;
   font-size: 20px;
   background-color: var(--color-1);
-  stroke: #e63d26;
+  border-width:1px;
+  border-style:dotted;
+  border-color:black;
   color: var(--color-2);
   border: solid 1px transparent;
   border-radius: 50px;
