@@ -7,7 +7,7 @@ section.color-set {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: #111111;
+  background-color: #f9b24b;
   transition: background-color .3s ease-in-out;
 }
 
@@ -25,18 +25,18 @@ section.color-set div.color {
 }
 
 section.color-set div.color:hover {
-  border: solid 8px black;
+  border: solid 8px #f9b24b;
   transform: scale(1.15);
   z-index: 1;
 }
 
 section.color-set div.color.clicked {
-  background-color: white !important;
+  background-color: #f9b24b !important;
 }
 
 
 
-/* mobile */
+
 
 @media screen and (max-width: 400px) {
   section.color-set {
