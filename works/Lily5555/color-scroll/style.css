@@ -273,3 +273,21 @@ section.fin h1 {
   color: #12856b; 
   line-height: 12vw;
 }
+
+section .color-change button {
+  padding: 16px;
+  font-family: 'Lato' sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-size: 20px;
+  background-color: var(--back);
+  color: var(--color-3);
+  border: solid 1px transparent;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+section .color-change button:hover {
+  background-color: var(--back);
+  color: var(--color-1);
+}
