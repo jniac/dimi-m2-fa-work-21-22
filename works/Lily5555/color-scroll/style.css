@@ -288,7 +288,7 @@ section .color-change button {
   letter-spacing: 2px;
   font-size: 20px;
   background-color: var(--color-1);
-  color: var(--color-2);
+  color: var(--color-4);
   border: solid 1px transparent;
   border-radius: 50px;
   cursor: pointer;
@@ -296,5 +296,5 @@ section .color-change button {
 
 section .color-change button:hover {
   background-color: var(--color-1);
-  color: var(--color-fond-2);
+  color: var(--color-4);
 }
