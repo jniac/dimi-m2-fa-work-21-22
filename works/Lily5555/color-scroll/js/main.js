@@ -1,5 +1,6 @@
 import './lorem.js'
 import './color.js'
+import './simple-accordion.js'
 
 document.querySelector('.color-change button').onclick = () => {
   

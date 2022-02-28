@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2? family= Asset & display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Asset&family=DM+Serif+Display&display=swap');
 
-
 body{
   --color-1: #490313;
   --color-2: #f23603;
@@ -10,6 +9,9 @@ body{
   --color-4: #e77318;
   --color-5: #e7a12e;
   --color-6: #12856b;
+  --color-fond-1: #5a3e2d;
+  --color-fond-2: rgb(242, 226, 176);
+  
 }
 
 body.color-version-2 {
@@ -19,6 +21,8 @@ body.color-version-2 {
   --color-4: #e9663a; 
   --color-5: #e63d26;
   --color-6: #12256b;
+  --color-fond-1: rgb(242, 226, 176);
+  --color-fond-2: #5a3e2d;
 }
 
 #color-1 {
@@ -58,13 +62,7 @@ body {
   color: rgb(242, 226, 176);
 }
 
-h1 {
-  font-family: 'Asset', cursive;
-  font-size: 10vw;
-  text-align: center;
-  color: #f23603;
-  line-height: 10vw;
-}
+
 
 section {
   /* vh: "viewport height" : la hauteur de la fenêtre */
@@ -73,20 +71,29 @@ section {
   overflow:hidden;
 }
 
+section.intro h1 {
+  font-family: 'Asset', cursive;
+  font-size: 10vw;
+  text-align: center;
+  color: var(--color-2);
+  line-height: 10vw;
+}
+
 section.intro {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #490313;
+  background-color: var(--color-1);
 }
 
 section.intro div.scroll-down {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 60px;
-  height: 60px;
+  --size: 10vh;
+  width: var(--size);
+  height: var(--size);
   background-color:rgb(242, 226, 176);
 
 /* utilisation d'un svg comme masque: */
@@ -111,7 +118,7 @@ section.color-set {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: #5a3e2d;
+  background-color: var(--color-fond-1);
 }
 
 section.color-set div.color {
@@ -160,7 +167,7 @@ section.lorem {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: rgb(242, 226, 176);
+  background-color: var(--color-fond-2);
 }
 
 section.lorem p {
@@ -216,12 +223,48 @@ section.lorem button:hover {
   }
 }
 
+section.simple-accordion .container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transform-origin: 0 0;
+}
+
+section.simple-accordion .stripe {
+  flex: 1;
+}
+
+section.simple-accordion .stripe:nth-child(3n + 1) {
+  background-color: var(--color-2);
+}
+
+section.simple-accordion .stripe:nth-child(3n + 2) {
+  background-color: var(--color-3);
+}
+
+section.simple-accordion .stripe:nth-child(3n + 3) {
+  background-color: var(--color-4);
+}
+
+
 section.fin {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #73b8a1;
+  background-color: var(--color-3);
+}
+
+section.fin h1 {
+  font-family: 'Asset', cursive;
+  font-size: 10vw;
+  text-align: center;
+  color: var(--color-6);
+  line-height: 10vw;
 }
 
 .fin span {

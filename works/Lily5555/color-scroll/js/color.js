@@ -1,4 +1,4 @@
-export const colors = [
+/*export const colors = [
     '#C1E7E3',
     '#DCFFFB',
     '#FFDCF4',
@@ -14,4 +14,4 @@ export const colors = [
     const index = Math.floor(Math.random() * colors.length)
     const color=colors[index]
     return color
-  }
+  }*/

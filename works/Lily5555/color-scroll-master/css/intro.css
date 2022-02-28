@@ -11,7 +11,6 @@ section.intro div.scroll-down {
   position: absolute;
   bottom: 0;
   left: 50%;
-
   --size: 10vh;
   width: var(--size);
   height: var(--size);
