@@ -22,23 +22,23 @@ body, body * {
 
 body {
   font-family: 'Fira Code', monospace;
-  background-color: rgb(31, 141, 104);
+  background-color: #676fbb;
 }
 
 body {
   --color-1:#00d9ff; 
-  --color-2:#aaaaaa; 
+  --color-2:#676fbb; 
   --color-3:#94003a; 
   --color-4:#4223a8; 
-  --color-5:#fff;
+  --color-5:#bd1818;
 }
 
 body.color-version-2 {
-  --color-1: #ffffff;
+  --color-1: #e42121;
   --color-2: #9a00ed;
   --color-3: #ff5d9d;
-  --color-4: #87e16a;
-  --color-5: #86ffe7;
+  --color-4: #488036;
+  --color-5: #175c4e;
 }
 
 section {
