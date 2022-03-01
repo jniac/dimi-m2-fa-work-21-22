@@ -1,0 +1,104 @@
+#color-1{
+  background-color:var(--color-1);
+}
+
+#color-2{
+  background-color:var(--color-2);
+}
+
+#color-3{
+  background-color:var(--color-3);
+}
+
+#color-4{
+  background-color:var(--color-4);
+}
+
+#color-5{
+  background-color:var(--color-5);
+}
+
+section.color-set {
+  --size: 30vh;
+  padding: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #000000;
+  color: azure;
+  transition: background-color .3s ease-in-out;
+}
+
+/* Phrase */
+
+section.color-set p {
+  font-family: 'Rowdies', cursive;
+  font-size: 2em;
+  color: #ffffff;
+  text-align: center;
+  transition: all .1s ease-out;
+  position: absolute;
+  top: -50px;
+}
+
+   /* la couleur de la bordure transparente */
+
+section.color-set div.color {
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-family: 'Rowdies', cursive;
+  font-size: calc(var(--size) * 0.11);
+  padding: 30px;
+  border: solid 8px transparent;
+  border-radius: 120px;
+  margin: 15px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+  top: 30px;
+}
+
+/* la couleur de la bordure au survol */
+ section.color-set div.color:hover {
+  border: solid 8px rgb(255, 255, 255);
+  transform: scale(1.15);
+  z-index: 1;
+}
+
+/* la couleur de fond quand on clique -> ne fonctionne pas */
+section.color-set div.color.clicked {
+  background-color: var(--white) !important;
+}
+
+
+  /* Phrase */
+
+  section.color-set p {
+    font-family: 'Rowdies', cursive;
+    font-size: 2em;
+    color: #ffffff;
+    text-align: center;
+    transition: all .1s ease-out;
+    padding-top: 128px;
+  }
+
+  /* mobile */
+  
+  @media screen and (max-width: 400px) {
+    section.color-set {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    section.color-set div.color:nth-child(2n + 1) {
+      transform: rotate(-5deg) translateX(-5vw);
+    }
+    section.color-set div.color:nth-child(2n + 2) {
+      transform: rotate(5deg) translateX(5vw);
+    }
+  }
+
+  

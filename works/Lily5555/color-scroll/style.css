@@ -1,6 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
-@import url(lorem.css);
-@import url(rorschach.css);
+@import url('https://fonts.googleapis.com/css2? family= Asset & display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Asset&family=DM+Serif+Display&display=swap');
+
+body{
+  --color-1: #490313;
+  --color-2: #f23603;
+  --color-3: #73b8a1;
+  --color-4: #e7a12e;
+  --color-5: #e77318;
+  --color-6: #12856b;
+  --color-fond-1: #5a3e2d;
+  --color-fond-2: rgb(242, 226, 176);
+  
+}
+
+body.color-version-2 {
+  --color-1: #cc9579; 
+  --color-2: #853d05;
+  --color-4: #be7b41; 
+  --color-3: #919985; 
+  --color-5: #78826a; 
+  --color-6: #4b512a;
+  --color-fond-1: rgb(242, 226, 176);
+  --color-fond-2: #253416;
+}
+
+#color-1 {
+  background-color:var(--color-1);
+}
+
+#color-2 {
+  background-color:var(--color-2);
+}
+
+#color-3 {
+  background-color:var(--color-3);
+}
+
+#color-4 {
+  background-color:var(--color-4);
+}
+
+#color-5 {
+  background-color:var(--color-5);
+}
+
+#color-6 {
+  background-color:var(--color-6);
+}
+
 
 body, body * {
   margin: 0;
@@ -9,14 +57,11 @@ body, body * {
 }
 
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  color: rgb(242, 226, 176);
 }
 
-h1 {
-  font-family: 'Mochiy Pop P One', sans-serif;
-  font-size: 120px;
-  color:#333;
-}
 
 section {
   /* vh: "viewport height" : la hauteur de la fenêtre */
@@ -25,69 +70,230 @@ section {
   overflow:hidden;
 }
 
+section.intro h1 {
+  font-family: 'Asset', cursive;
+  font-size: 10vw;
+  text-align: center;
+  color: var(--color-2);
+  line-height: 10vw;
+}
+
 section.intro {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #DCFFFB;
+  background-color: var(--color-1);
 }
 
 section.intro div.scroll-down {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 100px;
-  height: 100px;
-  transform: translateX(-50%) translateY(-32px);
-  background-color:#333;
-  
-  /* utilisation d'un svg comme masque: */
-  mask-image: url(assets/iconmonstr-arrow-69.svg);
-  mask-size: contain;
-  -webkit-mask-image: url(assets/iconmonstr-arrow-69.svg);
-  -webkit-mask-size: contain;
-  
-  /* inception: le svg de la flèche est réutilisé en background */
-  /*background-image: url(assets/iconmonstr-arrow-69.svg);*/
+  --size: 10vh;
+  width: var(--size);
+  height: var(--size);
+  background-color:rgb(242, 226, 176);
 
-  /* une option plus sage: une couleur pleine */
-  /* background-color: black; */
+/* utilisation d'un svg comme masque: */
+mask-image: url(assets/arrow-down.svg);
+mask-size: contain;
+-webkit-mask-image: url(assets/arrow-down.svg);
+-webkit-mask-size: contain;
+
+transform: translateX(-50%) translateY(-32px);
 }
+
 section.intro div.scroll-down:hover {
-  background-color: #C1BBDD;
+background-color: #73b8a1;
 }
-
 
 
 section.color-set {
-  padding: 64px;
+  --size: 40vh;
+  padding: 64px calc((100% - 3.5 * var(--size)) / 2);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #222;
-  height: 100vh;
+  align-content: center;
+  background-color: var(--color-fond-1);
 }
 
 section.color-set div.color {
-  width: 300px;
-  height: 300px;
+  width: var(--size);
+  height: var(--size);
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  font-size: 48px;
-  padding: 32px;
+  font-size: calc(var(--size) * 0.15);
+  padding: 16px;
   border: solid 8px transparent;
   cursor: pointer;
   transition: background-color .3s ease-in-out;
 }
 
 section.color-set div.color:hover {
-  border: solid 8px #333;
-  transform: scale(1.1);
+  border: solid 10px rgb(242, 226, 176);
+  transform: scale(1.15);
+  z-index: 1;
 }
 
 section.color-set div.color.clicked {
   background-color: white !important;
+}
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section.color-set {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  section.color-set div.color:nth-child(2n + 1) {
+    transform: rotate(-5deg) translateX(-5vw);
+  }
+  section.color-set div.color:nth-child(2n + 2) {
+    transform: rotate(5deg) translateX(5vw);
+  }
+}
+
+
+section.lorem {
+  color: #f23603;
+  padding: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-fond-2);
+}
+
+section.lorem p {
+  font-size: 4vw;
+}
+
+
+section.lorem button {
+  --margin: 32px;
+  --size: 10vh;
+  position: absolute;
+  bottom: var(--margin);
+  right: var(--margin);
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 100;
+  font-size: calc(var(--size) * 0.8);
+  background-color: var(--color-4);
+  color: #fff6;
+  border: solid 2px #fff3;
+  border-radius: 8px;
+  transition: all .1s ease-out;
+  cursor: pointer;
+}
+
+section.lorem span {
+  transform: translate(7%, -4%);
+}
+
+section.lorem button:hover {
+  color: var(--color-4);
+  border-color: #fff5;
+  background-color: white;
+}
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section.lorem {
+    padding: 96px 48px;
+  }
+
+  section.lorem p {
+    font-size: 24px;
+  }
+
+  section.lorem button {
+    --margin: 16px;
+  }
+}
+
+section.simple-accordion .container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transform-origin: 0 0;
+}
+
+section.simple-accordion .stripe {
+  flex: 1;
+}
+
+section.simple-accordion .stripe:nth-child(3n + 1) {
+  background-color: var(--color-2);
+}
+
+section.simple-accordion .stripe:nth-child(3n + 2) {
+  background-color: var(--color-3);
+}
+
+section.simple-accordion .stripe:nth-child(3n + 3) {
+  background-color: var(--color-4);
+}
+
+
+section.fin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-3);
+}
+
+section.fin h1 {
+  font-family: 'Asset', cursive;
+  font-size: 10vw;
+  text-align: center;
+  color: var(--color-6);
+  line-height: 10vw;
+}
+
+.fin span {
+  font-size: 10vw;
+  text-align: center;
+  color: var(--color-6); 
+  line-height: 12vw;
+}
+
+section .color-change {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 32px;
+}
+
+section .color-change button {
+  padding: 16px;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-size: 20px;
+  background-color: var(--color-2);
+  color: var(--color-1);
+  border: solid 1px transparent;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+section .color-change button:hover {
+  background-color: var(--color-1);
+  color: var(--color-2);
 }

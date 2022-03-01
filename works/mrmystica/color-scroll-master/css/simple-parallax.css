@@ -4,7 +4,7 @@ section.simple-parallax {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #111;
+  background-color: #0d4d5b;
 }
 
 section.simple-parallax .circle {

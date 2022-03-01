@@ -22,23 +22,23 @@ body, body * {
 
 body {
   font-family: 'Fira Code', monospace;
-  background-color: #000;
+  background-color: #0c4d59;
 }
 
 body {
-  --color-1:#ffcc00; 
-  --color-2:#aaaaaa; 
-  --color-3:#94003a; 
-  --color-4:#4223a8; 
+  --color-1:#e68535; 
+  --color-2:#c4b78a; 
+  --color-3:#947836; 
+  --color-4:#74180d; 
   --color-5:#fff;
 }
 
 body.color-version-2 {
-  --color-1: #ffffff;
-  --color-2: #9a00ed;
-  --color-3: #ff5d9d;
-  --color-4: #87e16a;
-  --color-5: #86ffe7;
+  --color-1: #d8eef3;
+  --color-2: #172d40;
+  --color-3: #215b73;
+  --color-4: #45b3bf;
+  --color-5: #97d3da;
 }
 
 section {
@@ -62,14 +62,14 @@ section .color-change button {
   padding: 16px;
   font-family: inherit;
   background-color: var(--color-4);
-  color: white;
-  border: solid 1px #fff3;
+  color: orange;
+  border: solid 1px #0c4d59;
   border-radius: 4px;
   cursor: pointer;
 }
 
 section .color-change button:hover {
-  background-color: white;
+  background-color: orange;
   color: var(--color-4);
 }
 

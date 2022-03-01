@@ -33,13 +33,13 @@ section.complex-accordion .stripe:nth-child(3n + 1) {
   padding-left: calc(25% + 50% * 0 / 3);
   padding-right: calc(25% + 50% * 2 / 3);
   background-color: var(--color-1);
-  color: #111;
+  color: #0c4d59;
 }
 
 section.complex-accordion .stripe:nth-child(3n + 2) {
   padding-left: calc(25% + 50% * 1 / 3);
   padding-right: calc(25% + 50% * 1 / 3);
-  background-color: #111;
+  background-color: #0c4d59;
   color: var(--color-2);
 }
 
