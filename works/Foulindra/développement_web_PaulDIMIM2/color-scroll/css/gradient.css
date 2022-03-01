@@ -1,0 +1,32 @@
+
+.bg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,  
+    #3f0aa8, purple, 
+    #FF8235, #ffff1c, 
+    #3fe297, #00C9FF, 
+    #e657ad, #3015a5);
+  background-repeat: no-repeat;
+  background-size: 1000% 1000%;
+  animation: gradient 240s ease infinite;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+    
+@keyframes gradient { 
+  0%{background-position:0% 0%}
+  50%{background-position:100% 100%}
+  100%{background-position:0% 0%}
+}

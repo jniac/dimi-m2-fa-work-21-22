@@ -13,6 +13,8 @@ section.lorem {
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
   font-style: initial;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 section.lorem p {

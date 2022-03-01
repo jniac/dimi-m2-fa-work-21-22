@@ -1,18 +1,22 @@
 @import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=block);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
 @import url(https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=block);
-@import url(intro.css);
-@import url(color-set.css);
-@import url(lorem.css);
-@import url(simple-accordion.css);
-@import url(simple-parallax.css);
-@import url(color-interpolation.css);
-@import url(complex-parallax.css);
-@import url(complex-accordion.css);
-@import url(random-chars.css);
-@import url(you-cant-read-this.css);
-@import url(rorschach.css);
-@import url(section-info.css);
+@import url(bloc1.css);
+@import url(bloc2.css);
+@import url(bloc3.css);
+@import url(bloc4.css);
 
+html {
+  height: 100%;
+}
+body {
+  background: white;
+  font: 400 1.5em/1.5 "Open Sans", serif;
+  color: #000;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
 
 body, body * {
   margin: 0;
@@ -20,16 +24,12 @@ body, body * {
   position: relative;
 }
 
-body {
-  font-family: 'Fira Code', monospace;
-  background-color: #000;
-}
 
 body {
-  --color-1:#ffcc00; 
-  --color-2:#aaaaaa; 
-  --color-3:#94003a; 
-  --color-4:#4223a8; 
+  --color-1:#12cbd1; 
+  --color-2:#187abb; 
+  --color-3:#4ab928; 
+  --color-4:#978670; 
   --color-5:#fff;
 }
 

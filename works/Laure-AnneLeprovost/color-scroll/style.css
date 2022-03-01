@@ -1,97 +1,427 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Mochiy+Pop+P+One&display=swap');
-@import url(lorem.css);
-
-body, body * {
+body, * {
   margin: 0;
-  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* position: relative; */
 }
 
 body {
-  font-family: 'Fira Code', monospace;
+  --color-1: #2C3532;
+  --color-2: #0F6466;
+  --color-3: #D8B08C;
+  --color-4: #FFCB9A;
+  --color-5: #D2E8E3;
+  --back: rgba(34, 34, 34, 0.733);
+  --white: white;
+}
+
+body.color-version-2 {
+  --color-1: #91aaff;
+  --color-2: #ff9e9e;
+  --color-3: #ff80c5;
+  --color-4: #7afbff;
+  --color-5: #8aff9c;
+  --back: #222;
+  --white: white;
+}
+
+
+p {
+  font-size: 0.2em;
+  text-align: center;
+  color: white;
+  padding: 40px;
+}
+
+#section1 {
+  height: 100vh;
+  background-color: #2C3532;
+
+}
+
+#section2 {
+  height: 100vh;
+  background-color: #0F6466;
+}
+
+
+#section3 {
+  height: 100vh;
+  background-color: #D8B08C;
+}
+
+#section4 {
+  height: 100vh;
+  background-color: #ffcb9a7a;
+  align-items: center;
+}
+
+#section4 p {
+  color: #2C3532;
+  padding-bottom: 0;
+  padding-top: 50px;
+}
+
+#section5 {
+  height: 100vh;
+  background-color: #d2e8e385;
 }
 
 h1 {
-  font-family: 'Mochiy Pop P One', sans-serif;
-  font-size: 120px;
+  color: #D2E8E3;
 }
 
-section {
-  /* vh: "viewport height" : la hauteur de la fenêtre */
-  min-height: 100vh; 
-  padding: 32px;
+h3 {
+  font-size: 0.4em;
+  text-align: center;
+  padding-top: 70px;
+  top: 20%;
+  color: #2C3532;
 }
 
-section.intro {
+BODY {
+  background-size: 0.12em 100%;
+  font: 16em/1 Arial;
+}
+
+.text--line {
+  font-size: 0.5em;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 7% 28%;
+  stroke-width: 3px;
+  animation: stroke-offset 9s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+  stroke: #360745;
+  stroke-dashoffset: 7%;
+}
+
+.text-copy:nth-child(2) {
+  stroke: #D61C59;
+  stroke-dashoffset: 14%;
+}
+
+.text-copy:nth-child(3) {
+  stroke: #E7D84B;
+  stroke-dashoffset: 21%;
+}
+
+.text-copy:nth-child(4) {
+  stroke: #EFEAC5;
+  stroke-dashoffset: 28%;
+}
+
+.text-copy:nth-child(5) {
+  stroke: #1B8798;
+  stroke-dashoffset: 35%;
+}
+
+@keyframes stroke-offset {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+
+.parallax-effect {
+  background-image: url("https://graphiste-laureanneleprovost.fr/img/Photodeprofil.jpg");
+  min-height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-clip: content-box;
+  background-origin: content-box;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
+#metierlolo {
+  position: absolute;
+  z-index: 1;
+  top: 170vh;
+  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 10vw;
+  font-family: "Source Sans Pro", sans-serif;
+  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+}
+
+@keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+
+  100% {
+    background-size: 300% 300%;
+  }
+}
+
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+
+#ouca {
+  color: #2C3532;
+  left: 60px;
+  position: absolute;
+  top: 185vh;
+}
+
+#conteneurliste {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: dimgrey;
 }
 
-section.intro div.scroll-down {
+
+
+
+#button1 {
+  background-color: #2C3532 !important;
+  height: 35vh;
+  width: 35vh;
+  transition: 0.3s;
+  border-radius: 0%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#section4 button {
+  background-color: transparent;
+  border: none !important;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: -19%;
+  font-size: 0.2em;
+}
+
+#section4 button:after {
+  content: '';
   position: absolute;
-  bottom: 0;
+  top: 50%;
   left: 50%;
-  width: 100px;
-  height: 100px;
-  transform: translateX(-50%) translateY(-32px);
-  
-  /* utilisation d'un svg comme masque: */
-  mask-image: url(assets/arrow-down.svg);
-  mask-size: contain;
-  -webkit-mask-image: url(assets/arrow-down.svg);
-  -webkit-mask-size: contain;
-  
-  /* inception: le svg de la flèche est réutilisé en background */
-  background-image: url(assets/arrow-down.svg);
-
-  /* une option plus sage: une couleur pleine */
-  /* background-color: black; */
-}
-section.intro div.scroll-down:hover {
-  background-color: blue;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, .5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
 }
 
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+#section4 button:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
 
 
-section.color-set {
+
+
+
+#button1:hover {
+  border-radius: 5%;
+}
+
+#cubcolors2 {
+  background-color: #0F6466;
+  height: 35vh;
+  width: 35vh;
+  transition: 0.3s;
+  border-radius: 0%;
+  text-align: center;
+}
+
+#cubcolors2 p {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 25%;
+}
+
+#cubcolors2:hover {
+  border-radius: 5%;
+}
+
+
+#cubcolors3 {
+  background-color: #D8B08C;
+  height: 35vh;
+  width: 35vh;
+  transition: 0.3s;
+  border-radius: 0%;
+  text-align: center;
+}
+
+#cubcolors3 p {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 25%;
+}
+
+#cubcolors3:hover {
+  border-radius: 5%;
+}
+
+
+#cubcolors4 {
+  background-color: #FFCB9A;
+  height: 35vh;
+  width: 35vh;
+  transition: 0.3s;
+  border-radius: 0%;
+  text-align: center;
+}
+
+#cubcolors4 p {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 25%;
+}
+
+#cubcolors4:hover {
+  border-radius: 5%;
+}
+
+#cubcolors5 {
+  background-color: #D2E8E3;
+  height: 35vh;
+  width: 35vh;
+  transition: 0.3s;
+  border-radius: 0%;
+  text-align: center;
+}
+
+#cubcolors5 p {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 25%;
+}
+
+#cubcolors5:hover {
+  border-radius: 5%;
+}
+
+#contenerlignecolors {
+  display: flex;
+  padding-top: 10%;
+}
+
+
+
+
+
+
+
+/*--------------------- flèche --------------------- */
+#imgfleche {
+  width: 40px;
+  margin-left: 47%;
+  margin-top: 20px;
+  display: flex;
+}
+
+#fleche {
+  animation: fleche 1s ease infinite;
+}
+
+@keyframes fleche {
+  from {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+
+/*--------------- change texte ------------------*/
+
+section.lorem {
+  position: relative;
   padding: 64px;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section.lorem p {
+  font-size: 36px;
+}
+
+section.lorem button {
+  --margin: 32px;
+  --size: 10vh;
+  position: absolute;
+  bottom: var(--margin);
+  right: var(--margin);
+  width: var(--size);
+  height: var(--size);
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
-  height: 100vh;
-}
-
-section.color-set div.color {
-  width: 300px;
-  height: 300px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-size: 48px;
-  padding: 32px;
-  border: solid 8px transparent;
+  font-family: inherit;
+  font-weight: 100;
+  font-size: calc(var(--size) * 0.8);
+  background-color: var(--color-4);
+  color: #fff6;
+  border: solid 2px #fff3;
+  border-radius: 8px;
+  transition: all .1s ease-out;
   cursor: pointer;
-  transition: background-color .3s ease-in-out;
 }
 
-section.color-set div.color:hover {
-  border: solid 8px black;
-  transform: scale(1.1);
+section.lorem span {
+  transform: translate(7%, -4%);
 }
 
-section.color-set div.color.clicked {
-  background-color: white !important;
+section.lorem button:hover {
+  color: var(--color-4);
+  border-color: #fff5;
+  background-color: white;
 }
-
-
-
-
-
-
-
-
-

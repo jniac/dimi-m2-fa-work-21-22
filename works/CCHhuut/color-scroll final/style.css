@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lato:wght@300;400;700;900&display=swap');
+@import url(./animations.css);
+@import url(./slider.css);
+
+h1,h2,h3,h4,h5 {
+    font-family: "Cormorant Garamond";
+    font-weight: 300;}
+h1 {
+    font-size: 100px;
+    font-weight: 300;
+    line-height: 5rem;
+    color: white;
+    text-align: center;
+    animation: blink infinite 2s;}
+h2 {
+    font-size: 60px;
+    font-weight: 300;
+    margin: 0%;}
+
+body {
+    --color-1: #8823EE;
+    --color-2: #267DFF;
+    --color-3: #5AEDFF;
+    --color-4: #B6FF47;
+    --color-5: #25AA0D;
+    --color-6: linear-gradient(#000000,#004058);
+
+    margin: 0px;
+    font-family: "lato";
+    font-size: 1.5em;
+    color: white}
+
+/* Première Section */
+section {
+    min-height: 98vh;
+    }
+section.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./images/Light_and_Dark.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;}
+
+.logo {
+    max-height: 100px;
+    position: absolute;}
+.home:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to top, #0000006e, transparent);
+    z-index: 200;
+    }
+.home:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: color;
+    pointer-events: none;}
+
+.scroll{
+    position: absolute;
+    top: 80%;
+    align-items: center;
+    flex-direction: column;
+}
+.arrow {
+    min-width: 70px;
+}
+
+/* Deuxième Section */
+section.kyber-colors,section.your-saber{
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+    flex-direction: column;
+    background: var(--color-6);}
+
+button.light,button.dark {
+    background-color: white;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 105px;
+    width: 105px;
+    margin: 20px;
+    margin-bottom: 10px;
+    background-size: 70%;
+    border-color: rgba(0, 0, 0, 0);}
+button.light:hover,button.dark:hover{
+    transform: scale(1.1,1.1);}
+
+button.light{
+    background-image: url(assets/icone_light.svg);}
+button.light:hover{
+    background-color: #b5fcff;
+    box-shadow: 0 0 15px #b5fcff;}
+
+button.dark {
+    background-image: url(assets/icone_dark.svg);}
+button.dark:hover{
+    background-color: #FF7777;
+    box-shadow: 0 0 15px #FF7777;}
+
+div.icone-title {
+    width: 260px;
+    align-content: space-between;
+    display: flex;
+    justify-content: space-between;
+}
+.title1{
+    width: 105px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+span.color-set {
+    width: 80%;
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: 100px;
+
+}
+
+.color1,.color2,.color3,.color4,.color5 {
+    height: 200px;
+    width: 150px;
+    /*Utilisation "mask" pour afficher les couleurs dans les cristaux*/
+    mask-image: url(./assets/background_cristal_kyber.svg);
+    -webkit-mask-image: url(./assets/background_cristal_kyber.svg);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-position: center;
+    -webkit-mask-position: center;}
+.color1:hover,.color2:hover,.color3:hover,.color4:hover,.color5:hover {
+    transform: scale(0.9,0.9);
+    transform: rotate(0.1);
+    border: white 1px;}
+
+.color1 {
+    background-color: var(--color-1);}
+.color2 {
+    background-color: var(--color-2);}
+.color3 {
+    background-color: var(--color-3);}
+.color4 {
+    background-color: var(--color-4);}
+.color5 {
+    background-color: var(--color-5);}
+
+div.color-title {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 1%;}
+div.title2 {
+    font-family: "Cormorant Garamond";
+    font-weight: 300;
+    width: 150px;
+    text-align: center;
+}
+hr { width: 100vw;}
+span.bot-title{
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
+div .group-button {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.saber-button {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    height: 50px;
+    background-color: white;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 105px;
+    width: 105px;
+    margin: 20px;
+    margin-bottom: 10px;
+    background-size: 70%;
+    border-color: rgba(0, 0, 0, 0);
+}
+.your-saber{
+    display: flex;
+}
+
+section .slider-image {
+    background-color: var(--color-6);
+}
+
+section.end {
+    background-image: url(./images/Espace_etoiles.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    justify-content: center;
+}

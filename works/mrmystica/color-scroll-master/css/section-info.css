@@ -4,7 +4,7 @@ section .section-info {
   --margin: 32px;
   left: var(--margin);
   bottom: var(--margin);
-  color: white;
+  color: #f9b24b;
   font-weight: 100;
 }
 
@@ -13,7 +13,7 @@ section .section-info span {
 }
 
 section .section-info a {
-  color: white;
+  color: #f9b24b;
 }
 
 @media screen and (max-width: 400px) {

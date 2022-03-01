@@ -5,26 +5,26 @@ import { inverseLerp } from '../../../../common/basic-functions.js'
 const section = document.querySelector('section.color-interpolation')
 
 // Couleurs :
-const darkGrey = new Color('#111')
+const darkGreen = new Color('#0c4d59')
 let color2 = new Color('--color-3', document.body)
 let color3 = new Color('--color-4', document.body)
 
 // Interpolations :
 // Les interpolations sont obtenu par la méthode "range":
 // https://colorjs.io/docs/interpolation.html
-let gradient1 = darkGrey.range(color2)
+let gradient1 = darkGreen.range(color2)
 let gradient2 = color2.range(color3)
 
 const updateColor = () => {
   color2 = new Color('--color-3', document.body)
   color3 = new Color('--color-4', document.body)
-  gradient1 = darkGrey.range(color2)
+  gradient1 = darkGreen.range(color2)
   gradient2 = color2.range(color3)
 }
 
 const updateGradientDiv = () => {
   const gradient = [
-    ...Color.steps(darkGrey, color2, { steps: 10 }),
+    ...Color.steps(darkGreen, color2, { steps: 10 }),
     ...Color.steps(color2, color3, { steps: 10 }),
   ].map(c => c.hex).join(', ')
   section.querySelector('div.gradient').style.backgroundImage = `linear-gradient(to right, ${gradient})`
