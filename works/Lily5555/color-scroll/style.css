@@ -26,38 +26,29 @@ body.color-version-2 {
 }
 
 #color-1 {
-  background-color: var(--color-1);
+  background-color:var(--color-1);
 }
 
 #color-2 {
-  background-color: var(--color-2);
+  background-color:var(--color-2);
 }
 
 #color-3 {
-  background-color: var(--color-3);
+  background-color:var(--color-3);
 }
 
 #color-4 {
-  background-color: var(--color-4);
+  background-color:var(--color-4);
 }
 
 #color-5 {
-  background-color: var(--color-5);
+  background-color:var(--color-5);
 }
 
 #color-6 {
-  background-color: var(--color-6);
+  background-color:var(--color-6);
 }
 
-section.color-set {
-  padding: 64px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--back);
-  height: 100vh;
-}
 
 body, body * {
   margin: 0;
@@ -70,7 +61,6 @@ body {
   font-size: 20px;
   color: rgb(242, 226, 176);
 }
-
 
 
 section {
