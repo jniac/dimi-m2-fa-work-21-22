@@ -186,3 +186,16 @@ svg {
 @keyframes stroke-offset{
 	100% {stroke-dashoffset: -35%;}
 }
+
+
+
+
+
+.ecran2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #F2D338;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
