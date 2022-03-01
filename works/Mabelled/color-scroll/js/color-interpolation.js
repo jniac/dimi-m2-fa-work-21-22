@@ -54,13 +54,13 @@ trackParallax(section, info => {
   for (const span of section.querySelectorAll('span.y')) {
     span.innerHTML = `${n}<br>${color}`
   }
-
-  section.style.backgroundColor = color
+  section.querySelector('.backgroundGradiant').style.filter = `saturate( ${n*10})`
+  //section.style.backgroundColor = color
 })
 
 // grrr. 
 // Une ligne de code pour retirer la première ligne du bloc code. Such a shame.
-section.querySelector('code').innerHTML = section.querySelector('code').innerText.trim()
+//section.querySelector('code').innerHTML = section.querySelector('code').innerText.trim()
 
 
 

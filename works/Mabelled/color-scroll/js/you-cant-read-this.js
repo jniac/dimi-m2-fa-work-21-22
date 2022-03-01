@@ -18,7 +18,7 @@ const mapWord = (word) => {
 }
 
 const splitToSpan = () => {
-  const words = container.innerText.split(' ')
+  const words = ['merci', 'mabelle']
   container.innerHTML = words
     .map(word => mapWord(word))
     .join('<span class="space"></span>')

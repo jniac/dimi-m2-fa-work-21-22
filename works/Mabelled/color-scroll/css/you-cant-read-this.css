@@ -8,6 +8,10 @@ section.you-cant-read-this .container {
     align-items: center;
     align-content: center;
     background-color: dimgrey;
+    background-image: url("../assets/background-2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
   
   section.you-cant-read-this .container div {

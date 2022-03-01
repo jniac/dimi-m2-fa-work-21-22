@@ -6,10 +6,10 @@ import './simple-accordion.js'
 import './simple-parallax.js'
 import './color-interpolation.js'
 import './complex-parallax.js'
-import './complex-accordion.js'
-import './random-chars.js'
+//import './complex-accordion.js'
+//import './random-chars.js'
 import './you-cant-read-this.js'
-import './rorschach.js'
+//import './rorschach.js'
 
 document.querySelector('.color-change button').onclick = () => {
   
