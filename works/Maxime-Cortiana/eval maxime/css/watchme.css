@@ -1,0 +1,30 @@
+section.watchme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.watchme h1 {
+  font-family: 'Concert One', cursive;
+  font-weight: 700;
+  font-size: 4vw;
+  line-height: 1em;
+  top: 3vw;
+  color: white;
+}
+
+.watchme {
+  display: flex;
+  min-height: 100vh;
+  background-color: black;
+  overflow: hidden;
+
+  background: url('/img/YeuxViolets.png');
+  background-size: cover;
+
+  clip-path: circle(150px at var(--x) var(--y));
+}
+
+.watchme::before{
+  filter: blur(40px);
+}

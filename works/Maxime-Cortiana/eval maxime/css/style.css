@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css2?family=Concert+One&display=swap);
+@import url(eye.css);
+@import url(watchme.css);
+@import url(intro.css);
+@import url(parallax.css);
+
+body, body * {
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: black;
+}
+
+section {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+section .LesYeux {
+  min-height: 100vh;
+  overflow: hidden;
+}
