@@ -1,19 +1,17 @@
-
-export const colors = [
-  '#ffcc00', 
-  'red',
-  'blue',
-  '#6f0',
-  '#0ff',
-]
-
-export const backgroundColors = [
-  '#222',
-  '#232323',
-]
-
-export const getRandomColor = () => {
-  const index = Math.floor(Math.random() * colors.length)
-  const color = colors[index]
-  return color
-}
+/*export const colors = [
+    '#C1E7E3',
+    '#DCFFFB',
+    '#FFDCF4',
+    '#DABFDE',
+    '#C1BBDD',
+  ]
+  
+  export const backgroundColors = [
+    '#333'
+  ]
+  
+  export const getRandomColor = () => {
+    const index = Math.floor(Math.random() * colors.length)
+    const color=colors[index]
+    return color
+  }*/

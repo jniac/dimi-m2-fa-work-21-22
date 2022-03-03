@@ -1,0 +1,83 @@
+section.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/chat-3.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(138, 191, 240);
+}
+
+section.intro h1, section.intro p{
+  color: #fff;
+}
+
+section.intro svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+} 
+
+section.intro div.scroll-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  --size: 10vh;
+  width: var(--size);
+  height: var(--size);
+  background-color: rgb(234, 234, 243);
+  /* utilisation d'un svg comme masque: */
+  /* mask-image: url(../assets/arrow-down.svg); */
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  /* -webkit-mask-image: url(../assets/arrow-down.svg); */
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  transform: translateX(calc(var(--size) * -0.5)) translateY(-32px);
+  transition: background .2s ease-in-out, opacity .2s ease-in-out;
+}
+
+section.intro div.scroll-down:hover {
+  background-color: var(--color-1);
+}
+
+section.intro div.scroll-down.hidden {
+  opacity: 0;
+}
+
+section.intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 12vw;
+  line-height: 1em;
+  text-align: center;
+}
+
+section.intro p {
+  font-size: 2em;
+  transition: all .1s ease-out;
+}
+
+section.intro p span {
+  transition: all .1s ease-out;
+}
+
+section.intro p.hidden {
+  opacity: 0;
+}
+
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section.intro h1 {
+    font-size: 14vh;
+  }
+
+  section.intro p {
+    margin-top: 4vh;
+    font-size: 1.4em;
+  }
+}

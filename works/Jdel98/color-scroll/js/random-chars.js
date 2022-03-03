@@ -13,7 +13,7 @@ const randomDraw = () => {
   const spans = []
   for (let i = 0; i < count; i++) {
     const char = randomItem(chars)
-    const color = randomItem(['--color-2', '--color-3', '--color-4', '--color-5'])
+    const color = randomItem(['--color-1', '--color-3', '--color-4', '--color-5'])
     const angle = randomRange(-90, 90)
     const scale = chance(1 / 40) ? randomRange(4, 5) : randomRange(.3, 1)
     const x = (Math.random() * 100).toFixed() + '%'

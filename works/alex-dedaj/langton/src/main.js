@@ -13,3 +13,5 @@ for (let x = 3; x < 24; x++) {
     // alors on colorie le pixel en 'fc0 (jaune)', sinon en rouge
     setPixel(x, 10, color)
 }
+
+Test 

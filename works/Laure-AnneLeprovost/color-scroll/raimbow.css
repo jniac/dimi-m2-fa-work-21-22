@@ -1,0 +1,85 @@
+.c-rainbow {
+  counter-reset: rainbow;
+  position: relative;
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.c-rainbow__layer {
+  counter-increment: rainbow;
+  font-size: 20rem;
+  color: #FFF;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 4px 4px 0 rgba(0, 0, 0, 0.2);
+  animation: rainbow 1.5s ease-in-out infinite;
+}
+.c-rainbow__layer:nth-child(1) {
+  animation-delay: 0.1s;
+  left: 1px;
+  z-index: 7;
+}
+.c-rainbow__layer:nth-child(2) {
+  animation-delay: 0.3s;
+  left: 2px;
+  z-index: 6;
+}
+.c-rainbow__layer:nth-child(3) {
+  animation-delay: 0.4s;
+  left: 3px;
+  z-index: 5;
+}
+.c-rainbow__layer:nth-child(4) {
+  animation-delay: 0.5s;
+  left: 4px;
+  z-index: 4;
+}
+.c-rainbow__layer:nth-child(5) {
+  animation-delay: 0.6s;
+  left: 5px;
+  z-index: 3;
+}
+.c-rainbow__layer:nth-child(6) {
+  animation-delay: 0.7s;
+  left: 6px;
+  z-index: 2;
+}
+.c-rainbow__layer:nth-child(7) {
+  animation-delay: 0.8s;
+  left: 7px;
+  z-index: 1;
+}
+.c-rainbow__layer:not(:first-child) {
+  position: absolute;
+  top: 30vh;
+  left: -440px;
+}
+.c-rainbow__layer--white {
+  display: none;
+  color: #0F6466;
+}
+.c-rainbow__layer--orange {
+  color: #D2E8E3;
+}
+.c-rainbow__layer--red {
+  color: #D8B08C;
+}
+.c-rainbow__layer--violet {
+  color: #FFCB9A;
+}
+.c-rainbow__layer--blue {
+  color: #D2E8E3;
+}
+.c-rainbow__layer--green {
+  color: #2C3532;
+}
+.c-rainbow__layer--yellow {
+  color:#0F6466;
+}
+@keyframes rainbow {
+  0%, 100% {
+    transform: translateY(1rem);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+}

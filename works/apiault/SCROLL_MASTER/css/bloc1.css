@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Shippori+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+
+h1 {
+	font: 700 2.8em/1.2 "montserrat", sans-serif;
+  margin: 10px 0;
+}
+
+#box {
+	background: url('../asset/fond1.jpeg') no-repeat fixed 50% 0;
+	background-size: cover;
+	color: rgba(41, 41, 41, 0.8);
+  border-bottom:0px black ;
+	height: 100%;
+	width: 100%;
+  padding: 30px 10px;
+}
+
+#boxtext {
+	width: 30em;
+	position: fixed;
+	top: 25%;
+	left: 50%;
+	border: .5em solid rgba(29, 29, 29, 0.5);
+	margin-left: -15em;
+	padding: 50px 100px;
+  box-shadow: 0px 0px 30px white;
+}
+#boxtext p {
+  margin: 10px 0;
+  color: black;
+}
+.arrow{
+	margin-top: 80vh;
+  width: 50px;
+	transform: rotate(90deg);
+  animation: arrow 1.2s ease infinite;
+}
+@keyframes arrow {
+  0%{
+    top: 40px;
+    }25%{
+      top: 45px;
+    }50%{
+      top: 30px;
+    }75%{
+      top: 55px;
+    }100%{
+      top: 40px;
+    }
+}

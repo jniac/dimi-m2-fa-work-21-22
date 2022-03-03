@@ -1,0 +1,50 @@
+section.color-set {
+  padding: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--back);
+  height: 100vh;
+}
+
+#color-1{
+  background-color:var(--color-1);
+}
+
+#color-2{
+  background-color:var(--color-2);
+}
+
+#color-3{
+  background-color:var(--color-3);
+}
+
+#color-4{
+  background-color:var(--color-4);
+}
+
+#color-5{
+  background-color:var(--color-5);
+}
+
+section.color-set div.color {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  margin:15px;
+  border-radius: 500px;
+  transition: background-color .3s ease-in-out;
+}
+
+section.color-set div.color:hover {
+  transform: scale(1.05);
+}
+
+section.color-set div.color.clicked {
+  background-color: var(--white) !important;
+}
