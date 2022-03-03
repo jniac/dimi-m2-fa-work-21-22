@@ -23,8 +23,8 @@ section.random-chars button {
   font-weight: 100;
   font-size: calc(var(--size) * 0.8);
   background-color: var(--color-4);
-  color: #fff6;
-  border: solid 2px #fff3;
+  color: orange;
+  border: solid 2px #0c4d59;
   border-radius: 8px;
   transition: all .1s ease-out;
   cursor: pointer;
@@ -34,8 +34,8 @@ section.random-chars span {
 }
 section.random-chars button:hover {
   color: var(--color-4);
-  border-color: #fff5;
-  background-color: white;
+  border-color: orange;
+  background-color: #0c4d59;
 }
 
 section.random-chars .container {

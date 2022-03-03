@@ -1,0 +1,151 @@
+/* Premier écran */
+
+section.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #25C7D9;
+}
+
+
+/* Animation cercle*/
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  background: #fafafa;
+  animation: pulse 3s infinite;
+}
+
+.small{
+  width: 250px;
+  height: 250px;
+  left: -150px;
+  top: -150px;
+}
+
+.medium{
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  top: -200px;
+}
+
+.large{
+  width: 500px;
+  height: 500px;
+  right: -300px;
+  bottom: -300px;
+}
+
+.xlarge{
+  width: 700px;
+  height: 700px;
+  right: -400px;
+  top: -400px;
+}
+
+.xxlarge{
+  width: 900px;
+  height: 900px;
+  left: -500px;
+  bottom: -500px;
+  background:#F2D338;
+}
+
+.shade1{
+
+  background:#F2D338;
+
+}
+.shade2{
+  background:#F2762E;
+}
+
+.shade3{
+  background:#F23030;
+}
+
+.shade5{
+  background:#248EA6;
+}
+
+@keyframes pulse{
+  0%{
+    transform: scale(0.8);
+  }
+  
+  50%{
+    transform: scale(1.2);
+  }
+  
+  100%{
+    transform: scale(0.8);
+  }
+}
+
+
+/* Scroll down */
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: white;
+  fill: transparent;
+  stroke-width: 1px;	
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section.intro h1 {
+    font-size: 14vh;
+  }
+  
+  section.intro p {
+    margin-top: 4vh;
+    font-size: 1.4em;
+  }
+}

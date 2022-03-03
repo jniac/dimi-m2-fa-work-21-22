@@ -1,52 +1,53 @@
-
-section.bloc2 {
-  --size: 30vh;
-  padding: 64px calc((100% - 3.5 * var(--size)) / 2);
+.color{
+  max-width: 200px;
+  width: 200px;
+  height: 200px;
+  margin: 20px 10px;
+  box-shadow: 0px 0px 10px grey;
+  transition-duration:400ms;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: #111111;
-  transition: background-color .3s ease-in-out;
+  align-items:flex-end;
+  padding-bottom: 10px;
 }
-
-section.bloc2 div.color {
-  width: var(--size);
-  height: var(--size);
+.bloc2{
+ background-color: white;
+ height: 100vh;
+}
+.bloc2 h2{
+  font-family: 'montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  padding-top: 50px;;
+}
+.color-set{
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-size: calc(var(--size) * 0.15);
-  padding: 16px;
-  border: solid 8px transparent;
-  cursor: pointer;
-  transition: background-color .3s ease-in-out;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+.color:hover{
+  z-index: 10;
+  box-shadow: 0px 0px 20px rgb(0, 0, 0);
+  transition-duration:400ms;
+  transform: scale(1.2);
 
-section.bloc2 div.color:hover {
-  border: solid 8px black;
-  transform: scale(1.15);
-  z-index: 1;
 }
-
-section.bloc2 div.color.clicked {
-  background-color: white !important;
+.bloc2-cont ul{
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
 }
-
-
-
-/* mobile */
-
-@media screen and (max-width: 400px) {
-  section.bloc2 {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  section.bloc2 div.color:nth-child(2n + 1) {
-    transform: rotate(-5deg) translateX(-5vw);
-  }
-  section.bloc2 div.color:nth-child(2n + 2) {
-    transform: rotate(5deg) translateX(5vw);
-  }
+.bloc2-cont li{
+  list-style-type: none;
+  width: 50%;
+  padding: 20px;
+}
+.bloc2-cont li p{
+  font-family: 'open sans', sans-serif;
+  font-size: 1.2em;
+  text-align: left;
+  font-weight: 600;
+  line-height: 60px;
+  color:#333;
 }

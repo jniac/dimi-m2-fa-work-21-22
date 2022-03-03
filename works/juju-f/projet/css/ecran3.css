@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(intro.css);
+@import url(color-set.css);
+
+/* Animation de la balle */
+
+@keyframes balltransform {
+	0% {
+		border-radius:50%;
+		height:100%;
+		width:60%;
+	}
+	29% {
+		height:100%;
+		width:60%;
+	}
+	30% {
+		height:50%;
+		width:100%;
+	}
+	40% {
+		height:80%;
+		width:80%;
+	}
+	59% {
+		height:100%;
+		width:60%;
+	}
+	60% {
+		height:50%;
+		width:100%;
+		border-radius:50%;
+		transform:rotate(0);
+	}
+	100% {
+		height:80%;
+		width:80%;
+		border-radius:0;
+		transform: rotate(-180deg);
+	}
+}
+
+@keyframes ballbounce {
+	/* up */
+	0% {
+		top:-30%;
+		animation-timing-function: ease-in;
+	}
+	/* floor */
+	30% {
+		top:80%;
+		animation-timing-function: ease-out;
+	}
+	/* up */
+	40% {
+		top: 20%;
+	}
+	/* up */
+	45% {
+		top:17%;
+		animation-timing-function: ease-in;
+	}
+	/* floor */
+	60% {
+		top:80%;
+		animation-timing-function: ease-out;
+	}
+	/* up */
+	75% {
+		top:30%;
+	}
+	90% {
+		top:25%;
+		animation-timing-function: ease-in;
+	}
+	/* floor */
+	100% {
+		top:110%;
+		animation-timing-function:ease-out;
+	}
+}
+
+@keyframes scalemask {
+	0% {
+		mask-size:0%;
+	}
+	65% {
+		mask-size:0%;
+	}
+	78%,100% {
+		mask-size:300%;
+	}
+}
+
+@keyframes scalemask2 {
+	0% {
+		-webkit-mask-size:0%;
+	}
+	83% {
+		-webkit-mask-size:0%;
+	}
+	100% {
+		-webkit-mask-size: 300%;
+	}
+}
+
+
+/* Balle */
+.ball {
+	width:5rem;
+	height:5rem;
+	left:50%;
+	position:absolute;
+	z-index:1;
+	margin-left:-2.5rem;
+	animation:ballbounce 4s 1s infinite;
+	animation-fill-mode:both;
+}
+
+.ball:after {
+	content:" ";
+	color:#F2D338;
+	display:block;
+	margin:auto;
+	border-radius:50%;
+	background:#F2D338;
+	width:100%;
+	height:100%;
+	animation: balltransform 4s 1s infinite;
+}
+
+.animation {
+	background:#25C7D9;
+	height:100vh;
+	width:100vw;
+	position:relative;
+	z-index:1;
+}
+
+
+/* Text animation */
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 300px;
+
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #F2D338;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #F2762E;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #F23030;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #248EA6;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+
+
+
+
+.ecran2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #F2D338;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

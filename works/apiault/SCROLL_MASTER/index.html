@@ -5,27 +5,154 @@
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <link rel="icon" href="img/rabbit.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="bloc1.css">
-    <link rel="stylesheet" type="text/css" href="bloc2.css">
-  
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
   </head>
   <body>
       
     </div>
     <section class="bloc1">
-      <div class="grid bloc1-text"></div>
-        <h1>Color Scroll</h1>
-        <p>rendu Anaelle PIAULT</p>
-      <div class="bloc1-scroll-down"></div>
+      <div id="box">
+        <div id="boxtext">
+          <h1>COLOR SCROLL</h1>
+          <p>by Anaelle PIAULT</p> 
+        </div>
+        <img src="asset/arrow.png" class="arrow"/>
+      </div>
+      
     </section>
-  
+      
     <section class="bloc2">
-      <div class="color" style="background-color: #fff;">#fff</div>
-      <div class="color" style="background-color: #fff;">#fff</div>
-      <div class="color" style="background-color: #fff;">#fff</div>
-      <div class="color" style="background-color: #fff;">#fff</div>
-      <div class="color" style="background-color: #fff;">#fff</div>
+      <div>
+        <h2>Color click</h2>
+      </div>
+      <div class="bloc2-cont">
+        <ul>
+          <li class="color-set">
+            <div>
+              <div class="color color1" style="background-color: var(--color-1);">Bleu claire</div>
+              <div class="color color2" style="background-color: var(--color-2);">Bleu foncé</div>
+            </div>
+            <div>
+              <div class="color color3" style="background-color: var(--color-3);">Vert</div>
+              <div class="color color4" style="background-color: var(--color-4);">Marron</div>    
+            </div>
+          </li>
+          <li>
+            <p class="cont-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et totam animi laudantium possimus? Sunt nisi minima laborum! Eveniet similique odit, asperiores culpa deleniti, modi nisi suscipit voluptatum, dicta voluptatibus error!</p>
+          </li>
+        </ul>
+       </div>
     </section>
+
+    <div>
+
+    </div class="bloc3">
+      <div class="hero" id="box2">
+        <h1 class="box2text">GRADIENT TRAVEL</h1>
+        <img src="asset/nuages.png"/>
+      </div>
+      
+    </div>
+
+    <section class="bloc4">
+      <p>&nbsp;</p>
+      <div class="hero-center-section">
+        <div class="left-text">nature</div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="img-wrap">
+                <img src="asset/travel.jpeg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-center-section">
+        <div class="left-text">travel</div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="img-wrap">
+                <img src="asset/landscape.jpeg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-center-section">
+        <div class="left-text">Landscape</div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="img-wrap">
+                <img src="asset/culture.jpeg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-center-section">
+        <div class="left-text">Culture</div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="img-wrap">
+                <img src="asset/sky.jpeg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-center-section">
+        <div class="left-text">Sky</div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="img-wrap">
+                <img src="asset/sky.jpeg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="section padding-top-bottom over-hide z-bigger">
+        <ul class="slide-buttons">
+          <li class="">
+            <a href="#0" class="hover-target" data-hover="nature">nature</a>
+          </li>
+          <li class="">
+            <a href="#0" class="hover-target" class="hover-target" data-hover="travel">travel</a>
+          </li>
+          <li class="">
+            <a href="#0" class="hover-target" data-hover="Landscape">Landscape</a>
+          </li>
+          <li class="">
+            <a href="#0" class="hover-target" data-hover="Culture">Culture</a>
+          </li>
+          <li class="">
+            <a href="#0" class="hover-target" data-hover="Sky">Sky</a>
+          </li>
+        </ul>
+      </div>
+        
+      <!-- Page cursor
+      ================================================== -->
+      
+      <div class='cursor' id="cursor"></div>
+      <div class='cursor2' id="cursor2"></div>
+      <div class='cursor3' id="cursor3"></div> 
+    </section>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bloc1.js" type="module"></script>
+    <script src="js/bloc2.js" type="module"></script>
+    <script src="js/bloc3.js" type="module"></script>
+    <script src="js/bloc4.js" type="module"></script>
   </body>
 </html>
+<!--<p>https://codepen.io/ig_design/pen/MRbJWW<br>
+  https://codepen.io/quasimondo/pen/AZedgK<br>
+  https://codepen.io/plavookac/pen/QMwObb</p>-->

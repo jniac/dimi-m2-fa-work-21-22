@@ -1,0 +1,29 @@
+section.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+section.intro h1 {
+  font-family: 'Concert One', cursive;
+  font-weight: 700;
+  font-size: 12vw;
+  line-height: 1em;
+  text-align: center;
+  color: white;
+}
+
+section.intro p {
+  font-size: 2em;
+  transition: all .1s ease-out;
+  color: white;
+}
