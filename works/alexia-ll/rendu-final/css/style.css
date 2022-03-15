@@ -1,0 +1,74 @@
+
+@import url(./color-set.css);
+@import url(./intro.css);
+@import url(./lorem.css);
+@import url(./stylewave.css);
+
+
+body{
+  --color-1:#31BFF3; 
+  --color-2:#A484E9; 
+  --color-3:#F4889A; 
+  --color-4:#FF392E;
+  --color-5:#FFAF66; 
+  --color-6:#FFE45E;
+  --color-7:#87e16a;
+}
+
+body, body * {
+  margin: 0;
+  box-sizing: border-box;
+  position:relative;
+}
+
+body {
+  font-family: 'Gill sans';
+  font-weight: 300;
+  letter-spacing: 3px;
+  height: 100%;
+}
+
+section {
+  min-height: 100vh; 
+  padding: 32px;
+  overflow:hidden;
+  width: 100%;
+}
+
+section .wave {
+  margin-top: -10000px;
+  width: 100%;
+}
+
+section .color-change {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 32px;
+}
+
+section .color-change button {
+  padding: 16px;
+  font-family: 'Lato' sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-size: 20px;
+  background-color: var(--back);
+  color: var(--color-3);
+  border: solid 1px transparent;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+section .color-change button:hover {
+  background-color: var(--back);
+  color: var(--color-1);
+}
+
+/* mobile */
+
+@media screen and (max-width: 400px) {
+  section .color-change {
+    padding: 16px;
+  }
+}

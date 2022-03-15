@@ -1,0 +1,66 @@
+section.intro {
+  padding-top: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #F4889A;
+  font-family: 'Gill sans';
+}
+
+section.intro div.scroll-down {
+  position: absolute;
+  bottom: 0;
+  --size: 30px;
+  width: var(--size);
+  height: var(--size);
+  background-color: white;
+  mask-image: url(../css/assets/scroll-down.svg);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url(../css/assets/scroll-down.svg);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+
+  transform: 
+  translateX(calc(var(--size) * -0.5)) 
+  translateY(-32px)
+  ;
+
+  transition: background.2s ease-in-out, opacity .2s ease-in-out;
+}
+
+section.intro div.scroll-down:hover {
+  background-color: var(--color-4);
+}
+
+section.intro div.scroll-down.hidden {
+  opacity: 0;
+}
+
+section.intro h2 {
+  font-family: 'Gill sans', bold, sans-serif;
+  font-weight: 200px;
+  font-size: 150px;
+  line-height: 1em;
+  text-align: center;
+  color: white;
+}
+
+section.intro p {
+  font-family: 'Gill Sans MT', sans-serif;
+  font-style: bold;
+  line-height: 60px;
+  font-size: 15px;
+  transition: all .1s ease-out;
+}
+
+section.intro p span {
+  transition: all .1s ease-out;
+}
+
+section.intro p.hidden {
+  opacity: 0;
+}
