@@ -5,9 +5,10 @@ import { inverseLerp } from '../../../../common/basic-functions.js'
 const section = document.querySelector('section.color-interpolation')
 
 // Couleurs :
+const cssMap = document.body.computedStyleMap()
 const darkGrey = new Color('#111')
-let color2 = new Color('--color-3', document.body)
-let color3 = new Color('--color-4', document.body)
+let color2 = new Color(cssMap.get('--color-3').toString())
+let color3 = new Color(cssMap.get('--color-4').toString())
 
 // Interpolations :
 // Les interpolations sont obtenu par la méthode "range":
