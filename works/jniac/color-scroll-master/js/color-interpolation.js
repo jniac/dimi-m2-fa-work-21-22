@@ -1,4 +1,4 @@
-import Color from "https://colorjs.io/dist/color.esm.js"
+import Color from "https://colorjs.io/dist/color.js"
 import { trackParallax } from '../../../../common/parallax.js'
 import { inverseLerp } from '../../../../common/basic-functions.js'
 
